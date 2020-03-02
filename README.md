@@ -10,7 +10,7 @@
         1. Open Terminal.
         2. Change the current working directory to the location where you want the cloned directory to be made.
         3. Type git clone, and then paste the URL:
-            $ git clone https://gitlab.com/vietphan/food-landingpage.git
+            $ git clone https://github.com/iLOVEu3Ngan/Cinema-Project-.git
         4. Press Enter. Your local clone will be created.
     + Install node module: $ npm install
     + Run react app: $ npm start
