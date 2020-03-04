@@ -3,11 +3,10 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './components/Body/HomePage/HomePage';
 
-
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
+    <Header/>
      <HomePage/>
      <Footer/>
     </div>
