@@ -3,8 +3,11 @@ import Carousel from "react-bootstrap/Carousel";
 
 class CarouselBanner extends React.Component {
   render() {
+    let Banner = {
+      opacity: "1"
+    }
     return (
-      <div className="mt-5 mb-5">
+      <div className="mb-5" style= {Banner}>
         <Carousel>
           <Carousel.Item>
             <img
