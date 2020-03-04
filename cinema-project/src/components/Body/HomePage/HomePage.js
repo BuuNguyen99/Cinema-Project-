@@ -1,7 +1,8 @@
 import React from "react";
-import "./styleHomePage.css";
+import "./HomePage.css";
 import CarouselBanner from "./Carousel/CarouselBanner";
 import Movies from "./Movies/Movies";
+import Promotion from "../Promotion/Promotion"
 
 class HomePage extends React.Component {
     render() {
@@ -9,6 +10,7 @@ class HomePage extends React.Component {
             <div>
                <CarouselBanner/>
                <Movies/> 
+               <Promotion/>
             </div>
         )
     }
