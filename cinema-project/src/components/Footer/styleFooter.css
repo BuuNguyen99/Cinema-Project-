@@ -35,10 +35,10 @@
     list-style-type: none;
     margin-left: -60px;
 }
-ul li {
+.list-items li {
     margin: 20px 0px;
 }
-ul i {
+.list-items i {
     color: white;
     margin-right: 10px;
     
