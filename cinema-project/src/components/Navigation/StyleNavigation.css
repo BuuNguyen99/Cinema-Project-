@@ -1,21 +1,17 @@
-* {
-	padding: 0;
-	margin:0;
-}
 
 ul {
 	list-style-type: none;
 }
-
-.nav > li {
+.containerFluid {
+	background-color: black;
+	opacity: 100;
+}
+.navigation .nav > li {
 	float: left;
 	width: calc(100% / 7)
 }
 
-/* .nav > li:not(:last-child) {
-	background: url(https://www.galaxycine.vn/website/images/line-menu.png) no-repeat center right;
-} */
-.nav > li:not(:last-child)> a::after{
+.navigation .nav > li:not(:last-child)> a::after{
 	content: "|";
 	color: white;
 	text-align: right;
@@ -26,27 +22,27 @@ ul {
     right: 0;
 }
 
-.nav li a {
+.navigation .nav li a {
 	display: block;
 	text-align: center;
 	text-decoration: none;
 	color: white;
-	background-color: #333;
+	background-color: black;
 	font-size: 90%;
 	font-weight: normal;
 	padding: 1em 0;
 }
 
-.nav li:hover > a {
+.navigation .nav li:hover > a {
 	color: #f26b38;
 	transition: all 0.5s;
 }
 
-.nav li:hover > .sub-menu {
+.navigation .nav li:hover > .sub-menu {
     opacity: 1;
 }
 
-.nav li:hover > #sub-menu-last {
+.navigation .nav li:hover > #sub-menu-last {
 	display: block;
 }
 
@@ -56,16 +52,15 @@ ul {
 }
 
 .sub-menu ul li:hover > a {
-	background-color: #777;
 	color: white;
 }
 
-.nav li {
+.navigation .nav li {
 	position: relative;
 }
 
 
-.nav .sub-menu {
+.navigation .nav .sub-menu {
     opacity: 0;
 	position: absolute;
 	width: 100%;
@@ -73,11 +68,11 @@ ul {
 	left: 100%;
 }
 
-.nav > li > .sub-menu {
+.navigation .nav > li > .sub-menu {
 	top: 100%;
 	left: 0;
 }
-.nav #sub-menu-last {
+.navigation .nav #sub-menu-last {
 	display: none;
 	position: absolute;
 	width: 100%;

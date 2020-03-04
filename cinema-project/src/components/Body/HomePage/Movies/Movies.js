@@ -10,8 +10,8 @@ class Movies extends React.Component {
     };
     return (
       <div className="container mb-5">
-        <div className="row">
-          <ul className="nav nav-tabs movie-home link-cout">
+        <div className="row nav-tabs">
+          <ul className="nav movie-home link-cout">
             <li className=" mr-3 link-wrapper">
               <a
                 className="link hover-2"

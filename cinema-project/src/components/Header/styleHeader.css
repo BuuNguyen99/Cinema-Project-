@@ -5,3 +5,12 @@
 .imageLogo {
     width: 100%
 }
+.text-right a{
+  font-size: 14px;
+  color: #a0a3a7;
+}
+.btn-toolbar {
+    display: contents !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
