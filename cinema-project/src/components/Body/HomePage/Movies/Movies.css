@@ -8,9 +8,7 @@
   position: relative;
   padding: 10px 0;
   color: black;
-}
-a.link.hover-2 {
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .link-wrapper {
@@ -40,6 +38,7 @@ a.link.hover-2 {
 .hover-2:hover:after {
   transform: scaleX(1);
 }
+
 .btn.secondary:after {
   font-family: 'FontAwesome';
   font-weight: 400;
@@ -47,19 +46,23 @@ a.link.hover-2 {
   content: '\f178';
   margin-left: 10px;
 }
+
 .btn.secondary.btn-outline-orange {
   color: #f26b38;
   border-color: #f26b38;
   float: right;
   margin-right:-15px ;
 }
+
 .btn.secondary.btn-outline-orange:hover {
   color: white;
   border-color: white;
 }
+
 .pull-right {
   text-transform: uppercase;
 }
+
 .pull-right a:hover{
   background-color: #f26b38;
 }

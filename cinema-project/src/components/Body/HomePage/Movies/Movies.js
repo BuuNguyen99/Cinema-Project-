@@ -4,35 +4,27 @@ import "./Movies.css";
 
 class Movies extends React.Component {
   render() {
-    let linksStyle = {
-      color: "black",
-      textTransform: "uppercase"
-    };
     return (
       <div className="container mb-5">
         <div className="row">
           <ul className="nav nav-tabs movie-home link-cout">
             <li className=" mr-3 link-wrapper">
-              <a
+              <h4
                 className="link hover-2"
-                href="#tab_default_1"
                 data-toggle="tab"
                 aria-expanded="true"
-                style={linksStyle}
               >
                 Phim đang chiếu
-              </a>
+              </h4>
             </li>
             <li className=" mr-3 link-wrapper">
-              <a
+              <h4
                 className="link hover-2"
-                href="#tab_default_1"
                 data-toggle="tab"
                 aria-expanded="true"
-                style={linksStyle}
               >
                 Phim sắp chiếu
-              </a>
+              </h4>
             </li>
           </ul>
         </div>
