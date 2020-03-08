@@ -5,7 +5,7 @@ import Register from "./Register";
 class Header extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container navigation">
           <div className="row d-flex align-items-center py-3">
               <div className="col-4">
                   <img className="imageLogo" src="https://www.galaxycine.vn/website/images/galaxy-logo.png" alt="logo"></img>

@@ -1,0 +1,10 @@
+.imageItem>img{
+    height: 350px;
+    padding-bottom: 30px;
+}
+.row>h2{
+    border-bottom: 2px solid #D2691E;
+}
+.row>p{
+    line-height: 30px;
+}
