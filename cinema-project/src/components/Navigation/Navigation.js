@@ -4,7 +4,7 @@ import "./StyleNavigation.css";
 class Navigation extends Component {
   render() {
     return (
-      <div class="containerFluid">
+      <div className="containerFluid">
         <div className="container navigation">
           <ul className="nav">
             <li>
@@ -16,7 +16,7 @@ class Navigation extends Component {
               <a className="text-uppercase" href="#">
                 phim
               </a>
-              <ul class="sub-menu">
+              <ul className="sub-menu">
                 <li>
                   <a className="text-uppercase" href="#">
                     phim đang chiếu
@@ -33,7 +33,7 @@ class Navigation extends Component {
               <a className="text-uppercase" href="#">
                 góc điện ảnh
               </a>
-              <ul class="sub-menu">
+              <ul className="sub-menu">
                 <li>
                   <a className="text-uppercase" href="#">
                     thể loại phim

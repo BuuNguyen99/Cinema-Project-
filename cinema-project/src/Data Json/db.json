@@ -1,0 +1,362 @@
+{
+  "movie": [
+    {
+      "id": "Movie001",
+      "name": "Nắng 3: lời hứa của cha",
+      "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
+      "type": "Hài, Tình cảm , Gia đình",
+      "author": "Đồng Đăng Giao",
+      "actor": [
+        {
+          "id": "Actor001",
+          "name": "Khả Như"
+        },
+        {
+          "id": "Actor002",
+          "name": "Kiều Minh Tuấn"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Name",
+      "date": [
+        {
+          "id": "Date",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie002",
+      "name": "Onward: Truy Tìm Phép Thuật",
+      "intro": "Lấy bối cảnh vùng ngoại ô một thế giới kỳ ảo, hai anh em yêu tinh tuổi teen bắt đầu hành trình khám phá xem, liệu rằng đâu đó ngoài kia có còn tồn tại ma thuật không?",
+      "type": "Hoạt Hình",
+      "author": "Dan Scanlon",
+      "actor": [
+        {
+          "id": "Actor003",
+          "name": "Tom Holland,"
+        },
+        {
+          "id": "Actor004",
+          "name": "Chris Pratt"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Mỹ",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/24/450x300_1582529315801.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie003",
+      "name": "Ác mộng bên hồ",
+      "intro": "Một nhóm bạn đi nghỉ dưỡng tại ngôi nhà bên hồ, tuy nhiên cuộc vui đã trở nên kinh hoàng khi có người bị sát hại. Thế lực bí ẩn dưới đáy hồ thực sự là gì?",
+      "type": "Kinh dị, tâm lý",
+      "author": "Quang Huy",
+      "actor": [
+        {
+          "id": "Actor005",
+          "name": "Patrick Walshe McBride"
+        },
+        {
+          "id": "Actor006",
+          "name": "Iben Akerlie"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Na Uy",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/27/450x300_1582775198057.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie004",
+      "name": "Căn Hộ Của Quỷ",
+      "intro": "Phim là câu chuyện có thật về gia đình bị ma ám tại vùng Madrid khi họ chuyển đến căn nhà mới, các thế lực đen tối tại đây đã gây nỗi ám ảnh kinh hoàng cho họ.",
+      "type": "Kinh dị",
+      "author": "Albert Pintó",
+      "actor": [
+        {
+          "id": "Actor007",
+          "name": "Begoña Vargas"
+        },
+        {
+          "id": "Actor008",
+          "name": "Iván Marcos"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Viet nam",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/24/450x300-32_1582530414160.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie005",
+      "name": "The Invisible Man: Kẻ Vô Hình",
+      "intro": "Một cô gái đang bị truy sát bởi một tên ác nhân mà cô không thể nhìn thấy. Mục đích của kẻ vô hình này là gì? Hắn có liên hệ ra sao với cô gái kia? Đón xem!",
+      "type": "Kinh dị, ly kì, giả tưởng",
+      "author": "Quang Huy",
+      "actor": [
+        {
+          "id": "Acto009",
+          "name": "Elisabeth Moss "
+        },
+        {
+          "id": "Actor010",
+          "name": "Oliver Jackson-Cohen"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Mỹ",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/19/450x300_1582096375218.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie006",
+      "name": "Cuốc Xe Nửa Đêm",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/20/450x300-cuoc-xe_1582172123848.jpg",
+      "video": "",
+      "vote": ""
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "some name",
+      "email": "",
+      "phone": "",
+      "gender": "",
+      "birth": "",
+      "pass": "",
+      "image": ""
+    },
+    {
+      "id": 1,
+      "name": "some name",
+      "email": "",
+      "phone": "",
+      "gender": "",
+      "birth": "",
+      "pass": "",
+      "image": ""
+    },
+    {
+      "name": "tt",
+      "email": "nguyenbuupro@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "1212",
+      "image": "",
+      "id": 2
+    },
+    {
+      "name": "tt",
+      "email": "nguyenbuupro@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "1212",
+      "image": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "",
+      "image": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "",
+      "image": "",
+      "id": 5
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "some name",
+      "email": "",
+      "pass": "",
+      "image": ""
+    }
+  ],
+  "reviewMovie": [
+    {
+      "id": "",
+      "title": "",
+      "image": "",
+      "content": "",
+      "vote": ""
+    }
+  ],
+  "promotion": [
+    {
+      "id": "",
+      "title": "",
+      "image": "",
+      "content": ""
+    },
+    {
+      "id": "",
+      "title": "",
+      "image": "",
+      "content": ""
+    }
+  ],
+  "theater": {
+    "name": "",
+    "about": ""
+  },
+  "support": [
+    {
+      "id": "",
+      "title": "",
+      "content": ""
+    }
+  ],
+  "Booking": [
+    {
+      "id": "",
+      "idUser": "",
+      "idMovie": "",
+      "idDate": "",
+      "time": "13:00",
+      "seat": [
+        "F6",
+        "F7"
+      ]
+    }
+  ]
+}
