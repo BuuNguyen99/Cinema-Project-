@@ -74,7 +74,7 @@ class Login extends React.Component {
               <div className="col-md-12">
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Email"
                 />

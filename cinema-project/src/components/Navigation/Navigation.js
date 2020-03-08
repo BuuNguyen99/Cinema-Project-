@@ -30,7 +30,7 @@ class Header extends Component {
               <a className="text-uppercase" href="#">
                 phim
               </a>
-              <ul class="sub-menu">
+              <ul className="sub-menu">
                 <li>
                   <a className="text-uppercase" href="#">
                     phim đang chiếu

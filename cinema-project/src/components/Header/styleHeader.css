@@ -1,6 +1,9 @@
 .wrapper-header {
     position: relative;
 }
+.Header {
+    display: "flex"
+}
 .imageLogo {
     width: 100%
 }
