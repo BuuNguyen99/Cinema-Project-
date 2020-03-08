@@ -1,0 +1,162 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "name": "abc",
+      "intro": "bvfvvv",
+      "type": "kinh di",
+      "author": "Quang Huy",
+      "actor": [
+        {
+          "id": "1",
+          "name": "Lan Ngoc"
+        },
+        {
+          "id": "2",
+          "name": "Tran Thanh"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Viet nam",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": 1,
+      "name": "abc",
+      "intro": "bvfvvv",
+      "type": "kinh di",
+      "author": "Quang Huy",
+      "actor": [
+        {
+          "id": "1",
+          "name": "Lan Ngoc"
+        },
+        {
+          "id": "2",
+          "name": "Tran Thanh"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Viet nam",
+      "date": [
+        {
+          "id": "",
+          "datemovie": "20/1/2019",
+          "frame time": [
+            {
+              "id": "11",
+              "Room": "1",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "",
+      "video": "",
+      "vote": ""
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "some name",
+      "email": "",
+      "phone": "",
+      "gender": "",
+      "birth": "",
+      "pass": "",
+      "image": ""
+    },
+    {
+      "id": 1,
+      "name": "some name",
+      "email": "",
+      "phone": "",
+      "gender": "",
+      "birth": "",
+      "pass": "",
+      "image": ""
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "admin",
+      "email": "admin@123",
+      "pass": "123",
+      "image": ""
+    }
+  ],
+  "reviewMovie": [
+    {
+      "id": "",
+      "title": "",
+      "image": "",
+      "content": "",
+      "vote": ""
+    }
+  ],
+  "promotion": [
+    {
+      "id": "",
+      "title": "",
+      "image": "",
+      "content": ""
+    },
+    {
+      "id": "",
+      "title": "",
+      "image": "",
+      "content": ""
+    }
+  ],
+  "theater": {
+    "name": "",
+    "about": ""
+  },
+  "support": [
+    {
+      "id": "",
+      "title": "",
+      "content": ""
+    }
+  ],
+  "Booking": [
+    {
+      "id": "",
+      "idUser": "",
+      "idMovie": "",
+      "idDate": "",
+      "time": "13:00",
+      "seat": [
+        "F6",
+        "F7"
+      ]
+    }
+  ]
+}
