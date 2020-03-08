@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 import routes from "./routes";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
@@ -12,7 +11,6 @@ class App extends React.Component {
       <Router>
         <div className="Container">
           <Header />
-          {/* <Navigation /> */}
           {this.showContentMenus(routes)}
         </div>
         <Footer/>
@@ -23,6 +21,7 @@ class App extends React.Component {
     var result = null;
     if (routes.length > 0) {
       result = routes.map((route, index) => {
+        console.log('main:', route.main)
         return (
           <Route
             key={index}
@@ -33,6 +32,7 @@ class App extends React.Component {
         );
       });
     }
+    console.log('result:', result)
     return <Switch> {result} </Switch>;
   };
 }
