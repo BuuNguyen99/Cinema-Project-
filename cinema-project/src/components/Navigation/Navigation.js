@@ -1,192 +1,149 @@
-import React, { Component } from 'react';
-import './styleHeader.css';
-import Login from './Login';
-import Register from './Register';
-import Navigation from '../Navigation/Navigation';
+import React, { Component } from "react";
+import "./StyleNavigation.css";
 
-class Header extends Component {
-  constructor() {
-    super();
+class Navigation extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      openMenu: false,
-      openSearch: false
+      menuExpand: '',
+      isExpand: false
     };
   }
-  renderNavigation = () => {
-    console.log('render');
-    // let xhtml = null;
-    // if(this.state.open) {
-    console.log('true');
-    let xhtml = (
-      <div className="containerNav containerFluid">
-        <nav className="container navigation">
-          <ul className="nav">
-            <li>
-              <a className="text-uppercase" href="#">
-                mua vé
-              </a>
-            </li>
-            <li>
-              <a className="text-uppercase" href="#">
-                phim
-              </a>
-              <ul className="sub-menu">
-                <li>
-                  <a className="text-uppercase" href="#">
-                    phim đang chiếu
+
+  handleClickMenu = (menu) => {
+    this.setState(prevState => ({
+        menuExpand: menu,
+        isExpand: prevState.menuExpand !== menu ? true : false
+    }));
+  };
+
+  render() {
+    const showMenu = this.props.style;
+    console.log('showMenu:', showMenu)
+    const { menuExpand, isExpand } = this.state
+    const isExpand1 = 'menu1' == menuExpand && isExpand ? true : false;
+    const isExpand2 = 'menu2' == menuExpand && isExpand ? true : false;
+    const styleMenu1 = isExpand1 ? 'show' : '';
+    const styleMenu2 = isExpand2 ? 'show' : ''
+
+    return (
+      <div className={`${showMenu}`}>
+        <nav className={` wrap-nav-c navbar navbar-expand-md navbar-dark`}>
+          <div className="container-c container">
+            <div
+              className="nav collapse navbar-collapse show"
+              id="navbarResponsive">
+              <ul className=" navbar-c navbar-nav">
+                <li className="nav-item-c nav-item">
+                  <a
+                    className="nav-link-c text-uppercase nav-link"
+                    href="about.html">
+                    Mua vé
                   </a>
                 </li>
-                <li>
-                  <a className="text-uppercase" href="#">
-                    phim sắp chiếu
+                
+                <li onClick={() => this.handleClickMenu('menu1')} className={`nav-item-c nav-item dropdown ${styleMenu1}`}>
+                  <a
+                    className="nav-link-c text-uppercase nav-link dropdown-toggle"
+                    id="navbarDropdownPortfolio"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded={isExpand1}>
+                    Phim
+                  </a>
+                  <div
+                    className={`dropdown-c dropdown-menu dropdown-menu-right ${styleMenu1}`}
+                    aria-labelledby="navbarDropdownPortfolio">
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-1-col.html">
+                      Phim đang chiếu
+                    </a>
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-2-col.html">
+                      Phim sắp chiếu
+                    </a>
+                  </div>
+                </li>
+                
+                <li onClick={()=> this.handleClickMenu('menu2')} className={`nav-item-c nav-item dropdown ${styleMenu2}`}>
+                  <a
+                    className="nav-link-c text-uppercase nav-link dropdown-toggle"
+                    id="navbarDropdownPortfolio"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded={isExpand2}>
+                    Góc điện ảnh
+                  </a>
+                  <div
+                    className={`dropdown-c dropdown-menu dropdown-menu-right ${styleMenu2}`}
+                    aria-labelledby="navbarDropdownPortfolio">
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-1-col.html">
+                      thể loại phim
+                    </a>
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-2-col.html">
+                      diễn viên
+                    </a>
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-2-col.html">
+                      đạo diễn
+                    </a>
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-2-col.html">
+                      bình luận phim
+                    </a>
+                    <a
+                      className="nav-link-sub text-uppercase dropdown-item"
+                      href="portfolio-2-col.html">
+                      blog điện ảnh
+                    </a>
+                  </div>
+                </li>
+                
+                <li className="nav-item-c nav-item">
+                  <a
+                    className="nav-link-c text-uppercase nav-link"
+                    href="services.html">
+                    sự kiện
+                  </a>
+                </li>
+
+                <li className="nav-item-c nav-item">
+                  <a
+                    className="nav-link-c text-uppercase nav-link"
+                    href="contact.html">
+                    Rạp/giá vé
+                  </a>
+                </li>
+
+                <li className="nav-item-c nav-item">
+                  <a
+                    className="nav-link-c text-uppercase nav-link"
+                    href="contact.html">
+                    Hỗ trợ
+                  </a>
+                </li>
+
+                <li className="nav-item-c nav-item">
+                  <a
+                    className="nav-link-c text-uppercase nav-link"
+                    href="contact.html">
+                    Thành viên
                   </a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a className="text-uppercase" href="#">
-                góc điện ảnh
-              </a>
-              <ul className="sub-menu">
-                <li>
-                  <a className="text-uppercase" href="#">
-                    thể loại phim
-                  </a>
-                </li>
-                <li>
-                  <a className="text-uppercase" href="#">
-                    diễn viên
-                  </a>
-                </li>
-                <li>
-                  <a className="text-uppercase" href="#">
-                    đạo diễn
-                  </a>
-                </li>
-                <li>
-                  <a className="text-uppercase" href="#">
-                    bình luận phim
-                  </a>
-                </li>
-                <li>
-                  <a className="text-uppercase" href="#">
-                    blog điện ảnh
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a className="text-uppercase" href="#">
-                Sự kiện
-              </a>
-            </li>
-            <li>
-              <a className="text-uppercase" href="#">
-                rạp/ giá vé
-              </a>
-            </li>
-            <li>
-              <a className="text-uppercase" href="#">
-                hỗ trợ
-              </a>
-            </li>
-            <li>
-              <a className="text-uppercase" href="#">
-                thanh vien
-              </a>
-            </li>
-          </ul>
+          </div>
+          </div>
         </nav>
       </div>
     );
+  }}
 
-    //}
-    return xhtml;
-  };
-
-  handleToggleMenu() {
-    this.setState({
-      openMenu: !this.state.openMenu
-    });
-    if (this.state.openSearch) {
-      this.setState({
-        openSearch: !this.state.openSearch
-      });
-    }
-  }
-
-  handleToggleSearch() {
-    this.setState({
-      openSearch: !this.state.openSearch
-    });
-    if (this.state.openMenu) {
-      this.setState({
-        openMenu: !this.state.openMenu
-      });
-    }
-  }
-
-  render() {
-    let showMenu = this.state.openMenu ? 'showMenu' : 'hideMenu';
-    let showSearch = this.state.openSearch ? 'showSearch' : 'hideSearch';
-    return (
-      <div className="wrapper-header">
-        <div className=" container-fluid">
-          <div className="container">
-            <div className="wrap-header row d-flex align-items-center py-3">
-              <div className="col-4">
-                <a href="#">
-                  <img
-                    className="imageLogo"
-                    src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
-                    alt="logo"></img>
-                </a>
-              </div>
-              <div className="col-8 text-right text-secondary">
-                <Login /> <span>/</span> <Register />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* menu mobile */}
-        <div className={`skip-links`}>
-          <span
-            className="skip-links-item"
-            onClick={this.handleToggleMenu.bind(this)}>
-            <a className="linkItem">
-              <span className="icon">
-                <span>
-                  <i className="fas fa-bars"></i>
-                </span>
-              </span>
-              <span className="label">Menu</span>
-            </a>
-          </span>
-          <span
-            className="skip-links-item"
-            onClick={this.handleToggleSearch.bind(this)}>
-            <a href="#" className=" linkItem skip-link skip-search">
-              <span className="icon">
-                <span>
-                  <i className="fas fa-search"></i>
-                </span>
-              </span>
-              <span className="label">Tìm kiếm</span>
-            </a>
-          </span>
-        </div>
-
-        <Navigation style={showMenu} />
-
-        <div className={`${showSearch} find-header`}>
-          <input
-            className="form-control mx-auto"
-            placeholder="Tìm tên phim, diễn viên..."></input>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Header;
+  export default Navigation

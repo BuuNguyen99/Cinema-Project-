@@ -14,12 +14,12 @@ class Movies extends React.Component {
     };
   }
  
-  componentDidMount () {
-    callApi ('movie','GET',null).then(res => {
-      this.props.fetchAllData(res.data);
+  // componentDidMount () {
+  //   callApi ('movie','GET',null).then(res => {
+  //     this.props.fetchAllData(res.data);
       
-    })
-  }
+  //   })
+  // }
 
   render() {
     let linksStyle = {

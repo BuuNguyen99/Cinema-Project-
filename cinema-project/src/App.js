@@ -12,7 +12,7 @@ class App extends React.Component {
       <Router>
         <div className="Container">
           <Header />
-          <Navigation />
+          {/* <Navigation /> */}
           {this.showContentMenus(routes)}
         </div>
         <Footer/>
