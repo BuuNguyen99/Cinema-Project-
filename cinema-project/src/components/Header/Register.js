@@ -119,10 +119,10 @@ class Register extends React.Component {
         <a
           bsStyle="primary"
           onClick={this.handleShow}
-          className="pl-2 text-secondary text-decoration-none"
+          className="text-secondary text-decoration-none"
           href="#"
         >
-          <i className="far fa-bell mr-1"></i> Đăng Ký
+           Đăng Ký
         </a>
         <Modal
           {...this.props}
