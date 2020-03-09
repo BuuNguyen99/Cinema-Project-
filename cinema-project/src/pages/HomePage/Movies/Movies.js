@@ -1,8 +1,8 @@
 import React from "react";
 import ItemMovie from "./ItemMovie";
 import "./Movies.css";
-import { actFetchDataMovieRequest } from './../../../actions/action';
 import callApi from "../../../utils/ApiCaller";
+import {actFetchDataMovie} from './../../../actions/action'
 import { connect } from "react-redux";
 
 class Movies extends React.Component {
@@ -15,10 +15,10 @@ class Movies extends React.Component {
   }
  
   componentDidMount () {
-    // callApi ('movie','GET',null).then(res => {
-      this.props.fetchAllDataMovie();
+    callApi ('movie','GET',null).then(res => {
+      this.props.fetchAllDataMovie(res.data);
       
-    //})
+    })
   }
 
   render() {
@@ -79,14 +79,16 @@ class Movies extends React.Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.reducerMovie);
+  
   return {
     Movies: state.reducerMovie
   }
 }
 const mapDispatchToProps = (dispatch,props) => {
         return {
-          fetchAllDataMovie: () => {
-            dispatch(actFetchDataMovieRequest());
+          fetchAllDataMovie: (movies) => {
+            dispatch(actFetchDataMovie(movies))
           }
         }
 }

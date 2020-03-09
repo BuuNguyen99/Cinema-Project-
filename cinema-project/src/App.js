@@ -21,7 +21,6 @@ class App extends React.Component {
     var result = null;
     if (routes.length > 0) {
       result = routes.map((route, index) => {
-        console.log('main:', route.main)
         return (
           <Route
             key={index}
@@ -32,7 +31,6 @@ class App extends React.Component {
         );
       });
     }
-    console.log('result:', result)
     return <Switch> {result} </Switch>;
   };
 }

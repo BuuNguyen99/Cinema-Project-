@@ -13,9 +13,9 @@ class SearchBox extends Component {
     }
     onHandleOnEnter = (e) => {
         const {keyword} = this.state;
-        console.log('keyyy:', keyword)
+        console.log('key:', keyword)
         if(e.keyCode === 13) {
-            this.props.searchMovie(keyword);e
+            this.props.searchMovie(keyword);
         }
         
     }
