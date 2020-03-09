@@ -8,6 +8,8 @@ const stateDefault = {
     switch (action.type) {
       case Types.FETCH_DATA_MOVIE: {
         state = action.data
+        console.log(state);
+        
         return [...state];
       }
       // case Types.SEARCH_MOVIE: {

@@ -2,13 +2,13 @@ import * as Types from './../constants/ActionTypes';
 import * as apiCall from '../utils/ApiCall'
 import { object } from 'prop-types';
 
-export const  actFetchDataMovieRequest = () => {
-    return (dispatch) => {
-        return apiCall.getAllDataMovie().then(res => {
-            dispatch(actFetchDataMovie(res.data))
-        })
-    }
-}
+// export const  actFetchDataMovieRequest = () => {
+//     return (dispatch) => {
+//         return apiCall.getAllDataMovie().then(res => {
+//             dispatch(actFetchDataMovie(res.data))
+//         })
+//     }
+// }
 
 export const actFetchDataMovie = (data) => {
     return {
