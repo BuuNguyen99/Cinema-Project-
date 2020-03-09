@@ -14,12 +14,12 @@ class Movies extends React.Component {
     };
   }
  
-  // componentDidMount () {
-  //   callApi ('movie','GET',null).then(res => {
-  //     this.props.fetchAllData(res.data);
+  componentDidMount () {
+    callApi ('movie','GET',null).then(res => {
+      this.props.fetchAllData(res.data);
       
-  //   })
-  // }
+    })
+  }
 
   render() {
     let linksStyle = {
@@ -38,6 +38,7 @@ class Movies extends React.Component {
     return (
       <div className="container mb-5">
         <div className="row nav-tabs">
+          <div className="col-md-12">
           <ul className="nav movie-home link-cout">
             <li className=" mr-3 link-wrapper">
               <a
@@ -62,6 +63,7 @@ class Movies extends React.Component {
               </a>
             </li>
           </ul>
+          </div>
         </div>
         <div className="row">
           {dataMovies}

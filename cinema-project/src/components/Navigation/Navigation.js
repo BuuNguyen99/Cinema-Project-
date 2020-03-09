@@ -19,7 +19,6 @@ class Navigation extends Component {
 
   render() {
     const showMenu = this.props.style;
-    console.log('showMenu:', showMenu)
     const { menuExpand, isExpand } = this.state
     const isExpand1 = 'menu1' == menuExpand && isExpand ? true : false;
     const isExpand2 = 'menu2' == menuExpand && isExpand ? true : false;
