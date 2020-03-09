@@ -3,6 +3,7 @@ import './styleHeader.css';
 import Login from './Login';
 import Register from './Register';
 import Navigation from '../Navigation/Navigation';
+import SearchBox from '../SearchBox/SearchBox';
 
 class Header extends Component {
   constructor() {
@@ -91,11 +92,7 @@ class Header extends Component {
         <Navigation style={showMenu} />
 
         {/* Search */}
-        <div className={`${showSearch} find-header`}>
-          <input
-            className="form-control mx-auto"
-            placeholder="Tìm tên phim, diễn viên..."></input>
-        </div>
+        <SearchBox styleSearch={`${showSearch}`}/>
       </div>
     );
   }

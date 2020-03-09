@@ -1,13 +1,56 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 
 class SearchPage extends Component {
-    render() {
-        return (
-            <div style={{height: '100vh'}} className="container text-center mt-5">
-                SearchPage
-            </div>
-        );
+  render() {
+    const {listSearch} = this.props; 
+    
+    const notify = listSearch.length > 0 ? `${listSearch.length} kết quả được tìm thấy!` : 'Không tìm thấy kết quả nào!'
+    return (
+        <div style={{minHeight: "70vh"}} className="container my-4">
+          <p>{notify}</p>
+          <div className="row">
+              {this.showSearchList(listSearch)}
+           </div>
+        </div>
+    );
+  }
+
+  showSearchList = (listSearch) => {
+    if(listSearch.length > 0) {
+        const list = listSearch.map((item, index) => {
+            return (
+                <div key={index} className="col-4 p-2">
+                    <div className="card">
+                    <img
+                        className="card-img-top"
+                        src={item.image}
+                        alt="Card image"
+                        style={{width:"100%"}}
+                    />
+                    <div className="card-body">
+                       <Link>
+                        <h6 className="card-title">{item.name}</h6>
+                          <p className="card-text text-left">
+                          Diễn viên: {item.author}
+                          </p>
+                       </Link>
+                    </div>
+                    </div>
+                </div>           
+         
+            )
+        })
+        return list;
     }
 }
+}
 
-export default SearchPage;
+const mapStateToProps = (state) => {
+  return {
+    listSearch: state.reducerMovie
+  }
+}
+
+export default connect(mapStateToProps)(SearchPage);
