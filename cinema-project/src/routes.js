@@ -10,14 +10,14 @@ const routes = [
         main: () => <HomePage/>
     },
     {
-        path: '',
-        exact: false,
-        main: () => <NotFoundPage/>
-    },
-    {
         path: '/search',
         exact: false,
         main: () => <SearchPage/>
+    },
+    {
+        path: '',
+        exact: false,
+        main: () => <NotFoundPage/>
     }
 ]
 

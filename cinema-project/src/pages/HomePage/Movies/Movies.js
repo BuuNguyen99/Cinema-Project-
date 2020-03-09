@@ -1,7 +1,7 @@
 import React from "react";
 import ItemMovie from "./ItemMovie";
 import "./Movies.css";
-import { actFetchDataApi } from './../../../actions/action';
+import { actFetchDataMovieRequest } from './../../../actions/action';
 import callApi from "../../../utils/ApiCaller";
 import { connect } from "react-redux";
 
@@ -14,12 +14,12 @@ class Movies extends React.Component {
     };
   }
  
-  // componentDidMount () {
-  //   callApi ('movie','GET',null).then(res => {
-  //     this.props.fetchAllData(res.data);
+  componentDidMount () {
+    // callApi ('movie','GET',null).then(res => {
+      this.props.fetchAllDataMovie();
       
-  //   })
-  // }
+    //})
+  }
 
   render() {
     let linksStyle = {
@@ -80,13 +80,13 @@ class Movies extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    Movies: state
+    Movies: state.reducerMovie
   }
 }
 const mapDispatchToProps = (dispatch,props) => {
         return {
-          fetchAllData: (data) => {
-            dispatch(actFetchDataApi(data));
+          fetchAllDataMovie: () => {
+            dispatch(actFetchDataMovieRequest());
           }
         }
 }

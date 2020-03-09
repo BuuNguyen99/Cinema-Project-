@@ -1,14 +1,8 @@
-import * as Types from './../constants/ActionTypes';
+import { combineReducers } from 'redux'
+import reducerMovie from './reducerMovie'
 
-const stateDefault = [];
-  
-  export function reducer(state = stateDefault, action) {
-    switch (action.type) {
-      case Types.FETCH_DATA_API:
-        state = action.data
-        return [...state];
-        default:
-          return [...state];
-  }
-}
-  
+const reducer = combineReducers({
+    reducerMovie
+});
+
+export default reducer
