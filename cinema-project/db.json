@@ -240,28 +240,18 @@
       "video": "",
       "vote": ""
     }
-  ]
-  ,
+  ],
   "user": [
     {
-      "id": 1,
-      "name": "some name",
-      "email": "",
-      "phone": "",
-      "gender": "",
+      "name": "qqq",
+      "email": "11@gmail.com",
+      "phone": "1111111111",
+      "gender": "Nam",
       "birth": "",
-      "pass": "",
-      "image": ""
-    },
-    {
-      "id": 1,
-      "name": "some name",
-      "email": "",
-      "phone": "",
-      "gender": "",
-      "birth": "",
-      "pass": "",
-      "image": ""
+      "pass": "11111111q",
+      "image": "",
+      "address": "1",
+      "id": 1
     }
   ],
   "admin": [

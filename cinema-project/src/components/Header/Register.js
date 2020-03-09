@@ -3,7 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
 import callApi from "../../utils/ApiCaller";
 
-
 class Register extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -14,68 +13,111 @@ class Register extends React.Component {
     this.state = {
       show: false,
       id: "",
-      txtName: "",
-      txtPhone: "",
+      txtName: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtPhone: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
       txtGender: "Nam",
-      txtEmail: "",
-      txtPassword: "",
-      txtRePassword: "",
-      txtAddress: ""
+      txtEmail: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtPassword: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtRePassword: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtAddress: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
     };
   }
-  // validateInput = (type, checkingText) => {
-  //   if (type === "phonenumber") {
-  //     const regexp = /^\d{10,11}$/;
-  //     const checkingResult = regexp.exec(checkingText);
-  //     if (checkingResult !== null) {
-  //       return { isInputValid: true, errorMessage: "" };
-  //     } else {
-  //       return {
-  //         isInputValid: false,
-  //         errorMessage: "Số điện thoại phải có 10 - 11 chữ số."
-  //       };
-  //     }
-  //   }
 
-  //   if (type === "fullname") {
-  //     /* Kiểm tra fullname */
-  //   }
-  // };
+  handleInput = event => {
+    const { name, value } = event.target;
+    const newState = { ...this.state[name] }; /* dummy object */
+    newState.value = value;
+    this.setState({ [name]: newState });
+  };
 
-  // handleInputValidation = event => {
-  //   const { name } = event.target;
-  //   const { isInputValid, errorMessage } = validateInput( name,this.state[name].value );
-  //   const newState = { ...this.state[name] }; /* dummy object */
-  //   newState.isInputValid = isInputValid;
-  //   newState.errorMessage = errorMessage;
-  //   this.setState({ [name]: newState });
-  // };
-
+  handleInputValidation = event => {
+    const { name } = event.target;
+    const { isInputValid, errorMessage } = validateInput(
+      name,
+      this.state[name].value,
+      this.state.txtPassword.value
+    );
+    const newState = { ...this.state[name] }; /* dummy object */
+    newState.isInputValid = isInputValid;
+    newState.errorMessage = errorMessage;
+    this.setState({ [name]: newState });
+  };
   handlerChange = e => {
     const value = e.target.value;
     this.setState({
       [e.target.name]: value
     });
-    console.log(this.state.txtName);
   };
 
   onSave = e => {
     e.preventDefault();
-    console.log(this.state);
-    let {txtName, txtPhone, txtGender, txtPassword, txtEmail, txtAddress } = this.state;
-    callApi('user', 'POST', {
-      name: txtName,
-      email: txtEmail,
-      phone: txtPhone,
-      gender: txtGender,
-      birth: "",
-      pass: txtPassword,
-      image: ""
-    }).then(res => {
-      console.log(res);
-      
-    });
-
+    let {
+      txtName,
+      txtPhone,
+      txtPassword,
+      txtRePassword,
+      txtEmail,
+      txtAddress
+    } = this.state;
+    if (
+      (txtName.value !== '' && txtName.isInputValid === true) &&
+      (txtPhone.value !== '' && txtPhone.isInputValid === true) &&
+      (txtPassword.value !== '' && txtPassword.isInputValid === true) &&
+      (txtRePassword.value !== '' && txtRePassword.isInputValid == true) &&
+      (txtEmail.value !== '' && txtEmail.isInputValid === true) &&
+      (txtAddress.value !== '' && txtAddress.isInputValid === true) 
+    ) {
+      let {
+        txtName,
+        txtPhone,
+        txtGender,
+        txtPassword,
+        txtEmail,
+        txtAddress
+      } = this.state;
+      callApi("user", "POST", {
+        name: txtName.value,
+        email: txtEmail.value,
+        phone: txtPhone.value,
+        gender: txtGender,
+        birth: "",
+        pass: txtPassword.value,
+        image: "",
+        address: txtAddress.value
+      }).then(res => {
+        console.log(res);
+      });
+      alert("Đăng Ký thành công");
+      this.setState ({
+        show: false
+      })
+  } else {
+    alert ("Vui Lòng điền đầy đủ thông tin và đúng định dạng");
+  }
   };
 
   handleShow() {
@@ -122,7 +164,7 @@ class Register extends React.Component {
           className="text-secondary text-decoration-none"
           href="#"
         >
-           Đăng Ký
+          Đăng Ký
         </a>
         <Modal
           {...this.props}
@@ -143,15 +185,16 @@ class Register extends React.Component {
                     type="text"
                     className="form-control"
                     id="fullName"
+                    value={txtName.value}
                     placeholder="Họ Tên"
                     name="txtName"
-                    value={txtName}
-                    onChange={this.handlerChange}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
                   />
                   <FormError
                     type="txtName"
-                    isHidden={this.state.isInputValid}
-                    errorMessage={this.state.errorMessage}
+                    isHidden={this.state.txtName.isInputValid}
+                    errorMessage={this.state.txtName.errorMessage}
                   />
                 </div>
               </div>
@@ -163,13 +206,15 @@ class Register extends React.Component {
                     id="phoneNumber"
                     placeholder="Số điện thoại"
                     name="txtPhone"
-                    value={txtPhone}
-                    onChange={this.handlerChange}
+                    value={txtPhone.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
+                    
                   />
                   <FormError
                     type="txtPhone"
-                    isHidden={this.state.isInputValid}
-                    errorMessage={this.state.errorMessage}
+                    isHidden={this.state.txtPhone.isInputValid}
+                    errorMessage={this.state.txtPhone.errorMessage}
                   />
                 </div>
                 <div className="col-md-6">
@@ -177,8 +222,8 @@ class Register extends React.Component {
                     <select
                       className="form-control"
                       name="txtGender"
-                      value={txtGender}
-                      onChange={this.handlerChange}
+                      value={txtGender.value}
+                      onChange={this.handleInput}
                     >
                       <optgroup label="Giới Tính">Giới Tính</optgroup>
                       <option value="Nam">Nam </option>
@@ -187,7 +232,7 @@ class Register extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="row">
+              <div className="row mt-3">
                 <div className="col-md-12">
                   <input
                     type="email"
@@ -195,13 +240,15 @@ class Register extends React.Component {
                     id="email"
                     placeholder="Email"
                     name="txtEmail"
-                    value={txtEmail}
-                    onChange={this.handlerChange}
+                    value={txtEmail.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
+                    
                   />
                   <FormError
                     type="txtEmail"
-                    isHidden={this.state.isInputValid}
-                    errorMessage={this.state.errorMessage}
+                    isHidden={this.state.txtEmail.isInputValid}
+                    errorMessage={this.state.txtEmail.errorMessage}
                   />
                 </div>
               </div>
@@ -213,13 +260,15 @@ class Register extends React.Component {
                     id="password"
                     placeholder="Mật khẩu"
                     name="txtPassword"
-                    value={txtPassword}
-                    onChange={this.handlerChange}
+                    value={txtPassword.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
+                    
                   />
                   <FormError
                     type="txtPassword"
-                    isHidden={this.state.isInputValid}
-                    errorMessage={this.state.errorMessage}
+                    isHidden={this.state.txtPassword.isInputValid}
+                    errorMessage={this.state.txtPassword.errorMessage}
                   />
                 </div>
                 <div className="col-md-6">
@@ -229,13 +278,14 @@ class Register extends React.Component {
                     id="rePassword"
                     placeholder="Xác nhận mật khẩu"
                     name="txtRePassword"
-                    value={txtRePassword}
-                    onChange={this.handlerChange}
+                    value={txtRePassword.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
                   />
                   <FormError
                     type="txtRePassword"
-                    isHidden={this.state.isInputValid}
-                    errorMessage={this.state.errorMessage}
+                    isHidden={this.state.txtRePassword.isInputValid}
+                    errorMessage={this.state.txtRePassword.errorMessage}
                   />
                 </div>
               </div>
@@ -245,15 +295,17 @@ class Register extends React.Component {
                     type="text"
                     className="form-control"
                     id="address"
-                    placeholder="Địa Chỉ"
+                    placeholder="Địa chỉ"
                     name="txtAddress"
-                    value={txtAddress}
-                    onChange={this.handlerChange}
+                    value={txtAddress.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
+                    
                   />
                   <FormError
                     type="txtAddress"
-                    isHidden={this.state.isInputValid}
-                    errorMessage={this.state.errorMessage}
+                    isHidden={this.state.txtAddress.isInputValid}
+                    errorMessage={this.state.txtAddress.errorMessage}
                   />
                 </div>
               </div>
@@ -268,13 +320,7 @@ class Register extends React.Component {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button
-              type="submit"
-              form="nameform"
-              value="Submit"
-              onClick={this.handleHide}
-              style={Buttonn}
-            >
+            <Button type="submit" form="nameform" style={Buttonn}>
               Đăng Ký
             </Button>
           </Modal.Footer>
@@ -284,13 +330,93 @@ class Register extends React.Component {
   }
 }
 
+const validateInput = (type, checkingText, pass) => {
+  if (type === "txtName") {
+    const regexp = /^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ ]+$/;
+    const checkingResult = regexp.exec(checkingText);
+    if (checkingResult !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Không chứa số và kí tự đặc biệt."
+      };
+    }
+  }
+  if (type === "txtPhone") {
+    const regexp = /^\d{10,11}$/;
+    const checkingResult = regexp.exec(checkingText);
+    if (checkingResult !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "SĐT phải có 10 - 11 chữ số."
+      };
+    }
+  }
+  if (type === "txtEmail") {
+    const regexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    const checkingResult = regexp.exec(checkingText);
+    if (checkingResult !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Email không hợp lệ."
+      };
+    }
+  }
+  if (type === "txtPassword") {
+    const regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const checkingResult = regexp.exec(checkingText);
+    if (checkingResult !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Mật khẩu từ 8 kí tự bao gồm chữ và số"
+      };
+    }
+  }
+  if (type === "txtRePassword") {
+    let rePass = checkingText;
+    if (pass === rePass) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Mật khẩu không khớp"
+      };
+    }
+  }
+  if (type === "txtAddress") {
+    if (checkingText !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Mật khẩu từ 8 kí tự bao gồm chữ và số"
+      };
+    }
+  }
+};
+
 function FormError(props) {
   /* nếu isHidden = true, return null ngay từ đầu */
+  let color = {
+    color: "red"
+  };
+
   if (props.isHidden) {
     return null;
   }
 
-  return <div>{props.errorMessage}</div>;
+  return (
+    <div className="m-1" style={color}>
+      {props.errorMessage}
+    </div>
+  );
 }
 
 export default Register;
