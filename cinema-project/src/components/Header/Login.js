@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
+import { actFetchDataUsersRequest, actFetchDataAdminRequest } from "./../../actions/action";
+import { connect } from "react-redux";
+
 class Login extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -9,8 +12,22 @@ class Login extends React.Component {
     this.handleHide = this.handleHide.bind(this);
 
     this.state = {
-      show: false
+      show: false,
+      txtPassword: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtEmail: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      }
     };
+  }
+  componentDidMount() {
+    this.props.onFetchDataUser();
+    // this.props.onFetchDataAdmin();
   }
 
   handleShow() {
@@ -21,10 +38,60 @@ class Login extends React.Component {
     this.setState({ show: false });
   }
 
-  render() {
-      let toolbar = {
-          display: "content"
+  handleInput = event => {
+    const { name, value } = event.target;
+    const newState = { ...this.state[name] }; /* dummy object */
+    newState.value = value;
+    this.setState({ [name]: newState });
+  };
+
+  handleInputValidation = event => {
+    const { name } = event.target;
+    const { isInputValid, errorMessage } = validateInput(
+      name,
+      this.state[name].value
+    );
+    const newState = { ...this.state[name] }; /* dummy object */
+    newState.isInputValid = isInputValid;
+    newState.errorMessage = errorMessage;
+    this.setState({ [name]: newState });
+  };
+  onSave = e => {
+    e.preventDefault();
+    let { txtPassword, txtEmail } = this.state;
+    let { users } = this.props;
+    if (
+      txtPassword.value !== "" &&
+      txtPassword.isInputValid === true &&
+      txtEmail.value !== "" && txtEmail.isInputValid === true
+    ) {
+      if( users.length > 0 ) {
+        for( let i = 0 ; i < users.length ; i ++ ) {
+          if((txtEmail.value === users[i].email) && (txtPassword.value === users[i].pass)) {
+            alert ("Đăng nhập thành công");
+            this.setState({ show: false });
+            return null;
+            
+          }
+        }
+        alert( "Tài khoản hoặc mất khẩu không đúng");
       }
+      else {
+            alert("đVui lòng đăng ký");
+      }
+    } else {
+      console.log(users.length);
+
+      alert("Vui Lòng điền đầy đủ thông tin đăng nhập");
+    }
+  };
+
+  render() {
+    let { txtEmail, txtPassword } = this.state;
+
+    let toolbar = {
+      display: "content"
+    };
     let header = {
       color: "#f26b38",
       borderBottom: "2px solid #f26b38"
@@ -37,11 +104,11 @@ class Login extends React.Component {
       color: "#a0a3a7"
     };
     let Buttonn = {
-        backgroundColor: "#f26b38",  
-        border: "1px solid #f26b38"  
-      };
+      backgroundColor: "#f26b38",
+      border: "1px solid #f26b38"
+    };
     return (
-      <ButtonToolbar style = {toolbar}>
+      <ButtonToolbar style={toolbar}>
         <a
           bsStyle="primary"
           onClick={this.handleShow}
@@ -70,26 +137,46 @@ class Login extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-12">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Email"
-                />
+            <form onSubmit={this.onSave} id="nameform">
+              <div className="row">
+                <div className="col-md-12">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    placeholder="Email"
+                    name="txtEmail"
+                    value={txtEmail.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
+                  />
+                  <FormError
+                    type="txtEmail"
+                    isHidden={this.state.txtEmail.isInputValid}
+                    errorMessage={this.state.txtEmail.errorMessage}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row mt-3">
-              <div className="col-md-12">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                />
+              <div className="row mt-3">
+                <div className="col-md-12">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    placeholder="Mật khẩu"
+                    name="txtPassword"
+                    value={txtPassword.value}
+                    onChange={this.handleInput}
+                    onBlur={this.handleInputValidation}
+                  />
+                  <FormError
+                    type="txtPassword"
+                    isHidden={this.state.txtPassword.isInputValid}
+                    errorMessage={this.state.txtPassword.errorMessage}
+                  />
+                </div>
               </div>
-            </div>
+            </form>
             <div className="row mt-3">
               <div className="col-md-12">
                 <a href="#" style={text}>
@@ -99,11 +186,75 @@ class Login extends React.Component {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleHide} style={Buttonn}>Đăng Nhập</Button>
+            <Button type="submit" form="nameform" style={Buttonn}>
+              Đăng Nhập
+            </Button>
           </Modal.Footer>
         </Modal>
       </ButtonToolbar>
     );
   }
 }
-export default Login;
+
+const validateInput = (type, checkingText) => {
+  if (type === "txtEmail") {
+    const regexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    const checkingResult = regexp.exec(checkingText);
+    if (checkingResult !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Email không hợp lệ."
+      };
+    }
+  }
+  if (type === "txtPassword") {
+    const regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const checkingResult = regexp.exec(checkingText);
+    if (checkingResult !== null) {
+      return { isInputValid: true, errorMessage: "" };
+    } else {
+      return {
+        isInputValid: false,
+        errorMessage: "Mật khẩu từ 8 kí tự bao gồm chữ và số"
+      };
+    }
+  }
+};
+function FormError(props) {
+  /* nếu isHidden = true, return null ngay từ đầu */
+  let color = {
+    color: "red"
+  };
+
+  if (props.isHidden) {
+    return null;
+  }
+
+  return (
+    <div className="m-1" style={color}>
+      {props.errorMessage}
+    </div>
+  );
+}
+
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    users: state.reducerUsers.users
+  };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onFetchDataUser: () => {
+      dispatch(actFetchDataUsersRequest());
+    },
+    
+  //   onFetchDataAdmin: () => {
+  //     dispatch(actFetchDataAdminRequest());
+  //   }
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
