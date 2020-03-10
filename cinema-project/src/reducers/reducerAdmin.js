@@ -1,23 +1,20 @@
 import * as Types from "../constants/ActionTypes";
 
 const stateDefault = {
-  movie: []
+  admin: []
 };
 
-function reducerMovie(state = stateDefault, action) {
+function reducerAdmin(state = stateDefault, action) {
   let newState = {...state}
   switch (action.type) {
-    case Types.FETCH_DATA_MOVIE: {
-      newState.movie = action.movie;
+    case Types.FETCH_DATA_ADMIN: {
+      newState.admin = action.admin;
       return newState;
     }
-    // case Types.SEARCH_MOVIE: {
-
-    //
     default: {
       return state;
     }
   }
 }
 
-export default reducerMovie;
+export default reducerAdmin;

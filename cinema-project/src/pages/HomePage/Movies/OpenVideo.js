@@ -1,61 +1,49 @@
-import React, { Component } from "react";
-import Modal from "react-bootstrap/Modal";
-import { Button, ButtonToolbar } from "react-bootstrap";
-class OpenVideo extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+import React from 'react';
+import { Button,Modal, ButtonToolbar } from 'react-bootstrap';
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleHide = this.handleHide.bind(this);
 
-    this.state = {
-      show: false
-    };
-  }
-
-  handleShow() {
-    this.setState({ show: true });
-  }
-
-  handleHide() {
-    this.setState({ show: false });
-  }
-
-  render() {
-    return (
-      <ButtonToolbar>
-        <a
-          bsStyle="primary"
-          onClick={this.handleShow}
-          className="pl-2 text-secondary text-decoration-none"
-          href="#"
-        >
-          <i className="fa fa-play"></i>
-        </a>
-        <Modal
-          {...this.props}
-          show={this.state.show}
-          onHide={this.handleHide}
-          dialogClassName="custom-modal"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-lg">
-              ĐĂNG NHẬP
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="row">
-              <div className="col-md-12">
-                
-              </div>
-            </div>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.handleHide} >Đăng Nhập</Button>
-          </Modal.Footer>
-        </Modal>
-      </ButtonToolbar>
-    );
-  }
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
 }
+
+function OpenVideo() {
+  const [modalShow, setModalShow] = React.useState(false);
+
+  return (
+    <ButtonToolbar>
+      <a href="#" variant="primary" onClick={() => setModalShow(true)}>
+          <i className="fa fa-play"></i> 
+      </a>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </ButtonToolbar>
+  );
+}
+
 export default OpenVideo;

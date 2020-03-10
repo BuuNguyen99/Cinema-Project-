@@ -241,17 +241,39 @@
       "vote": ""
     }
   ],
-  "user": [
+  "users": [
     {
-      "name": "qqq",
-      "email": "11@gmail.com",
-      "phone": "1111111111",
+      "name": "nguyễn Bữu",
+      "email": "nguyenbuubkdn@gmail.com",
+      "phone": "0357175762",
       "gender": "Nam",
       "birth": "",
-      "pass": "11111111q",
+      "pass": "nguyenbuu99",
+      "image": "",
+      "address": "856/34 Tôn Đức Thắng",
+      "id": 1
+    },
+    {
+      "name": "a",
+      "email": "nguyenbuubkdn@gmail.com",
+      "phone": "12121212121",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "12121212q",
       "image": "",
       "address": "1",
-      "id": 1
+      "id": 2
+    },
+    {
+      "name": "a",
+      "email": "12@gmail.com",
+      "phone": "1212121212",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "12121212q",
+      "image": "",
+      "address": "1",
+      "id": 3
     }
   ],
   "admin": [
