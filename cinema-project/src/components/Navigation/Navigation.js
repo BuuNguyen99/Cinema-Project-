@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./StyleNavigation.css";
+import { Link } from 'react-router-dom'
 
 class Navigation extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Navigation extends Component {
   handleClickMenu = (menu) => {
     this.setState(prevState => ({
         menuExpand: menu,
-        isExpand: prevState.menuExpand !== menu ? true : false
+        isExpand: prevState.menuExpand == '' || prevState.menuExpand == menu ? !prevState.isExpand : true
     }));
   };
 
@@ -34,108 +35,108 @@ class Navigation extends Component {
               id="navbarResponsive">
               <ul className=" navbar-c navbar-nav">
                 <li className="nav-item-c nav-item">
-                  <a
+                  <Link to='/buy-ticket'
                     className="nav-link-c text-uppercase nav-link"
                     href="about.html">
                     Mua vé
-                  </a>
+                  </Link>
                 </li>
                 
                 <li onClick={() => this.handleClickMenu('menu1')} className={`nav-item-c nav-item dropdown ${styleMenu1}`}>
-                  <a
+                  <Link
                     className="nav-link-c text-uppercase nav-link dropdown-toggle"
                     id="navbarDropdownPortfolio"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded={isExpand1}>
                     Phim
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-c dropdown-menu dropdown-menu-right ${styleMenu1}`}
                     aria-labelledby="navbarDropdownPortfolio">
-                    <a
+                    <Link to='/now-showing'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-1-col.html">
                       Phim đang chiếu
-                    </a>
-                    <a
+                    </Link>
+                    <Link to='/coming-soon'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-2-col.html">
                       Phim sắp chiếu
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 
                 <li onClick={()=> this.handleClickMenu('menu2')} className={`nav-item-c nav-item dropdown ${styleMenu2}`}>
-                  <a
+                  <Link
                     className="nav-link-c text-uppercase nav-link dropdown-toggle"
                     id="navbarDropdownPortfolio"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded={isExpand2}>
                     Góc điện ảnh
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-c dropdown-menu dropdown-menu-right ${styleMenu2}`}
                     aria-labelledby="navbarDropdownPortfolio">
-                    <a
+                    <Link to='/movie-genre'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-1-col.html">
                       thể loại phim
-                    </a>
-                    <a
+                    </Link>
+                    <Link to='/cast'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-2-col.html">
                       diễn viên
-                    </a>
-                    <a
+                    </Link>
+                    <Link to='/directors'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-2-col.html">
                       đạo diễn
-                    </a>
-                    <a
+                    </Link>
+                    <Link to='/review-film'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-2-col.html">
                       bình luận phim
-                    </a>
-                    <a
+                    </Link>
+                    <Link to='/blog-film'
                       className="nav-link-sub text-uppercase dropdown-item"
                       href="portfolio-2-col.html">
                       blog điện ảnh
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 
                 <li className="nav-item-c nav-item">
-                  <a
+                  <Link to='/event'
                     className="nav-link-c text-uppercase nav-link"
                     href="services.html">
                     sự kiện
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item-c nav-item">
-                  <a
+                  <Link to="/theater-ticketprice"
                     className="nav-link-c text-uppercase nav-link"
                     href="contact.html">
                     Rạp/giá vé
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item-c nav-item">
-                  <a
+                  <Link to='/support'
                     className="nav-link-c text-uppercase nav-link"
                     href="contact.html">
                     Hỗ trợ
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item-c nav-item">
-                  <a
+                  <Link to='/account'
                     className="nav-link-c text-uppercase nav-link"
                     href="contact.html">
                     Thành viên
-                  </a>
+                  </Link>
                 </li>
               </ul>
           </div>
