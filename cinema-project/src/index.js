@@ -8,7 +8,6 @@ import reducer from "./reducers/reducer";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import thunk from 'redux-thunk';
-import {applyMiddleware} from 'redux'
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
