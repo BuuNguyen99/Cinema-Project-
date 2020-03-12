@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
-import callApi from "../../utils/ApiCaller";
+import { actRegisterUserRequest, actFetchDataUsersRequest } from "./../../actions/action";
+import { connect } from "react-redux";
 
 class Register extends React.Component {
   constructor(props, context) {
@@ -12,7 +13,6 @@ class Register extends React.Component {
 
     this.state = {
       show: false,
-      id: "",
       txtName: {
         value: "",
         isInputValid: true,
@@ -43,7 +43,7 @@ class Register extends React.Component {
         value: "",
         isInputValid: true,
         errorMessage: ""
-      },
+      }
     };
   }
 
@@ -66,40 +66,39 @@ class Register extends React.Component {
     newState.errorMessage = errorMessage;
     this.setState({ [name]: newState });
   };
-  handlerChange = e => {
-    const value = e.target.value;
-    this.setState({
-      [e.target.name]: value
-    });
-  };
+
+  componentDidMount() {
+    this.props.onFetchDataUser();
+  }
 
   onSave = e => {
     e.preventDefault();
     let {
       txtName,
       txtPhone,
+      txtGender,
       txtPassword,
       txtRePassword,
       txtEmail,
       txtAddress
     } = this.state;
+
+    let { users } = this.props;
     if (
-      (txtName.value !== '' && txtName.isInputValid === true) &&
-      (txtPhone.value !== '' && txtPhone.isInputValid === true) &&
-      (txtPassword.value !== '' && txtPassword.isInputValid === true) &&
-      (txtRePassword.value !== '' && txtRePassword.isInputValid == true) &&
-      (txtEmail.value !== '' && txtEmail.isInputValid === true) &&
-      (txtAddress.value !== '' && txtAddress.isInputValid === true) 
+      txtName.value !== "" &&
+      txtName.isInputValid === true &&
+      txtPhone.value !== "" &&
+      txtPhone.isInputValid === true &&
+      txtPassword.value !== "" &&
+      txtPassword.isInputValid === true &&
+      txtRePassword.value !== "" &&
+      txtRePassword.isInputValid == true &&
+      txtEmail.value !== "" &&
+      txtEmail.isInputValid === true &&
+      txtAddress.value !== "" &&
+      txtAddress.isInputValid === true
     ) {
-      let {
-        txtName,
-        txtPhone,
-        txtGender,
-        txtPassword,
-        txtEmail,
-        txtAddress
-      } = this.state;
-      callApi("user", "POST", {
+      let user = {
         name: txtName.value,
         email: txtEmail.value,
         phone: txtPhone.value,
@@ -108,16 +107,27 @@ class Register extends React.Component {
         pass: txtPassword.value,
         image: "",
         address: txtAddress.value
-      }).then(res => {
-        console.log(res);
-      });
-      alert("Đăng Ký thành công");
-      this.setState ({
-        show: false
-      })
-  } else {
-    alert ("Vui Lòng điền đầy đủ thông tin và đúng định dạng");
-  }
+      };
+
+      let lengthUsers = users.length;
+      if (lengthUsers > 0) {
+        for (let i = 0; i < lengthUsers; i++) {
+          if (txtEmail.value === users[i].email) {
+            alert("Tài khoản đã tồn tại");
+            return null;
+          }
+        }
+        this.props.onRegisterUser(user);
+        alert("đăng kí thành công vui lòng đăng nhâp");
+        this.setState({ show: false });
+      } else {
+        this.props.onRegisterUser(user);
+        alert("đăng kí thành công vui lòng đăng nhâp");
+        this.setState({ show: false });
+      }
+    } else {
+      alert("Vui Lòng điền đầy đủ thông tin và đúng định dạng");
+    }
   };
 
   handleShow() {
@@ -209,7 +219,6 @@ class Register extends React.Component {
                     value={txtPhone.value}
                     onChange={this.handleInput}
                     onBlur={this.handleInputValidation}
-                    
                   />
                   <FormError
                     type="txtPhone"
@@ -243,7 +252,6 @@ class Register extends React.Component {
                     value={txtEmail.value}
                     onChange={this.handleInput}
                     onBlur={this.handleInputValidation}
-                    
                   />
                   <FormError
                     type="txtEmail"
@@ -263,7 +271,6 @@ class Register extends React.Component {
                     value={txtPassword.value}
                     onChange={this.handleInput}
                     onBlur={this.handleInputValidation}
-                    
                   />
                   <FormError
                     type="txtPassword"
@@ -300,7 +307,6 @@ class Register extends React.Component {
                     value={txtAddress.value}
                     onChange={this.handleInput}
                     onBlur={this.handleInputValidation}
-                    
                   />
                   <FormError
                     type="txtAddress"
@@ -419,4 +425,23 @@ function FormError(props) {
   );
 }
 
-export default Register;
+const mapStateToProps = state => {
+  console.log(state.reducerUsers);
+
+  return {
+    users: state.reducerUsers.users
+  };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onFetchDataUser: () => {
+      dispatch(actFetchDataUsersRequest());
+    },
+    onRegisterUser: register => {
+      dispatch(actRegisterUserRequest(register));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
