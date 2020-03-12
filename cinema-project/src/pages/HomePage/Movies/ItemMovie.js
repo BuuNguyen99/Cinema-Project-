@@ -19,9 +19,7 @@ class ItemMovie extends React.Component {
                 </a>
               </li>
               <li>
-                <a href="#">
-                <i className="fa fa-play"></i>
-                </a>
+                <OpenVideo/>
               </li>
             </ul>
           </div>

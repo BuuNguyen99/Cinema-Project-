@@ -3,7 +3,6 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import routes from "./routes";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import OpenVideo from "./pages/HomePage/Movies/OpenVideo";
 
 class App extends React.Component {
   render() {

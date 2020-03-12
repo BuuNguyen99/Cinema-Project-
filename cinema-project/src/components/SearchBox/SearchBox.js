@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import getSearchMovie from '../../utils/ApiCall';
-import { actSearchMovieRequest } from '../../actions/action'
+// import { actSearchMovieRequest } from '../../actions/action'
 import {Redirect, Route} from 'react-router-dom'
 
 class SearchBox extends Component {
@@ -39,12 +39,12 @@ class SearchBox extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        searchMovie: (keyword) => {
-            dispatch(actSearchMovieRequest(keyword))
-        }
-    }
-}
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         searchMovie: (keyword) => {
+//             dispatch(actSearchMovieRequest(keyword))
+//         }
+//     }
+// }
 
-export default connect(null, mapDispatchToProps)(SearchBox);
+export default SearchBox;
