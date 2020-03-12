@@ -1,6 +1,6 @@
 import * as Types from './../constants/ActionTypes';
 import callApi from '../utils/ApiCaller'
-// import ApiCall  from '../utils/ApiCall';
+import * as ApiCall  from '../utils/ApiCall';
 import { object } from 'prop-types';
 
 // Get data movie
@@ -16,6 +16,23 @@ export const actFetchDataMovie = (movie) => {
     return {
         type: Types.FETCH_DATA_MOVIE,
         movie
+    }
+}
+// act search movie
+export const  actSearchMovieRequest = (keyword) => {
+    console.log('key:', keyword)
+    return (dispatch) => {
+        return ApiCall.getSearchMovie({q: keyword}).then(res => {
+            console.log('res:', res.data)
+            dispatch(actFetchDataMovie(res.data))
+        })
+    }
+}
+
+export const  actSearchMovie = (data) => {
+    return {
+        type: Types.SEARCH_MOVIE,
+        data
     }
 }
 
@@ -73,26 +90,4 @@ export const actRegisterUser = (user) => {
         user
     }
 
-}
-
-
-
-
-
-
-// export const  actSearchMovieRequest = (keyword) => {
-//     console.log('key:', keyword)
-//     return (dispatch) => {
-//         return ApiCall.getSearchMovie({q: keyword}).then(res => {
-//             console.log('res:', res.data)
-//             dispatch(actFetchDataMovie(res.data))
-//         })
-//     }
-// }
-
-export const  actSearchMovie = (data) => {
-    return {
-        type: Types.SEARCH_MOVIE,
-        data
-    }
 }

@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import './styleHeader.css';
-import Login from './Login';
-import Register from './Register';
+import { connect } from "react-redux";
+import { actSearchMovieRequest } from '../../actions/action';
 import Navigation from '../Navigation/Navigation';
 import SearchBox from '../SearchBox/SearchBox';
+import Login from './Login';
+import Register from './Register';
+import './styleHeader.css';
+import {  Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
+import { compose } from 'redux'
 
 class Header extends Component {
   constructor() {
     super();
     this.state = {
       openMenu: false,
-      openSearch: false
+      openSearch: false,
     };
+    
   }
 
   handleToggleMenu() {
@@ -35,7 +41,14 @@ class Header extends Component {
       });
     }
   }
-
+  handleOnEnter = (e, keyword) => {
+    console.log('keycode:', e.keyCode)
+        console.log('key:', keyword)
+        if(e.keyCode === 13) {
+            this.props.searchMovie(keyword);
+            this.props.history.push('./search')
+        }
+  }
   render() {
     let showMenu = this.state.openMenu ? 'showMenu' : 'hideMenu';
     let showSearch = this.state.openSearch ? 'showSearch' : 'hideSearch';
@@ -46,12 +59,12 @@ class Header extends Component {
           <div className="container">
             <div className="wrap-header row d-flex align-items-center py-3">
               <div className="col-4">
-                <a href="#">
+                <Link to='/'>
                   <img
                     className="imageLogo"
                     src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
                     alt="logo"></img>
-                </a>
+                </Link>
               </div>
               <div className="col-8 text-right text-secondary">
                 <Login /> <span>/</span> <Register />
@@ -65,26 +78,26 @@ class Header extends Component {
           <span
             className="skip-links-item"
             onClick={this.handleToggleMenu.bind(this)}>
-            <a className="linkItem">
+            <Link className="linkItem">
               <span className="icon">
                 <span>
                   <i className="fas fa-bars"></i>
                 </span>
               </span>
               <span className="label">Menu</span>
-            </a>
+            </Link>
           </span>
           <span
             className="skip-links-item"
             onClick={this.handleToggleSearch.bind(this)}>
-            <a href="#" className=" linkItem skip-link skip-search">
+            <Link className=" linkItem skip-link skip-search">
               <span className="icon">
                 <span>
                   <i className="fas fa-search"></i>
                 </span>
               </span>
               <span className="label">Tìm kiếm</span>
-            </a>
+            </Link>
           </span>
         </div>
 
@@ -92,10 +105,23 @@ class Header extends Component {
         <Navigation style={showMenu} />
 
         {/* Search */}
-        <SearchBox styleSearch={`${showSearch}`}/>
+        <SearchBox handleOnEnter={this.handleOnEnter} styleSearch={`${showSearch}`}/>
       </div>
     );
   }
 }
 
-export default Header;
+const mapDispatchToProps = (dispatch) => {
+  return {
+      searchMovie: (keyword) => {
+          dispatch(actSearchMovieRequest(keyword))
+      }
+  }
+}
+
+const withConnect = connect(
+  null,
+  mapDispatchToProps,
+);
+
+export default compose(withRouter, withConnect)(Header);

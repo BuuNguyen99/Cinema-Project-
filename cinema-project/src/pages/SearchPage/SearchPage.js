@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 class SearchPage extends Component {
   render() {
     const {listSearch} = this.props; 
+    console.log('listSearch', listSearch)
     
     const notify = listSearch.length > 0 ? `${listSearch.length} kết quả được tìm thấy!` : 'Không tìm thấy kết quả nào!'
     return (
@@ -21,7 +22,7 @@ class SearchPage extends Component {
     if(listSearch.length > 0) {
         const list = listSearch.map((item, index) => {
             return (
-                <div key={index} className="col-4 p-2">
+                <div key={index} className="col-md-4 p-2">
                     <div className="card">
                     <img
                         className="card-img-top"
@@ -49,7 +50,7 @@ class SearchPage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    listSearch: state.reducerMovie
+    listSearch: state.reducerMovie.movie
   }
 }
 
