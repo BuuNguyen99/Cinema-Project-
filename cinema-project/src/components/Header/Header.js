@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
-import './styleHeader.css';
-import Login from './Login';
-import Register from './Register';
-import Navigation from '../Navigation/Navigation';
-import SearchBox from '../SearchBox/SearchBox';
+import React, { Component } from "react";
+import "./styleHeader.css";
+import Login from "./Login";
+import Register from "./Register";
+import Navigation from "../Navigation/Navigation";
+import SearchBox from "../SearchBox/SearchBox";
+import { connect } from "react-redux";
+import {
+  actFetchDataAccountRequest,
+  actDeleteAccountRequest
+} from "./../../actions/action";
 
 class Header extends Component {
   constructor() {
@@ -12,6 +17,10 @@ class Header extends Component {
       openMenu: false,
       openSearch: false
     };
+  }
+
+  componentDidMount() {
+    this.props.onFetchDataAccountRequest();
   }
 
   handleToggleMenu() {
@@ -36,9 +45,13 @@ class Header extends Component {
     }
   }
 
+  onDelete = () => {
+    this.props.onDeleteAccount();
+  }
+
   render() {
-    let showMenu = this.state.openMenu ? 'showMenu' : 'hideMenu';
-    let showSearch = this.state.openSearch ? 'showSearch' : 'hideSearch';
+    let showMenu = this.state.openMenu ? "showMenu" : "hideMenu";
+    let showSearch = this.state.openSearch ? "showSearch" : "hideSearch";
     return (
       <div className="wrapper-header">
         {/* Header banner */}
@@ -46,15 +59,16 @@ class Header extends Component {
           <div className="container">
             <div className="wrap-header row d-flex align-items-center py-3">
               <div className="col-4">
-                <a href="#">
+                <a href="#" onClick={this.onDelete}>
                   <img
                     className="imageLogo"
                     src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
-                    alt="logo"></img>
+                    alt="logo"
+                  ></img>
                 </a>
               </div>
               <div className="col-8 text-right text-secondary">
-                <Login /> <span>/</span> <Register />
+                 <ShowFunction account = {this.props} onDelete = {this.onDelete()}/>
               </div>
             </div>
           </div>
@@ -64,7 +78,8 @@ class Header extends Component {
         <div className={`skip-links`}>
           <span
             className="skip-links-item"
-            onClick={this.handleToggleMenu.bind(this)}>
+            onClick={this.handleToggleMenu.bind(this)}
+          >
             <a className="linkItem">
               <span className="icon">
                 <span>
@@ -76,7 +91,8 @@ class Header extends Component {
           </span>
           <span
             className="skip-links-item"
-            onClick={this.handleToggleSearch.bind(this)}>
+            onClick={this.handleToggleSearch.bind(this)}
+          >
             <a href="#" className=" linkItem skip-link skip-search">
               <span className="icon">
                 <span>
@@ -92,10 +108,52 @@ class Header extends Component {
         <Navigation style={showMenu} />
 
         {/* Search */}
-        <SearchBox styleSearch={`${showSearch}`}/>
+        <SearchBox styleSearch={`${showSearch}`} />
       </div>
     );
   }
 }
 
-export default Header;
+
+function ShowFunction(props ,onDelete) {
+    console.log(props);
+    
+    
+  let account = props.account.account;
+  if (account.length === 0) {
+    return (
+      <div>
+        <Login/> <span>/</span> <Register/>
+      </div>
+    );
+  }
+    else if ( account.length === 1) {
+      return (
+        <div>
+          <span>{account[0].name} | </span> <a href="#" > Thoát </a>
+        </div>
+      );
+    }
+  
+}
+
+
+
+
+const mapStateToProps = state => {
+  return {
+    account: state.reducerUsers.account
+  };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onFetchDataAccountRequest: () => {
+      dispatch(actFetchDataAccountRequest());
+    },
+    onDeleteAccount: (id) => {
+      dispatch(actDeleteAccountRequest(id))
+    }
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

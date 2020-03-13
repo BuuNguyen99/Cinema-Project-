@@ -23,7 +23,7 @@ class Register extends React.Component {
         isInputValid: true,
         errorMessage: ""
       },
-      txtGender: "Nam",
+      txtGender: "",
       txtEmail: {
         value: "",
         isInputValid: true,
@@ -46,11 +46,48 @@ class Register extends React.Component {
       }
     };
   }
-
+ 
+  clearInput = () =>{
+    this.setState ({
+      show: false,
+      txtName: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtPhone: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtGender: "Nam",
+      txtEmail: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtPassword: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtRePassword: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      },
+      txtAddress: {
+        value: "",
+        isInputValid: true,
+        errorMessage: ""
+      }
+    })
+  }
   handleInput = event => {
     const { name, value } = event.target;
     const newState = { ...this.state[name] }; /* dummy object */
     newState.value = value;
+    
     this.setState({ [name]: newState });
   };
 
@@ -99,6 +136,7 @@ class Register extends React.Component {
       txtAddress.isInputValid === true
     ) {
       let user = {
+        id: `user000${users.length - 1}`,
         name: txtName.value,
         email: txtEmail.value,
         phone: txtPhone.value,
@@ -106,7 +144,7 @@ class Register extends React.Component {
         birth: "",
         pass: txtPassword.value,
         image: "",
-        address: txtAddress.value
+        address: txtAddress.value,
       };
 
       let lengthUsers = users.length;
@@ -120,6 +158,7 @@ class Register extends React.Component {
         this.props.onRegisterUser(user);
         alert("đăng kí thành công vui lòng đăng nhâp");
         this.setState({ show: false });
+         this.clearInput();
       } else {
         this.props.onRegisterUser(user);
         alert("đăng kí thành công vui lòng đăng nhâp");
@@ -234,7 +273,7 @@ class Register extends React.Component {
                       value={txtGender.value}
                       onChange={this.handleInput}
                     >
-                      <optgroup label="Giới Tính">Giới Tính</optgroup>
+                      <option value="" disabled selected>Select Gender</option>
                       <option value="Nam">Nam </option>
                       <option value="Nữ">Nữ </option>
                     </select>
@@ -426,8 +465,6 @@ function FormError(props) {
 }
 
 const mapStateToProps = state => {
-  console.log(state.reducerUsers);
-
   return {
     users: state.reducerUsers.users
   };

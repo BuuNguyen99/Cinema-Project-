@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
-import { actFetchDataUsersRequest, actFetchDataAdminRequest } from "./../../actions/action";
+import {
+  actFetchDataUsersRequest,
+  actLoginAccountRequest
+} from "./../../actions/action";
 import { connect } from "react-redux";
 
 class Login extends React.Component {
@@ -25,9 +28,9 @@ class Login extends React.Component {
       }
     };
   }
+
   componentDidMount() {
     this.props.onFetchDataUser();
-    // this.props.onFetchDataAdmin();
   }
 
   handleShow() {
@@ -56,33 +59,48 @@ class Login extends React.Component {
     newState.errorMessage = errorMessage;
     this.setState({ [name]: newState });
   };
+
   onSave = e => {
-    e.preventDefault();
     let { txtPassword, txtEmail } = this.state;
     let { users } = this.props;
     if (
       txtPassword.value !== "" &&
       txtPassword.isInputValid === true &&
-      txtEmail.value !== "" && txtEmail.isInputValid === true
+      txtEmail.value !== "" &&
+      txtEmail.isInputValid === true
     ) {
-      if( users.length > 0 ) {
-        for( let i = 0 ; i < users.length ; i ++ ) {
-          if((txtEmail.value === users[i].email) && (txtPassword.value === users[i].pass)) {
-            alert ("Đăng nhập thành công");
+      if (users.length > 0) {
+        for (let i = 0; i < users.length; i++) {
+          if (
+            txtEmail.value === users[i].email &&
+            txtPassword.value === users[i].pass
+          ) {
+            alert("Đăng nhập thành công");
+            let account = {
+              id: users[i].id,
+              name: users[i].name,
+              email: users[i].email,
+              phone: users[i].phone,
+              gender:users[i].gender,
+              birth: users[i].birth,
+              pass: users[i].pass,
+              image: users[i].image,
+              address: users[i].address
+            };
+            this.props.onLoginAccount(account);
             this.setState({ show: false });
             return null;
-            
           }
         }
-        alert( "Tài khoản hoặc mất khẩu không đúng");
-      }
-      else {
-            alert("đVui lòng đăng ký");
+        alert("Tài khoản hoặc mất khẩu không đúng");
+        e.preventDefault();
+      } else {
+        alert("Vui lòng đăng ký");
+        e.preventDefault();
       }
     } else {
-      console.log(users.length);
-
       alert("Vui Lòng điền đầy đủ thông tin đăng nhập");
+      e.preventDefault();
     }
   };
 
@@ -240,9 +258,9 @@ function FormError(props) {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
   return {
-    users: state.reducerUsers.users
+    users: state.reducerUsers.users,
+    account: state.reducerUsers.account
   };
 };
 
@@ -251,10 +269,9 @@ const mapDispatchToProps = (dispatch, props) => {
     onFetchDataUser: () => {
       dispatch(actFetchDataUsersRequest());
     },
-    
-  //   onFetchDataAdmin: () => {
-  //     dispatch(actFetchDataAdminRequest());
-  //   }
+    onLoginAccount: account => {
+      dispatch(actLoginAccountRequest(account));
+    }
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
