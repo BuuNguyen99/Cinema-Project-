@@ -104,7 +104,7 @@ return {
 
 export const actDeleteAccountRequest = (id) => {
         return dispatch => {
-            return callApi("account"),'DELETE', null).then(res => {
+            return callApi("account",'DELETE', null).then(res => {
                 dispatch(actDeleteAccount(id))
             });
         }
