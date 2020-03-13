@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
-import { actFetchDataUsersRequest, actFetchDataAdminRequest } from "./../../actions/action";
+import {
+  actFetchDataUsersRequest,
+  actLoginAccountRequest,
+  actFetchDataAdminRequest
+} from "./../../actions/action";
 import { connect } from "react-redux";
 
 class Login extends React.Component {
@@ -22,12 +26,15 @@ class Login extends React.Component {
         value: "",
         isInputValid: true,
         errorMessage: ""
-      }
+      },
+      checkingU: false,
+      checkingA: false
     };
   }
+
   componentDidMount() {
     this.props.onFetchDataUser();
-    // this.props.onFetchDataAdmin();
+    this.props.onFetchDataAdmin();
   }
 
   handleShow() {
@@ -56,33 +63,71 @@ class Login extends React.Component {
     newState.errorMessage = errorMessage;
     this.setState({ [name]: newState });
   };
+
   onSave = e => {
-    e.preventDefault();
     let { txtPassword, txtEmail } = this.state;
     let { users } = this.props;
+    let { admin } = this.props;
+    console.log(admin);
+
     if (
       txtPassword.value !== "" &&
       txtPassword.isInputValid === true &&
-      txtEmail.value !== "" && txtEmail.isInputValid === true
+      txtEmail.value !== "" &&
+      txtEmail.isInputValid === true
     ) {
-      if( users.length > 0 ) {
-        for( let i = 0 ; i < users.length ; i ++ ) {
-          if((txtEmail.value === users[i].email) && (txtPassword.value === users[i].pass)) {
-            alert ("Đăng nhập thành công");
+      const { checkingU } = checkingUser(txtEmail.value);
+      if (checkingU === true) {
+        for (let i = 0; i < users.length; i++) {
+          if (
+            txtEmail.value === users[i].email &&
+            txtPassword.value === users[i].pass
+          ) {
+            alert("Đăng nhập thành công");
+            let accountUser = {
+              id: users[i].id,
+              name: users[i].name,
+              email: users[i].email,
+              phone: users[i].phone,
+              gender: users[i].gender,
+              birth: users[i].birth,
+              pass: users[i].pass,
+              image: users[i].image,
+              address: users[i].address
+            };
+            this.props.onLoginAccount(accountUser);
             this.setState({ show: false });
             return null;
-            
           }
         }
-        alert( "Tài khoản hoặc mất khẩu không đúng");
-      }
-      else {
-            alert("đVui lòng đăng ký");
+      } else {
+        const { checkingA } = checkingAdmin(txtEmail.value);
+        if (checkingA === true) {
+          for (let j = 0; j < admin.length; j++) {
+            if (
+              txtEmail.value === admin[j].email &&
+              txtPassword.value === admin[j].pass
+            ) {
+              alert("Đăng nhập thành công");
+              let accountAdmin = {
+                id: admin[j].id,
+                name: admin[j].name,
+                email: admin[j].email,
+                pass: admin[j].pass,
+                image: admin[j].image
+              };
+              this.props.onLoginAccount(accountAdmin);
+              this.setState({ show: false });
+              return null;
+            }
+          }
+          alert("Tài khoản hoặc mật khẩu không đúng");
+          e.preventDefault();
+        }
       }
     } else {
-      console.log(users.length);
-
       alert("Vui Lòng điền đầy đủ thông tin đăng nhập");
+      e.preventDefault();
     }
   };
 
@@ -198,14 +243,12 @@ class Login extends React.Component {
 
 const validateInput = (type, checkingText) => {
   if (type === "txtEmail") {
-    const regexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    const checkingResult = regexp.exec(checkingText);
-    if (checkingResult !== null) {
+    if (checkingText !== "") {
       return { isInputValid: true, errorMessage: "" };
     } else {
       return {
         isInputValid: false,
-        errorMessage: "Email không hợp lệ."
+        errorMessage: "Email không được để trống."
       };
     }
   }
@@ -239,10 +282,31 @@ function FormError(props) {
   );
 }
 
+const checkingUser = checkingText => {
+  const regexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+  const checkingResult = regexp.exec(checkingText);
+  if (checkingResult !== null) {
+    return { checkingU: true };
+  } else {
+    return { checkingU: false };
+  }
+};
+
+const checkingAdmin = checkingText => {
+  const regexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+$/;
+  const checkingResult = regexp.exec(checkingText);
+  if (checkingResult !== null) {
+    return { checkingA: true };
+  } else {
+    return { checkingA: false };
+  }
+};
+
 const mapStateToProps = state => {
-  console.log(state)
   return {
-    users: state.reducerUsers.users
+    users: state.reducerUsers.users,
+    account: state.reducerUsers.account,
+    admin: state.reducerAdmin.admin
   };
 };
 
@@ -251,10 +315,12 @@ const mapDispatchToProps = (dispatch, props) => {
     onFetchDataUser: () => {
       dispatch(actFetchDataUsersRequest());
     },
-    
-  //   onFetchDataAdmin: () => {
-  //     dispatch(actFetchDataAdminRequest());
-  //   }
+    onLoginAccount: account => {
+      dispatch(actLoginAccountRequest(account));
+    },
+    onFetchDataAdmin: () => {
+      dispatch(actFetchDataAdminRequest());
+    }
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
