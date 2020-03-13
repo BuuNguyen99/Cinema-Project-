@@ -251,7 +251,7 @@
       "pass": "nguyenbuu99",
       "image": "",
       "address": "856/34 Tôn Đức Thắng",
-      "id": 1
+      "id": "user0001"
     },
     {
       "name": "a",
@@ -262,45 +262,33 @@
       "pass": "12121212q",
       "image": "",
       "address": "1",
-      "id": 2
-    },
-    {
-      "name": "a",
-      "email": "12@gmail.com",
-      "phone": "1212121212",
-      "gender": "Nam",
-      "birth": "",
-      "pass": "12121212q",
-      "image": "",
-      "address": "1",
-      "id": 3
-    },
-    {
-      "name": "Nguyễn Huệ Linh",
-      "email": "nguyenhue@gmail.com",
-      "phone": "0981234567",
-      "gender": {
-        "0": "N",
-        "1": "a",
-        "2": "m",
-        "value": "Nữ"
-      },
-      "birth": "",
-      "pass": "12345abcde",
-      "image": "",
-      "address": "Da Nang",
-      "id": 4
+      "id": "user0002"
     }
   ],
   "admin": [
     {
-      "id": 1,
-      "name": "admin",
+      "id": "admin0001",
+      "name": "admin1",
       "email": "admin@123",
-      "pass": "123",
+      "pass": "123456789q",
+      "image": ""
+    },
+    {
+      "id": "admin0002",
+      "name": "admin2",
+      "email": "admin@1234",
+      "pass": "123456789q",
+      "image": ""
+    },
+    {
+      "id": "admin0003",
+      "name": "admin3",
+      "email": "admin@12345",
+      "pass": "123456789q",
       "image": ""
     }
   ],
+  "account": [],
   "reviewMovie": [
     {
       "id": "",

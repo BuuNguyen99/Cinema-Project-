@@ -99,6 +99,7 @@ class Register extends React.Component {
       txtAddress.isInputValid === true
     ) {
       let user = {
+        id: `user000${users.length - 1}`,
         name: txtName.value,
         email: txtEmail.value,
         phone: txtPhone.value,
@@ -234,7 +235,7 @@ class Register extends React.Component {
                       value={txtGender.value}
                       onChange={this.handleInput}
                     >
-                      <optgroup label="Giới Tính">Giới Tính</optgroup>
+                      <option value="" disabled selected>Select Gender</option>
                       <option value="Nam">Nam </option>
                       <option value="Nữ">Nữ </option>
                     </select>
@@ -426,7 +427,6 @@ function FormError(props) {
 }
 
 const mapStateToProps = state => {
-  console.log(state.reducerUsers);
 
   return {
     users: state.reducerUsers.users
