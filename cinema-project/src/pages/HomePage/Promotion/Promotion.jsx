@@ -6,24 +6,65 @@ class Promotion extends Component {
         return (
             <div className="container">
                 <div className="row">
-                <h2>TIN KHUYẾN MÃI</h2>
-                </div>
-                <div className="row">
-                    <div className="col-3 imageItem">
-                        <img src="../image/300x450_1570766652733.jpg" alt="anh km1" />
-                    </div>
-                    <div className="col-3 imageItem">
-                        <img src="../image/300x450_1575874237175.jpg" alt="anh km2" />
-                    </div>
-                    <div className="col-3 imageItem">
-                        <img src="../image/300x450_1580440145245.jpg" alt="anh km3" />
-                    </div>
-                    <div className="col-3 imageItem">
-                        <img src="../image/300x450_1582773542863.jpg" alt="anh km4" />
+                    <div className=" mr-3 link-wrapper mt-4">
+                        <h4
+                            className="link hover-1"
+                            data-toggle="tab"
+                            aria-expanded="true"
+                        >
+                            TIN KHUYẾN MÃI
+                        </h4>
                     </div>
                 </div>
+                <div className="row mt-3">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                        <div className="imageItem">
+                            <img src="../image/300x450_1570766652733.jpg" alt="anh km1" />
+                            <div className="imgContent">
+                                <h3 class="title">Khuyến mãi lớn</h3>
+                                <button className="btnImg">Chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 ">
+                        <div className="imageItem">
+                            <img src="../image/300x450_1575874237175.jpg" alt="anh km2" />
+                            <div className="imgContent">
+                                <h3 class="title">Khuyến mãi lớn</h3>
+                                <button className="btnImg">Chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                        <div className="imageItem">
+                            <img src="../image/300x450_1580440145245.jpg" alt="anh km3" />
+                            <div className="imgContent">
+                                <h3 class="title">Khuyến mãi lớn</h3>
+                                <button className="btnImg">Chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                        <div className="imageItem">
+                            <img src="../image/300x450_1582773542863.jpg" alt="anh km4" />
+                            <div className="imgContent">
+                                <h3 class="title">Khuyến mãi lớn</h3>
+                                <button className="btnImg">Chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="row">
-                    <h2>GALAXY CINEMA</h2>
+                    <div className=" mr-3 link-wrapper">
+                        <h4
+                            className="link hover-1"
+                            data-toggle="tab"
+                            aria-expanded="true"
+                        >
+                            GALAXY CINEMA 
+                        </h4>
+                    </div>
                 </div>
                 <div className="row">
                     <p><b> Galaxy Cinema</b> là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003,
@@ -37,7 +78,7 @@ class Promotion extends Component {
                         <i>Quý khách có thể dùng tin nhắn lấy vé tại quầy vé của Galaxy Cinema hoặc quét mã QR để một bước
                         vào rạp mà không cần tốn thêm bất kỳ công đoạn nào nữa.
                         Nếu bạn đã chọn được phim hay để xem, hãy đặt vé cực nhanh bằng box Mua Vé Nhanh ngay từ Trang Chủ.</i>
-                 </p>
+                    </p>
                     <p>
                         Galaxy Cinema luôn có những chương trình khuyến mãi, ưu đãi, quà tặng vô cùng hấp dẫn như giảm giá vé,
                         tặng vé xem phim miễn phí, tặng Combo, tặng quà phim…  dành cho quý khách.
