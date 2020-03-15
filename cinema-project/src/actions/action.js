@@ -7,6 +7,7 @@ import { object } from 'prop-types';
 export const  actFetchDataMovieRequest = () => {
     return (dispatch) => {
         return callApi('movie','GET', null).then (res => {
+            console.log('res:', res)
             dispatch(actFetchDataMovie(res.data))
         });
     }

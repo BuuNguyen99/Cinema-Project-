@@ -1,66 +1,40 @@
 import React from "react";
-import ItemMovie from "./ItemMovie";
-import "./Movies.css";
-import callApi from "../../../utils/ApiCaller";
-import {actFetchDataMovieRequest} from './../../../actions/action'
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import TabControl from "../../../components/Tab/TabControl";
+import { actFetchDataMovieRequest } from './../../../actions/action';
+import "./Movies.css";
 
 class Movies extends React.Component {
+  constructor(props){
+    super(props)
+    this.href = '/now-showing'
+  }
   
   componentDidMount () {
    this.props.fetchAllDataMovie();
   }
 
   render() {
-    let linksStyle = {
-      color: "black",
-      textTransform: "uppercase"
-    };    
-    let { Movies } = this.props;
-    let dataMovies = Movies.map((movie,index) => {
-      return (
-        <ItemMovie
-          key={index}
-          movie={movie}
-        />
-      );
-    });
+    let { movies } = this.props;
+    let movieShowing = [], movieComingSoon = [];
+    if(Object.keys(movies).length > 0) {
+      movieShowing = movies.movieShowing.slice(0, 6);
+      movieComingSoon = movies.movieComingSoon.slice(0, 6)
+    }
     return (
-      <div className="container mb-5">
-        <div className="row nav-tabs">
-          <ul className="nav movie-home link-cout">
-            <li className=" mr-3 link-wrapper">
-              <a
-                className="link hover-2"
-                href="#tab_default_1"
-                data-toggle="tab"
-                aria-expanded="true"
-                style={linksStyle}
-              >
-                Phim đang chiếu
-              </a>
-            </li>
-            <li className=" mr-3 link-wrapper">
-              <a
-                className="link hover-2"
-                href="#tab_default_1"
-                data-toggle="tab"
-                aria-expanded="true"
-                style={linksStyle}
-              >
-                Phim sắp chiếu
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="row">
-          {dataMovies}
-        </div>
+      <div className="container p-0 mb-5">
+        <TabControl tab1='phim đang chiếu'
+                    tab2='phim sắp chiếu'
+                    data1={movieShowing}
+                    data2={movieComingSoon}
+                    tabDefault={0}
+                    path={'/'}/>
         <div className="row mt-3">
           <div className="col-md-12 col-sm-12 col-xs-12 pull-right">
-            <a href="/phim-dang-chieu" className="btn secondary btn-outline-orange">
-              Xem thêm
-            </a>
+                <Link to='/now-showing' className="btn secondary btn-outline-orange">
+                  Xem thêm
+                </Link>
           </div>
         </div>
       </div>
@@ -70,10 +44,10 @@ class Movies extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    Movies: state.reducerMovie.movie
+    movies: state.reducerMovie.movie
   }
 }
-const mapDispatchToProps = (dispatch,props) => {
+const mapDispatchToProps = (dispatch) => {
         return {
           fetchAllDataMovie: () => {
             dispatch(actFetchDataMovieRequest())

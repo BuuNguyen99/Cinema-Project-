@@ -80,12 +80,12 @@ const routes = [
     {
         path: '/coming-soon',
         exact: false,
-        main: () => <MoviePage/>
+        main: ({match}) => <MoviePage match={match}/>
     },
     {
         path: '/now-showing',
         exact: false,
-        main: () => <MoviePage/>
+        main: ({match}) => <MoviePage match={match}/>
     },
     {
         path: '/buy-ticket',

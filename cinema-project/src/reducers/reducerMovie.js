@@ -1,7 +1,7 @@
 import * as Types from "../constants/ActionTypes";
 
 const stateDefault = {
-  movie: []
+  movie: {}
 };
 
 function reducerMovie(state = stateDefault, action) {
@@ -11,9 +11,6 @@ function reducerMovie(state = stateDefault, action) {
       newState.movie = action.movie;
       return newState;
     }
-    // case Types.SEARCH_MOVIE: {
-
-    //
     default: {
       return state;
     }
