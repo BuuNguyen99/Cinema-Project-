@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 import ShowMovie from '../ShowMovie/ShowMovie';
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 const AntTabs = withStyles({
   root: {
@@ -20,11 +21,16 @@ const AntTabs = withStyles({
   },
 
 })(Tabs);
-
+const breakpoints = createBreakpoints({});
 const AntTab = withStyles(theme => ({
   root: {
     outline: 'none !important',
-    fontSize: '20px',
+    fontSize: '18px',
+    [breakpoints.down("xs")]: {
+      fontSize: '13px',
+      marginRight: '10px',
+      paddingBottom: '0'
+    },
     fontWeight: theme.typography.fontWeightNormal,
     marginRight: theme.spacing(4),
     fontFamily: [
@@ -44,8 +50,8 @@ const AntTab = withStyles(theme => ({
         backgroundColor: '#f26b38',
       }
     },
-  },
-  selected: {}
+  }
+  
 }))(props => <Tab disableRipple {...props} />);
 
 function TabPanel(props) {

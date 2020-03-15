@@ -83,7 +83,9 @@ export const actRegisterUserRequest = (user) => {
 export const  actFetchDataAccountRequest = () => {
     return (dispatch) => {
         return callApi('account','GET', null).then (res => {
-            dispatch(actFetchDataAccount(res.data))
+            if(res) {
+                dispatch(actFetchDataAccount(res.data))
+            }
         });
     }
 }

@@ -246,6 +246,47 @@
         "image": "https://galaxycine.vn/media/2020/2/20/450x300-cuoc-xe_1582172123848.jpg",
         "video": "",
         "vote": ""
+      },
+      {
+        "id": "Movie020",
+        "name": "Nắng 3: lời hứa của cha",
+        "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
+        "type": "Hài, Tình cảm , Gia đình",
+        "author": "Đồng Đăng Giao",
+        "actor": [
+          {
+            "id": "Actor001",
+            "name": "Khả Như"
+          },
+          {
+            "id": "Actor002",
+            "name": "Kiều Minh Tuấn"
+          }
+        ],
+        "time": "105 minute",
+        "nation": "Việt Name",
+        "premiereDate": "10/3/2020",
+        "date": [
+          {
+            "id": "Date",
+            "datemovie": "20/1/2019",
+            "frame time": [
+              {
+                "id": "11",
+                "Room": "1",
+                "time": "13:00",
+                "seats": [
+                  "",
+                  ""
+                ]
+              }
+            ]
+          }
+        ],
+        "price": "75000",
+        "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
+        "video": "",
+        "vote": ""
       }
     ],
     "movieComingSoon": [
@@ -282,7 +323,7 @@
           }
         ],
         "price": "75000",
-        "image": "https://galaxycine.vn/media/2020/2/13/ewewe_1581587057402.jpg",
+        "image": "https://i.picsum.photos/id/199/600/400.jpg",
         "video": "",
         "vote": ""
       },

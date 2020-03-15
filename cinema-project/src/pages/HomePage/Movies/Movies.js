@@ -23,18 +23,20 @@ class Movies extends React.Component {
       movieComingSoon = movies.movieComingSoon.slice(0, 6)
     }
     return (
-      <div className="container p-0 mb-5">
-        <TabControl tab1='phim đang chiếu'
-                    tab2='phim sắp chiếu'
-                    data1={movieShowing}
-                    data2={movieComingSoon}
-                    tabDefault={0}
-                    path={'/'}/>
-        <div className="row mt-3">
-          <div className="col-md-12 col-sm-12 col-xs-12 pull-right">
-                <Link to='/now-showing' className="btn secondary btn-outline-orange">
-                  Xem thêm
-                </Link>
+      <div className="container mb-5">
+        <div className="wrap">
+          <TabControl tab1='phim đang chiếu'
+                      tab2='phim sắp chiếu'
+                      data1={movieShowing}
+                      data2={movieComingSoon}
+                      tabDefault={0}
+                      path={'/'}/>
+          <div className="row mt-3">
+            <div className="col-md-12 col-sm-12 col-xs-12 pull-right">
+                  <Link to='/now-showing' className="btn secondary btn-outline-orange">
+                    Xem thêm
+                  </Link>
+            </div>
           </div>
         </div>
       </div>
