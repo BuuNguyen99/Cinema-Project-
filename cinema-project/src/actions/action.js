@@ -53,13 +53,6 @@ export const actFetchDataAdmin = (admin) => {
     }
 }
 
-export function actSaveAccount(account) {
-    return {
-      type: Types.SAVE_ACCOUNT,
-      account
-    };
-  }
-
 //get data users
 export const  actFetchDataUsersRequest = () => {
     return (dispatch) => {
@@ -76,6 +69,8 @@ export const actFetchDataUsers = (users) => {
     }
 }
 
+
+
 //Post register user
 export const actRegisterUserRequest = (user) => {
         return (dispatch) => {
@@ -85,10 +80,56 @@ export const actRegisterUserRequest = (user) => {
         }
 } 
 
+export const  actFetchDataAccountRequest = () => {
+    return (dispatch) => {
+        return callApi('account','GET', null).then (res => {
+            dispatch(actFetchDataAccount(res.data))
+        });
+    }
+}
+
+export const actFetchDataAccount = (account) => {
+    return {
+        type: Types.FETCH_DATA_ACCOUNT,
+        account
+    }
+}
+
 export const actRegisterUser = (user) => {
     return {
         type: Types.REGISTER_USER,
         user
     }
 
+}
+
+export const actLoginAccountRequest = (account) => {
+    return (dispatch) => {
+        return callApi('account', 'POST', account).then(res => {
+            dispatch(actLoginAccount(res.data))
+        });
+    }
+} 
+
+export const actLoginAccount = (account) => {
+return {
+    type: Types.SAVE_ACCOUNT,
+    account
+}
+
+}
+
+export const actDeleteAccountRequest = (id) => {
+    return dispatch => {
+        return callApi(`account/${id}`, 'DELETE', null).then(res => {
+            dispatch( actDeleteAccount(id))
+        })
+    }
+}
+
+export const actDeleteAccount = (id) => {
+    return {
+        type: Types.DELETE_ACCOUNT,
+        id
+    }
 }
