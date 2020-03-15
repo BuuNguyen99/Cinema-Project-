@@ -1,12 +1,12 @@
 import React from "react";
-import "./itemMovie.css";
+import "./MovieItem.css";
 import OpenVideo from "./OpenVideo";
-class ItemMovie extends React.Component {
+class MovieItem extends React.Component {
   render() {
     let { movie } = this.props;
     
     return (
-      <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 pl-0 pr-3 mt-3">
+      <div className="col-lg-4 col-md-6 col-sm-6 p-2 mt-2">
         <div className="box">
           <img src= {movie.image}/>
           <div className="box-content">
@@ -28,4 +28,4 @@ class ItemMovie extends React.Component {
     );
   }
 }
-export default ItemMovie;
+export default MovieItem;

@@ -63,3 +63,7 @@ a.link.hover-2 {
 .pull-right a:hover{
   background-color: #f26b38;
 }
+
+.wrap {
+  padding: 0 15px;
+}

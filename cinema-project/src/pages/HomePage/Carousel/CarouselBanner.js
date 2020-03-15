@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import './CarouselStyle.css'
 
 class CarouselBanner extends React.Component {
   render() {
@@ -7,7 +8,7 @@ class CarouselBanner extends React.Component {
       opacity: "1",
     }
     return (
-      <div className="mb-5" style= {Banner}>
+      <div className="carousel" style= {Banner}>
         <Carousel>
           <Carousel.Item>
             <img
