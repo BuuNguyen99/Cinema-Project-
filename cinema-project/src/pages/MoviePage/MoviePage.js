@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import {actFetchDataMovieRequest} from '../../actions/action'
 
 class MoviePage extends Component {
-  componentDidMount () {
-    
+  componentDidMount () {  
     this.props.fetchAllDataMovie();
    }
   render() {

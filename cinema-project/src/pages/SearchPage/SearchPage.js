@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 class SearchPage extends Component {
   render() {
     const {listSearch} = this.props; 
-    console.log('listSearch', listSearch)
     
     const notify = listSearch.length > 0 ? `${listSearch.length} kết quả được tìm thấy!` : 'Không tìm thấy kết quả nào!'
     return (

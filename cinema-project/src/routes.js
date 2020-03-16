@@ -13,6 +13,7 @@ import CastPage from './pages/CastPage/CastPage';
 import BuyTicketPage from './pages/BuyTicketPage/BuyTicketPage';
 import MoviePage from './pages/MoviePage/MoviePage';
 import MovieGenrePage from './pages/MovieGenrePage/MovieGenrePage';
+import BuyTicketDetailPage from './pages/BuyTicketDetailPage/BuyTicketDetailPage';
 
 const routes = [
     {
@@ -90,7 +91,12 @@ const routes = [
     {
         path: '/buy-ticket',
         exact: false,
-        main: () => <BuyTicketPage/>
+        main: ({history}) => <BuyTicketPage history={history}/>
+    },
+    {
+        path: '/buy-ticket-detail/:movie',
+        exact: false,
+        main: () => <BuyTicketDetailPage/>
     },
     {
         path: '',

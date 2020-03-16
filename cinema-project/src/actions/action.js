@@ -7,7 +7,6 @@ import { object } from 'prop-types';
 export const  actFetchDataMovieRequest = () => {
     return (dispatch) => {
         return callApi('movie','GET', null).then (res => {
-            console.log('res:', res)
             dispatch(actFetchDataMovie(res.data))
         });
     }
@@ -21,10 +20,8 @@ export const actFetchDataMovie = (movie) => {
 }
 // act search movie
 export const  actSearchMovieRequest = (keyword) => {
-    console.log('key:', keyword)
     return (dispatch) => {
         return ApiCall.getSearchMovie({q: keyword}).then(res => {
-            console.log('res:', res.data)
             dispatch(actFetchDataMovie(res.data))
         })
     }
@@ -133,5 +130,34 @@ export const actDeleteAccount = (id) => {
     return {
         type: Types.DELETE_ACCOUNT,
         id
+    }
+}
+
+// act fetch showtimes
+export const  actFetchShowtimesRequest = () => {
+    return (dispatch) => {
+        return ApiCall.getShowtimes().then(res => {
+            if(res.status === 200) {
+                dispatch(actFetchShowtimes(res.data))
+            } else alert('Không thể kết nối dữ liệu!')
+        })
+    }
+}
+
+export const  actFetchShowtimes = (data) => {
+    return {
+        type: Types.FETCH_SHOWTIMES,
+        data
+    }
+}
+
+// act receive moving choosing
+
+export const actReceiveMovieChoosing = (movie, date, time) => {
+    return {
+        type: Types.RECEIVE_MOVIE_CHOOSING,
+        movie,
+        date,
+        time
     }
 }

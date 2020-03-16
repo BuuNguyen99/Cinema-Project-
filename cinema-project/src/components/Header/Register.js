@@ -170,7 +170,6 @@ class Register extends React.Component {
     return (
       <ButtonToolbar style={toolbar}>
         <a
-          bsStyle="primary"
           onClick={this.handleShow}
           className="text-secondary text-decoration-none"
           href="#"
