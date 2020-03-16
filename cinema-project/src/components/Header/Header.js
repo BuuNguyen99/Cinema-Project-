@@ -56,8 +56,6 @@ class Header extends Component {
     }
   }
   handleOnEnter = (e, keyword) => {
-    console.log('keycode:', e.keyCode)
-        console.log('key:', keyword)
         if(e.keyCode === 13) {
             this.props.searchMovie(keyword);
             this.props.history.push('./search')
@@ -93,26 +91,26 @@ class Header extends Component {
           <span
             className="skip-links-item"
             onClick={this.handleToggleMenu.bind(this)}>
-            <Link className="linkItem">
+            <a className="linkItem">
               <span className="icon">
                 <span>
                   <i className="fas fa-bars"></i>
                 </span>
               </span>
               <span className="label">Menu</span>
-            </Link>
+            </a>
           </span>
           <span
             className="skip-links-item"
             onClick={this.handleToggleSearch.bind(this)}>
-            <Link className=" linkItem skip-link skip-search">
+            <a className=" linkItem skip-link skip-search">
               <span className="icon">
                 <span>
                   <i className="fas fa-search"></i>
                 </span>
               </span>
               <span className="label">Tìm kiếm</span>
-            </Link>
+            </a>
           </span>
         </div>
 
@@ -127,10 +125,7 @@ class Header extends Component {
 }
 
 function ShowFunction(props ) {
-  console.log(props);
     let { onDelete } = props;
-    //console.log(onDelete);
-    
     let { account } = props.account; 
 if (account.length === 0) {
   return (

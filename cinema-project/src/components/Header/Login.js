@@ -68,7 +68,6 @@ class Login extends React.Component {
     let { txtPassword, txtEmail } = this.state;
     let { users } = this.props;
     let { admin } = this.props;
-    console.log(admin);
 
     if (
       txtPassword.value !== "" &&
@@ -155,7 +154,6 @@ class Login extends React.Component {
     return (
       <ButtonToolbar style={toolbar}>
         <a
-          bsStyle="primary"
           onClick={this.handleShow}
           className="pl-2 text-secondary text-decoration-none"
           href="#"
