@@ -1,4 +1,4 @@
-const styles = () => ({
+const styles = (theme) => ({
     block: {
         border: '1px solid #dedede',
         borderTop: 'none',
@@ -13,19 +13,24 @@ const styles = () => ({
         cursor: 'pointer',
         "&:hover": {
             textDecoration: 'unset',
-            color: 'inherit',
             backgroundColor: '#f1f1f1'
         }
     },
     active: {
-        backgroundColor: '#f1f1f1 !important'
+        backgroundColor: '#f1f1f1 !important',
+        color: theme.color.orange
     },
     session: {
         border: '1px solid #dedede',
         textAlign: 'center',
         width: '85px',
         marginRight: '10px',
-        marginTop: '10px'
+        marginTop: '10px',
+        "&:hover": {
+            color: theme.color.orange,
+            borderColor: theme.color.orange,
+            cursor: 'pointer'
+        }
     }
 })
 

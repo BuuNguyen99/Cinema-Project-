@@ -150,3 +150,14 @@ export const  actFetchShowtimes = (data) => {
         data
     }
 }
+
+// act receive moving choosing
+
+export const actReceiveMovieChoosing = (movie, date, time) => {
+    return {
+        type: Types.RECEIVE_MOVIE_CHOOSING,
+        movie,
+        date,
+        time
+    }
+}

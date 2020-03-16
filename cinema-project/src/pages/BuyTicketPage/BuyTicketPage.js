@@ -6,7 +6,7 @@ import ColumnBlock from '../../components/ColumnBlock/ColumnBlock';
 import styles from './BuyTicketStyle';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import {actFetchDataMovieRequest, actFetchShowtimesRequest} from '../../actions/action'
+import {actFetchDataMovieRequest, actFetchShowtimesRequest, actReceiveMovieChoosing} from '../../actions/action'
 import { Box } from '@material-ui/core';
 
 class BuyTicketPage extends Component {
@@ -24,24 +24,24 @@ class BuyTicketPage extends Component {
     this.props.fetchShowTimes();
   }
 
-  handleOnChooseMovie = (id, showtimes) => {
+  handleOnChooseMovie = (mv, showtimes) => {
     let listTime = []
     showtimes.forEach(item => {
-      let movie = item.movieIds.find(movie => movie.id === id)
+      let movie = item.movieIds.find(movie => movie.id === mv.id)
       if (movie !== undefined) listTime.push({...item, session: movie.session})
     });
     this.setState({
       timeOfMovie: listTime,
       isShow: true,
-      active: id
+      active: mv
     })
   }
 
   showMovieToChoose = (arr, classes, showtimes) => {
     return arr.map((item, index) => {
-      let active = this.state.active === item.id ? classes.active : ''
+      let active = this.state.active.id === item.id ? classes.active : ''
       return (
-        <div key={index} className={`${classes.block}`} onClick={() => {this.handleOnChooseMovie(item.id, showtimes)}}>
+        <div key={index} className={`${classes.block}`} onClick={() => {this.handleOnChooseMovie(item, showtimes)}}>
           <div className={`${classes.link} ${active} row no-gutters p-3`}>
             <span className='col-3'><img className={classes.img} src={item.image}/></span>
             <p className={`${classes.title} col-9 pl-4`}>{item.name}</p>
@@ -51,14 +51,26 @@ class BuyTicketPage extends Component {
       })
   }
 
+  handleOnChooseSession = (item, session) => {
+    const movie = this.state.active
+    this.props.receiveMovieChoosing(movie, item, session)
+    const { history } = this.props
+    const slug = movie.slug
+    history.push(`/buy-ticket-detail/${slug}`)
+  }
+
   showTimeOfMovie = (arr, classes) => {
     return arr.map((item, index) => {
       return (
         <div key={index} className={`${classes.block} p-4`} >
             <div>{item.name}</div>
             <div className='d-flex flex-wrap'>
-              { item.session.map((item, index) => {
-                  return <Box key={index} py={1} px={2} className={classes.session}>{item}</Box>
+              { item.session.map((session, index) => {
+                  return <Box key={index} py={1} px={2} 
+                              className={classes.session}
+                              onClick={() => this.handleOnChooseSession(item, session)}
+                              >{session}
+                          </Box>
                 })
               }
             </div>
@@ -105,6 +117,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     fetchShowTimes: () => {
       dispatch(actFetchShowtimesRequest())
+    },
+    receiveMovieChoosing: (movie, date, time) => {
+      dispatch(actReceiveMovieChoosing(movie, date, time))
     }
   }
 }
