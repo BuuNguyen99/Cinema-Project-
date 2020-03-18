@@ -1,17 +1,30 @@
 import * as Types from "../constants/ActionTypes";
 
 const stateDefault = {
-  movie: {},
+  movie: [],
+  movieShowing: [],
+  movieComingSoon: [],
+  searchMovie: [],
   choosing: {}
 };
 
+const isMovieShowing = (date) => {
+  const now = new Date().setHours(0, 0, 0, 0);
+  if(Date.parse(date) <= now) return true;
+  else return false
+}
+
 function reducerMovie(state = stateDefault, action) {
-  let newState = {...state}
   switch (action.type) {
     case Types.FETCH_DATA_MOVIE: {
-      newState.movie = action.movie;
-      return newState;
+      return {
+        ...state,
+        movie: action.movie,
+        movieShowing: action.movie.filter(item => isMovieShowing(item.premiereDate)),
+        movieComingSoon: action.movie.filter(item => !isMovieShowing(item.premiereDate))
+      }
     }
+    
     case Types.RECEIVE_MOVIE_CHOOSING: {
       console.log('action in reducer:', action.movie, action.date, action.time)
       return {

@@ -6,12 +6,16 @@ class SearchPage extends Component {
   render() {
     const {listSearch} = this.props; 
     
-    const notify = listSearch.length > 0 ? `${listSearch.length} kết quả được tìm thấy!` : 'Không tìm thấy kết quả nào!'
+    let notify = ''
+    if(listSearch) {
+    notify = listSearch.length > 0 ? `${listSearch.length} kết quả được tìm thấy!` : 
+                                                 'Không tìm thấy kết quả nào!';
+    }
     return (
         <div style={{minHeight: "70vh"}} className="container my-4">
           <p>{notify}</p>
           <div className="row">
-              {this.showSearchList(listSearch)}
+              {listSearch && this.showSearchList(listSearch)}
            </div>
         </div>
     );

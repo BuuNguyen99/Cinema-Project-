@@ -1,6 +1,5 @@
 {
-  "movie": {
-    "movieShowing": [
+  "movie": [
       {
         "id": "Movie001",
         "name": "Nắng 3: lời hứa của cha",
@@ -20,7 +19,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Name",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "Date",
@@ -62,7 +61,7 @@
         ],
         "time": "105 minute",
         "nation": "Mỹ",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -104,7 +103,7 @@
         ],
         "time": "105 minute",
         "nation": "Na Uy",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -146,7 +145,7 @@
         ],
         "time": "105 minute",
         "nation": "Viet nam",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -188,7 +187,7 @@
         ],
         "time": "105 minute",
         "nation": "Mỹ",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -230,7 +229,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -272,7 +271,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Name",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "Date",
@@ -294,9 +293,7 @@
         "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
         "video": "",
         "vote": ""
-      }
-    ],
-    "movieComingSoon": [
+      },
       {
         "id": "Movie007",
         "name": "MINIONS: THE RISE OF GRU",
@@ -312,7 +309,7 @@
         ],
         "time": "105 minute",
         "nation": "Mỹ",
-        "premiereDate": "10/5/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -354,7 +351,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/5/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -396,7 +393,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/5/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -438,7 +435,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/5/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -480,7 +477,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/5/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -522,7 +519,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/5/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -564,7 +561,7 @@
         ],
         "time": "105 minute",
         "nation": "Việt Nam",
-        "premiereDate": "10/3/2020",
+        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
         "date": [
           {
             "id": "",
@@ -587,8 +584,7 @@
         "video": "",
         "vote": ""
       }
-    ]
-  },
+    ],
   "users": [
     {
       "name": "nguyễn Bữu",

@@ -15,20 +15,21 @@ class Movies extends React.Component {
    this.props.fetchAllDataMovie();
   }
 
+  isMovieShowing = (date) => {
+    const now = new Date().setHours(0, 0, 0, 0);
+    if(Date.parse(date) <= now) return true;
+    else return false
+  }
+
   render() {
-    let { movies } = this.props;
-    let movieShowing = [], movieComingSoon = [];
-    if(Object.keys(movies).length > 0) {
-      movieShowing = movies.movieShowing.slice(0, 6);
-      movieComingSoon = movies.movieComingSoon.slice(0, 6)
-    }
+    let { movieShowing, movieComingSoon } = this.props;
     return (
       <div className="container mb-5">
         <div className="wrap">
           <TabControl tab1='phim đang chiếu'
                       tab2='phim sắp chiếu'
-                      data1={movieShowing}
-                      data2={movieComingSoon}
+                      data1={movieShowing.slice(0, 6)}
+                      data2={movieComingSoon.slice(0, 6)}
                       tabDefault={0}
                       path={'/'}/>
           <div className="row mt-3">
@@ -46,7 +47,8 @@ class Movies extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    movies: state.reducerMovie.movie
+    movieShowing: state.reducerMovie.movieShowing,
+    movieComingSoon: state.reducerMovie.movieComingSoon
   }
 }
 const mapDispatchToProps = (dispatch) => {
