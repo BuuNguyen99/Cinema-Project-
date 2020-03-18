@@ -80,12 +80,12 @@ class BuyTicketPage extends Component {
   }
 
   render() {
-    const { classes, movies, showtimes } = this.props;
+    const { classes, movies, movieShowing,showtimes } = this.props;
     const { timeOfMovie, isShow } = this.state;
-    let movieShowing = [];
-    if(Object.keys(movies).length > 0) {
-      movieShowing = movies.movieShowing
-    }
+    // let movieShowing = [];
+    // if(Object.keys(movies).length > 0) {
+    //   movieShowing = movies.movieShowing
+    // }
     console.log('showtimesss:', showtimes)
     return (
         <div className="container my-4">
@@ -106,6 +106,7 @@ class BuyTicketPage extends Component {
 const mapStateToProps = (state) => {
   return {
     movies: state.reducerMovie.movie,
+    movieShowing: state.reducerMovie.movieShowing,
     showtimes: state.reducerShowtimes.showtime
   }
 }
