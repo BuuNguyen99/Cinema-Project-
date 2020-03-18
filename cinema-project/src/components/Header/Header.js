@@ -169,6 +169,9 @@ const mapDispatchToProps = (dispatch, props) => {
     },
     onDeleteAccount: (id) => {
       dispatch(actDeleteAccountRequest(id));
+    },
+    searchMovie: (keyword) => {
+      dispatch(actSearchMovieRequest(keyword))
     }
   }
 };

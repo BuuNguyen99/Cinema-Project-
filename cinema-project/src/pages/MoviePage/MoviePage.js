@@ -8,15 +8,15 @@ class MoviePage extends Component {
     this.props.fetchAllDataMovie();
    }
   render() {
-    let { Movies } = this.props;
+    let { movieShowing, movieComingSoon } = this.props;
     const { match } = this.props;
     const tabDefault = match.path === '/now-showing' ? 0 : 1;
     return (
       <div className="container p-0 mt-3 mb-5">
         <TabControl tab1='phim đang chiếu'
                     tab2='phim sắp chiếu'
-                    data1={Movies.movieShowing}
-                    data2={Movies.movieComingSoon}
+                    data1={movieShowing}
+                    data2={movieComingSoon}
                     tabDefault={tabDefault}
                     path={match.path}/>
       </div>
@@ -25,7 +25,8 @@ class MoviePage extends Component {
 }
 const mapStateToProps = state => {
   return {
-    Movies: state.reducerMovie.movie
+    movieShowing: state.reducerMovie.movieShowing,
+    movieComingSoon: state.reducerMovie.movieComingSoon
   }
 }
 const mapDispatchToProps = (dispatch) => {
