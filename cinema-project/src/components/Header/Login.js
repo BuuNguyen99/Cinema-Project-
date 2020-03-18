@@ -64,12 +64,10 @@ class Login extends React.Component {
     this.setState({ [name]: newState });
   };
 
-  onSave = e => {
+  onLogin = e => {
     let { txtPassword, txtEmail } = this.state;
     let { users } = this.props;
     let { admin } = this.props;
-    console.log(admin);
-
     if (
       txtPassword.value !== "" &&
       txtPassword.isInputValid === true &&
@@ -100,6 +98,8 @@ class Login extends React.Component {
             return null;
           }
         }
+        alert("Tài khoản hoặc mật khẩu không đúng");
+        e.preventDefault();
       } else {
         const { checkingA } = checkingAdmin(txtEmail.value);
         if (checkingA === true) {
@@ -129,6 +129,7 @@ class Login extends React.Component {
       alert("Vui Lòng điền đầy đủ thông tin đăng nhập");
       e.preventDefault();
     }
+    
   };
 
   render() {
@@ -182,7 +183,7 @@ class Login extends React.Component {
                 </p>
               </div>
             </div>
-            <form onSubmit={this.onSave} id="nameform">
+            <form onSubmit={this.onLogin} id="formLogin">
               <div className="row">
                 <div className="col-md-12">
                   <input
@@ -221,7 +222,6 @@ class Login extends React.Component {
                   />
                 </div>
               </div>
-            </form>
             <div className="row mt-3">
               <div className="col-md-12">
                 <a href="#" style={text}>
@@ -229,9 +229,10 @@ class Login extends React.Component {
                 </a>
               </div>
             </div>
+            </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button type="submit" form="nameform" style={Buttonn}>
+            <Button type="submit" form="formLogin" style={Buttonn}>
               Đăng Nhập
             </Button>
           </Modal.Footer>

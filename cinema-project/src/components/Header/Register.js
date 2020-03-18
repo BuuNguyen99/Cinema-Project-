@@ -54,6 +54,11 @@ class Register extends React.Component {
     this.setState({ [name]: newState });
   };
 
+  handleChange = event => {
+    this.setState({ txtGender: event.target.value });
+    console.log(this.state.txtGender);
+  };
+
   handleInputValidation = event => {
     const { name } = event.target;
     const { isInputValid, errorMessage } = validateInput(
@@ -65,6 +70,7 @@ class Register extends React.Component {
     newState.isInputValid = isInputValid;
     newState.errorMessage = errorMessage;
     this.setState({ [name]: newState });
+
   };
 
   componentDidMount() {
@@ -82,7 +88,8 @@ class Register extends React.Component {
       txtEmail,
       txtAddress
     } = this.state;
-
+    console.log(txtGender);
+    
     let { users } = this.props;
     if (
       txtName.value !== "" &&
@@ -92,14 +99,13 @@ class Register extends React.Component {
       txtPassword.value !== "" &&
       txtPassword.isInputValid === true &&
       txtRePassword.value !== "" &&
-      txtRePassword.isInputValid == true &&
+      txtRePassword.isInputValid === true &&
       txtEmail.value !== "" &&
       txtEmail.isInputValid === true &&
       txtAddress.value !== "" &&
       txtAddress.isInputValid === true
     ) {
       let user = {
-        id: `user000${users.length - 1}`,
         name: txtName.value,
         email: txtEmail.value,
         phone: txtPhone.value,
@@ -233,7 +239,7 @@ class Register extends React.Component {
                       className="form-control"
                       name="txtGender"
                       value={txtGender.value}
-                      onChange={this.handleInput}
+                      onChange={this.handleChange}
                     >
                       <option value="" disabled selected>Select Gender</option>
                       <option value="Nam">Nam </option>

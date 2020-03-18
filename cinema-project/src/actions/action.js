@@ -79,6 +79,15 @@ export const actRegisterUserRequest = (user) => {
         }
 } 
 
+export const actRegisterUser = (user) => {
+    return {
+        type: Types.REGISTER_USER,
+        user
+    }
+
+}
+
+
 export const  actFetchDataAccountRequest = () => {
     return (dispatch) => {
         return callApi('account','GET', null).then (res => {
@@ -94,13 +103,6 @@ export const actFetchDataAccount = (account) => {
     }
 }
 
-export const actRegisterUser = (user) => {
-    return {
-        type: Types.REGISTER_USER,
-        user
-    }
-
-}
 
 export const actLoginAccountRequest = (account) => {
     return (dispatch) => {

@@ -68,12 +68,10 @@ class Header extends Component {
     let showSearch = this.state.openSearch ? 'showSearch' : 'hideSearch';
     return (
       <div className="wrapper-header">
-        {/* Header banner */}
         <div className=" container-fluid">
           <div className="container">
             <div className="wrap-header row d-flex align-items-center py-3">
               <div className="col-4">
-                {/* <a onClick= { () => this.onDelete("admin0001")}> aa</a> */}
                 <Link to='/'>
                   <img
                     className="imageLogo"
@@ -88,7 +86,6 @@ class Header extends Component {
           </div>
         </div>
 
-        {/* menu mobile */}
         <div className={`skip-links`}>
           <span
             className="skip-links-item"
@@ -116,10 +113,7 @@ class Header extends Component {
           </span>
         </div>
 
-        {/* Navigation */}
         <Navigation style={showMenu} />
-
-        {/* Search */}
         <SearchBox handleOnEnter={this.handleOnEnter} styleSearch={`${showSearch}`}/>
       </div>
     );
@@ -127,10 +121,8 @@ class Header extends Component {
 }
 
 function ShowFunction(props ) {
-  console.log(props);
+
     let { onDelete } = props;
-    //console.log(onDelete);
-    
     let { account } = props.account; 
 if (account.length === 0) {
   return (
