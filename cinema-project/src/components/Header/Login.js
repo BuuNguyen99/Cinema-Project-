@@ -7,6 +7,7 @@ import {
   actFetchDataAdminRequest
 } from "./../../actions/action";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component {
   constructor(props, context) {
@@ -65,6 +66,7 @@ class Login extends React.Component {
   };
 
   onLogin = e => {
+    e.preventDefault();
     let { txtPassword, txtEmail } = this.state;
     let { users } = this.props;
     let { admin } = this.props;
@@ -95,11 +97,11 @@ class Login extends React.Component {
             };
             this.props.onLoginAccount(accountUser);
             this.setState({ show: false });
+            window.location.reload();
             return null;
           }
         }
         alert("Tài khoản hoặc mật khẩu không đúng");
-        e.preventDefault();
       } else {
         const { checkingA } = checkingAdmin(txtEmail.value);
         if (checkingA === true) {
@@ -118,16 +120,15 @@ class Login extends React.Component {
               };
               this.props.onLoginAccount(accountAdmin);
               this.setState({ show: false });
+              window.location.reload();
               return null;
             }
           }
           alert("Tài khoản hoặc mật khẩu không đúng");
-          e.preventDefault();
         }
       }
     } else {
       alert("Vui Lòng điền đầy đủ thông tin đăng nhập");
-      e.preventDefault();
     }
     
   };
@@ -232,8 +233,8 @@ class Login extends React.Component {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button type="submit" form="formLogin" style={Buttonn}>
-              Đăng Nhập
+          <Button type="submit" form="formLogin" style={Buttonn}>
+              Đăng nhập
             </Button>
           </Modal.Footer>
         </Modal>

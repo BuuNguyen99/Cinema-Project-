@@ -1,49 +1,37 @@
-import React from 'react';
-import { Button,Modal, ButtonToolbar } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
 
-
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
+class OpenVideo extends Component {
+state = {
+  modal14: false
 }
 
-function OpenVideo() {
-  const [modalShow, setModalShow] = React.useState(false);
+toggle = nr => () => {
+  let modalNumber = 'modal' + nr
+  this.setState({
+    [modalNumber]: !this.state[modalNumber]
+  });
+}
 
+render() {
   return (
-    <ButtonToolbar>
-      <a href="#" variant="primary" onClick={() => setModalShow(true)}>
-          <i className="fa fa-play"></i> 
-      </a>
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </ButtonToolbar>
-  );
+      <MDBContainer>
+        <MDBBtn color="primary" onClick={this.toggle(14)}><i className="fa fa-search"></i></MDBBtn>
+        <MDBModal isOpen={this.state.modal14} toggle={this.toggle(14)} centered>
+          <MDBModalHeader toggle={this.toggle(14)}>MDBModal title</MDBModalHeader>
+          <MDBModalBody>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </MDBModalBody>
+          <MDBModalFooter>
+            <MDBBtn color="secondary" onClick={this.toggle(14)}>Close</MDBBtn>
+            <MDBBtn color="primary">Save changes</MDBBtn>
+          </MDBModalFooter>
+        </MDBModal>
+      </MDBContainer>
+    );
+  }
 }
 
 export default OpenVideo;

@@ -28,6 +28,7 @@ class Movies extends React.Component {
     return (
       <div className="container mb-5">
         <div className="row nav-tabs">
+          <div className="col-md-12">
           <ul className="nav movie-home link-cout">
             <li className=" mr-3 link-wrapper">
               <a
@@ -53,14 +54,17 @@ class Movies extends React.Component {
             </li>
           </ul>
         </div>
+        </div>
         <div className="row">
           {dataMovies}
         </div>
         <div className="row mt-3">
+          <div className="col-md-12">
           <div className="col-md-12 col-sm-12 col-xs-12 pull-right">
             <a href="/phim-dang-chieu" className="btn secondary btn-outline-orange">
               Xem thêm
             </a>
+          </div>
           </div>
         </div>
       </div>

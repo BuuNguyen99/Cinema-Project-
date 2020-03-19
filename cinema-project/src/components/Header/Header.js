@@ -11,7 +11,6 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'redux'
 
 
-
 class Header extends Component {
   constructor() {
     super();

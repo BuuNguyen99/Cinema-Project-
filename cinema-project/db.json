@@ -274,6 +274,17 @@
       "image": "",
       "address": "12",
       "id": "nJx2bOC"
+    },
+    {
+      "name": "a",
+      "email": "1@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "12121212q",
+      "image": "",
+      "address": "1",
+      "id": "R3AOPQ8"
     }
   ],
   "admin": [
@@ -299,19 +310,7 @@
       "image": ""
     }
   ],
-  "account": [
-    {
-      "id": "user0001",
-      "name": "nguyễn Bữu",
-      "email": "nguyenbuubkdn@gmail.com",
-      "phone": "0357175762",
-      "gender": "Nam",
-      "birth": "",
-      "pass": "nguyenbuu99",
-      "image": "",
-      "address": "856/34 Tôn Đức Thắng"
-    }
-  ],
+  "account": [],
   "reviewMovie": [
     {
       "id": "",

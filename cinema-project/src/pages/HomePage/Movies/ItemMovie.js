@@ -2,6 +2,7 @@ import React from "react";
 import "./itemMovie.css";
 import OpenVideo from "./OpenVideo";
 class ItemMovie extends React.Component {
+  
   render() {
     let { movie } = this.props;
     
@@ -19,11 +20,11 @@ class ItemMovie extends React.Component {
                 </a>
               </li>
               <li>
-                <OpenVideo/>
               </li>
             </ul>
           </div>
         </div>
+        
       </div>
     );
   }
