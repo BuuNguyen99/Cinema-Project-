@@ -15,7 +15,7 @@ class MovieItem extends React.Component {
             <ul className="icon">
               <li>
                 <a href="#">
-                  <i className="fa fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
                 </a>
               </li>
               <li>

@@ -67,6 +67,12 @@ class Register extends React.Component {
     this.setState({ [name]: newState });
   };
 
+  handleChangeGender= event => {
+    this.setState ({
+      txtGender : event.target.value
+    })
+  };
+
   componentDidMount() {
     this.props.onFetchDataUser();
   }
@@ -99,7 +105,6 @@ class Register extends React.Component {
       txtAddress.isInputValid === true
     ) {
       let user = {
-        id: `user000${users.length - 1}`,
         name: txtName.value,
         email: txtEmail.value,
         phone: txtPhone.value,
@@ -232,7 +237,7 @@ class Register extends React.Component {
                       className="form-control"
                       name="txtGender"
                       value={txtGender.value}
-                      onChange={this.handleInput}
+                      onChange={this.handleChangeGender}
                     >
                       <option value="" disabled selected>Select Gender</option>
                       <option value="Nam">Nam </option>

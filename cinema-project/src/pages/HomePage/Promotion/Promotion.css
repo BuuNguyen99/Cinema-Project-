@@ -34,7 +34,7 @@
 .imageItem:after{
     background: rgba(255,255,255,0.5);
     width: 64%;
-    height: 55%;
+    height: 94%;
     right: auto;
     left: -20%;
     top: -65%;
@@ -45,7 +45,7 @@
 }
 .imageItem:hover:after{
     opacity: 1;
-    top: -42%;
+    top: -32%;
 }
 .imageItem img{
     width: 100%;
