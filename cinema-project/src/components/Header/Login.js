@@ -65,6 +65,7 @@ class Login extends React.Component {
   };
 
   onSave = e => {
+    e.preventDefault();
     let { txtPassword, txtEmail } = this.state;
     let { users } = this.props;
     let { admin } = this.props;
@@ -82,7 +83,6 @@ class Login extends React.Component {
             txtEmail.value === users[i].email &&
             txtPassword.value === users[i].pass
           ) {
-            alert("Đăng nhập thành công");
             let accountUser = {
               id: users[i].id,
               name: users[i].name,
@@ -94,8 +94,10 @@ class Login extends React.Component {
               image: users[i].image,
               address: users[i].address
             };
+            alert("Đăng nhập thành công");
             this.props.onLoginAccount(accountUser);
             this.setState({ show: false });
+            window.location.reload();
             return null;
           }
         }
@@ -107,7 +109,6 @@ class Login extends React.Component {
               txtEmail.value === admin[j].email &&
               txtPassword.value === admin[j].pass
             ) {
-              alert("Đăng nhập thành công");
               let accountAdmin = {
                 id: admin[j].id,
                 name: admin[j].name,
@@ -115,18 +116,18 @@ class Login extends React.Component {
                 pass: admin[j].pass,
                 image: admin[j].image
               };
+              alert("Đăng nhập thành công");
               this.props.onLoginAccount(accountAdmin);
               this.setState({ show: false });
+              window.location.reload();
               return null;
             }
           }
-          alert("Tài khoản hoặc mật khẩu không đúng");
-          e.preventDefault();
         }
       }
+      alert("Tài khoản hoặc mật khẩu không đúng");
     } else {
       alert("Vui Lòng điền đầy đủ thông tin đăng nhập");
-      e.preventDefault();
     }
   };
 
