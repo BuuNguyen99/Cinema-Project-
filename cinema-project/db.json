@@ -394,19 +394,7 @@
       "image": ""
     }
   ],
-  "account": [
-    {
-      "id": "user0001",
-      "name": "nguyễn Bữu",
-      "email": "nguyenbuubkdn@gmail.com",
-      "phone": "0357175762",
-      "gender": "Nam",
-      "birth": "",
-      "pass": "nguyenbuu99",
-      "image": "",
-      "address": "856/34 Tôn Đức Thắng"
-    }
-  ],
+  "account": [],
   "reviewMovie": [
     {
       "id": "",

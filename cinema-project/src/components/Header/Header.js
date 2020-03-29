@@ -71,7 +71,6 @@ class Header extends Component {
           <div className="container">
             <div className="wrap-header row d-flex align-items-center py-3">
               <div className="col-4">
-                {/* <a onClick= { () => this.onDelete("admin0001")}> aa</a> */}
                 <Link to='/'>
                   <img
                     className="imageLogo"

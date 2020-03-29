@@ -196,3 +196,19 @@ export const actFetchDataData = (data) => {
         data
     }
 }
+
+export const  actFetchDataSupportRequest = () => {
+    return (dispatch) => {
+        return callApi('support','GET', null).then (res => {
+            dispatch(actFetchDataSupport(res.data))
+
+        });
+    }
+}
+
+export const actFetchDataSupport = (support) => {
+    return {
+        type: Types.FETCH_DATA_SUPPORT,
+        support
+    }
+}

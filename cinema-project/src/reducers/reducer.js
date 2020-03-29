@@ -5,6 +5,7 @@ import reducerShowtimes from './reducerShowtimes'
 import reducerTickets from './reducerTicket'
 import reducerUsers from './reducerUsers'
 import reducerFoods from './reducerFood'
+import reducerSupport from './reducerSupport'
 
 const reducer = combineReducers({
     reducerMovie,
@@ -12,7 +13,8 @@ const reducer = combineReducers({
     reducerAdmin,
     reducerShowtimes,
     reducerTickets,
-    reducerFoods
+    reducerFoods,
+    reducerSupport
 });
 
 export default reducer
