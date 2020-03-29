@@ -152,12 +152,47 @@ export const  actFetchShowtimes = (data) => {
 }
 
 // act receive moving choosing
-
 export const actReceiveMovieChoosing = (movie, date, time) => {
     return {
         type: Types.RECEIVE_MOVIE_CHOOSING,
         movie,
         date,
         time
+    }
+}
+
+// act receive data ticket
+export const  actFetchDataTicketRequest = () => {
+    return (dispatch) => {
+        return ApiCall.getTickets().then(res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataTicket(res.data))
+            } else alert('Không thể kết nối dữ liệu!')
+        })
+    }
+}
+
+export const actFetchDataTicket = (data) => {
+    return {
+        type: Types.FETCH_DATA_TICKETS,
+        data
+    }
+}
+
+// act receive data food
+export const  actFetchDataFoodRequest = () => {
+    return (dispatch) => {
+        return ApiCall.getFoods().then(res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataData(res.data))
+            } else alert('Không thể kết nối dữ liệu!')
+        })
+    }
+}
+
+export const actFetchDataData = (data) => {
+    return {
+        type: Types.FETCH_DATA_FOOD,
+        data
     }
 }

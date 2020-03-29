@@ -6,7 +6,7 @@ import ColumnBlock from '../../components/ColumnBlock/ColumnBlock';
 import styles from './BuyTicketStyle';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import {actFetchDataMovieRequest, actFetchShowtimesRequest, actReceiveMovieChoosing} from '../../actions/action'
+import {actFetchDataMovieRequest, actFetchShowtimesRequest, actReceiveMovieChoosing, actFetchDataUsersRequest} from '../../actions/action'
 import { Box } from '@material-ui/core';
 
 class BuyTicketPage extends Component {
@@ -22,6 +22,7 @@ class BuyTicketPage extends Component {
   componentDidMount() {
     this.props.fetchAllDataMovie();
     this.props.fetchShowTimes();
+    this.props.fetchDataUsers();
   }
 
   handleOnChooseMovie = (mv, showtimes) => {
@@ -80,13 +81,10 @@ class BuyTicketPage extends Component {
   }
 
   render() {
-    const { classes, movies, movieShowing,showtimes } = this.props;
+    const { classes, movies, movieShowing,showtimes, users } = this.props;
     const { timeOfMovie, isShow } = this.state;
-    // let movieShowing = [];
-    // if(Object.keys(movies).length > 0) {
-    //   movieShowing = movies.movieShowing
-    // }
     console.log('showtimesss:', showtimes)
+    console.log('users', users)
     return (
         <div className="container my-4">
           <div className="row">
@@ -107,7 +105,8 @@ const mapStateToProps = (state) => {
   return {
     movies: state.reducerMovie.movie,
     movieShowing: state.reducerMovie.movieShowing,
-    showtimes: state.reducerShowtimes.showtime
+    showtimes: state.reducerShowtimes.showtime,
+    user: state.reducerUsers.users
   }
 }
 
@@ -121,6 +120,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     receiveMovieChoosing: (movie, date, time) => {
       dispatch(actReceiveMovieChoosing(movie, date, time))
+    },
+    fetchDataUsers: () => {
+      dispatch(actFetchDataUsersRequest())
     }
   }
 }

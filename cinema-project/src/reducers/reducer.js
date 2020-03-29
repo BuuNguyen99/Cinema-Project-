@@ -1,14 +1,18 @@
 import { combineReducers } from 'redux'
-import reducerMovie from './reducerMovie'
-import reducerUsers from './reducerUsers'
 import reducerAdmin from './reducerAdmin'
+import reducerMovie from './reducerMovie'
 import reducerShowtimes from './reducerShowtimes'
+import reducerTickets from './reducerTicket'
+import reducerUsers from './reducerUsers'
+import reducerFoods from './reducerFood'
 
 const reducer = combineReducers({
     reducerMovie,
     reducerUsers,
     reducerAdmin,
-    reducerShowtimes
+    reducerShowtimes,
+    reducerTickets,
+    reducerFoods
 });
 
 export default reducer

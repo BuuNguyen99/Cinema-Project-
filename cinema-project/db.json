@@ -1,590 +1,352 @@
 {
   "movie": [
-      {
-        "id": "Movie001",
-        "name": "Nắng 3: lời hứa của cha",
-        "slug": "nang-3-loi-hua-cua-cha",
-        "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
-        "type": "Hài, Tình cảm , Gia đình",
-        "author": "Đồng Đăng Giao",
-        "actor": [
-          {
-            "id": "Actor001",
-            "name": "Khả Như"
-          },
-          {
-            "id": "Actor002",
-            "name": "Kiều Minh Tuấn"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Name",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "Date",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie002",
-        "name": "Onward: Truy Tìm Phép Thuật",
-        "slug": "onward-truy-tim-phep-thuat",
-        "intro": "Lấy bối cảnh vùng ngoại ô một thế giới kỳ ảo, hai anh em yêu tinh tuổi teen bắt đầu hành trình khám phá xem, liệu rằng đâu đó ngoài kia có còn tồn tại ma thuật không?",
-        "type": "Hoạt Hình",
-        "author": "Dan Scanlon",
-        "actor": [
-          {
-            "id": "Actor003",
-            "name": "Tom Holland,"
-          },
-          {
-            "id": "Actor004",
-            "name": "Chris Pratt"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Mỹ",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://galaxycine.vn/media/2020/2/24/450x300_1582529315801.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie003",
-        "name": "Ác mộng bên hồ",
-        "slug": "ac-mong-ben-ho",
-        "intro": "Một nhóm bạn đi nghỉ dưỡng tại ngôi nhà bên hồ, tuy nhiên cuộc vui đã trở nên kinh hoàng khi có người bị sát hại. Thế lực bí ẩn dưới đáy hồ thực sự là gì?",
-        "type": "Kinh dị, tâm lý",
-        "author": "Quang Huy",
-        "actor": [
-          {
-            "id": "Actor005",
-            "name": "Patrick Walshe McBride"
-          },
-          {
-            "id": "Actor006",
-            "name": "Iben Akerlie"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Na Uy",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://galaxycine.vn/media/2020/2/27/450x300_1582775198057.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie004",
-        "name": "Căn Hộ Của Quỷ",
-        "slug": "can-ho-cua-quy",
-        "intro": "Phim là câu chuyện có thật về gia đình bị ma ám tại vùng Madrid khi họ chuyển đến căn nhà mới, các thế lực đen tối tại đây đã gây nỗi ám ảnh kinh hoàng cho họ.",
-        "type": "Kinh dị",
-        "author": "Albert Pintó",
-        "actor": [
-          {
-            "id": "Actor007",
-            "name": "Begoña Vargas"
-          },
-          {
-            "id": "Actor008",
-            "name": "Iván Marcos"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Viet nam",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://galaxycine.vn/media/2020/2/24/450x300-32_1582530414160.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie005",
-        "name": "The Invisible Man: Kẻ Vô Hình",
-        "slug": "the-invisible-ke-vo-hinh",
-        "intro": "Một cô gái đang bị truy sát bởi một tên ác nhân mà cô không thể nhìn thấy. Mục đích của kẻ vô hình này là gì? Hắn có liên hệ ra sao với cô gái kia? Đón xem!",
-        "type": "Kinh dị, ly kì, giả tưởng",
-        "author": "Quang Huy",
-        "actor": [
-          {
-            "id": "Acto009",
-            "name": "Elisabeth Moss "
-          },
-          {
-            "id": "Actor010",
-            "name": "Oliver Jackson-Cohen"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Mỹ",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://galaxycine.vn/media/2020/2/19/450x300_1582096375218.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie006",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://galaxycine.vn/media/2020/2/20/450x300-cuoc-xe_1582172123848.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie020",
-        "name": "Nắng 4: lời hứa của cha",
-        "slug": "nang-4-loi-hua-cua-cha",
-        "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
-        "type": "Hài, Tình cảm , Gia đình",
-        "author": "Đồng Đăng Giao",
-        "actor": [
-          {
-            "id": "Actor001",
-            "name": "Khả Như"
-          },
-          {
-            "id": "Actor002",
-            "name": "Kiều Minh Tuấn"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Name",
-        "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "Date",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie007",
-        "name": "MINIONS: THE RISE OF GRU",
-        "slug": "minions-the-rise-of-gru",
-        "intro": "Minions - Những Quả Chuối Vàng biết đi sẽ trở lại trong câu chuyện chưa kể về tuổi thơ của Gru - cậu bé mười hai tuổi mơ được trở thành ác nhân xuất sắc nhất thế giới.",
-        "type": "Hoạt hình",
-        "author": "Lyle Balda",
-        "actor": [
-          {
-            "id": "Actor0071",
-            "name": "Minion"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Mỹ",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/199/600/400.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie008",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/201/600/400.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie009",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/202/600/400.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie010",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/203/600/400.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie011",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/204/600/400.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie012",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/1/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/211/600/400.jpg",
-        "video": "",
-        "vote": ""
-      },
-      {
-        "id": "Movie013",
-        "name": "Cuốc Xe Nửa Đêm",
-        "slug": "cuoc-xe-nua-dem",
-        "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-        "type": "Hành động, tâm lý",
-        "author": "Nguyễn Nguyên Hoàng",
-        "actor": [
-          {
-            "id": "Actor011",
-            "name": "Hoàng Yến Chibi"
-          },
-          {
-            "id": "Actor012",
-            "name": "Quách Ngọc Tuyên"
-          }
-        ],
-        "time": "105 minute",
-        "nation": "Việt Nam",
-        "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-        "date": [
-          {
-            "id": "",
-            "datemovie": "20/5/2019",
-            "frame time": [
-              {
-                "id": "11",
-                "Room": "1",
-                "time": "13:00",
-                "seats": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          }
-        ],
-        "price": "75000",
-        "image": "https://i.picsum.photos/id/206/600/400.jpg",
-        "video": "",
-        "vote": ""
-      }
-    ],
+    {
+      "id": "Movie001",
+      "name": "Nắng 3: lời hứa của cha",
+      "slug": "nang-3-loi-hua-cua-cha",
+      "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
+      "type": "Hài, Tình cảm , Gia đình",
+      "author": "Đồng Đăng Giao",
+      "actor": [
+        {
+          "id": "Actor001",
+          "name": "Khả Như"
+        },
+        {
+          "id": "Actor002",
+          "name": "Kiều Minh Tuấn"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Name",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie002",
+      "name": "Onward: Truy Tìm Phép Thuật",
+      "slug": "onward-truy-tim-phep-thuat",
+      "intro": "Lấy bối cảnh vùng ngoại ô một thế giới kỳ ảo, hai anh em yêu tinh tuổi teen bắt đầu hành trình khám phá xem, liệu rằng đâu đó ngoài kia có còn tồn tại ma thuật không?",
+      "type": "Hoạt Hình",
+      "author": "Dan Scanlon",
+      "actor": [
+        {
+          "id": "Actor003",
+          "name": "Tom Holland,"
+        },
+        {
+          "id": "Actor004",
+          "name": "Chris Pratt"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Mỹ",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/24/450x300_1582529315801.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie003",
+      "name": "Ác mộng bên hồ",
+      "slug": "ac-mong-ben-ho",
+      "intro": "Một nhóm bạn đi nghỉ dưỡng tại ngôi nhà bên hồ, tuy nhiên cuộc vui đã trở nên kinh hoàng khi có người bị sát hại. Thế lực bí ẩn dưới đáy hồ thực sự là gì?",
+      "type": "Kinh dị, tâm lý",
+      "author": "Quang Huy",
+      "actor": [
+        {
+          "id": "Actor005",
+          "name": "Patrick Walshe McBride"
+        },
+        {
+          "id": "Actor006",
+          "name": "Iben Akerlie"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Na Uy",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/27/450x300_1582775198057.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie004",
+      "name": "Căn Hộ Của Quỷ",
+      "slug": "can-ho-cua-quy",
+      "intro": "Phim là câu chuyện có thật về gia đình bị ma ám tại vùng Madrid khi họ chuyển đến căn nhà mới, các thế lực đen tối tại đây đã gây nỗi ám ảnh kinh hoàng cho họ.",
+      "type": "Kinh dị",
+      "author": "Albert Pintó",
+      "actor": [
+        {
+          "id": "Actor007",
+          "name": "Begoña Vargas"
+        },
+        {
+          "id": "Actor008",
+          "name": "Iván Marcos"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Viet nam",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/24/450x300-32_1582530414160.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie005",
+      "name": "The Invisible Man: Kẻ Vô Hình",
+      "slug": "the-invisible-ke-vo-hinh",
+      "intro": "Một cô gái đang bị truy sát bởi một tên ác nhân mà cô không thể nhìn thấy. Mục đích của kẻ vô hình này là gì? Hắn có liên hệ ra sao với cô gái kia? Đón xem!",
+      "type": "Kinh dị, ly kì, giả tưởng",
+      "author": "Quang Huy",
+      "actor": [
+        {
+          "id": "Acto009",
+          "name": "Elisabeth Moss "
+        },
+        {
+          "id": "Actor010",
+          "name": "Oliver Jackson-Cohen"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Mỹ",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/19/450x300_1582096375218.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie006",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/20/450x300-cuoc-xe_1582172123848.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie020",
+      "name": "Nắng 4: lời hứa của cha",
+      "slug": "nang-4-loi-hua-cua-cha",
+      "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
+      "type": "Hài, Tình cảm , Gia đình",
+      "author": "Đồng Đăng Giao",
+      "actor": [
+        {
+          "id": "Actor001",
+          "name": "Khả Như"
+        },
+        {
+          "id": "Actor002",
+          "name": "Kiều Minh Tuấn"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Name",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie007",
+      "name": "MINIONS: THE RISE OF GRU",
+      "slug": "minions-the-rise-of-gru",
+      "intro": "Minions - Những Quả Chuối Vàng biết đi sẽ trở lại trong câu chuyện chưa kể về tuổi thơ của Gru - cậu bé mười hai tuổi mơ được trở thành ác nhân xuất sắc nhất thế giới.",
+      "type": "Hoạt hình",
+      "author": "Lyle Balda",
+      "actor": [
+        {
+          "id": "Actor0071",
+          "name": "Minion"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Mỹ",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/199/600/400.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie008",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/201/600/400.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie009",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/202/600/400.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie010",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/203/600/400.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie011",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/204/600/400.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie012",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/211/600/400.jpg",
+      "video": "",
+      "vote": ""
+    },
+    {
+      "id": "Movie013",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": [
+        {
+          "id": "Actor011",
+          "name": "Hoàng Yến Chibi"
+        },
+        {
+          "id": "Actor012",
+          "name": "Quách Ngọc Tuyên"
+        }
+      ],
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/206/600/400.jpg",
+      "video": "",
+      "vote": ""
+    }
+  ],
   "users": [
     {
       "name": "nguyễn Bữu",
@@ -632,7 +394,19 @@
       "image": ""
     }
   ],
-  "account": [],
+  "account": [
+    {
+      "id": "user0001",
+      "name": "nguyễn Bữu",
+      "email": "nguyenbuubkdn@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": "",
+      "pass": "nguyenbuu99",
+      "image": "",
+      "address": "856/34 Tôn Đức Thắng"
+    }
+  ],
   "reviewMovie": [
     {
       "id": "",
@@ -686,33 +460,174 @@
       "id": "day001",
       "name": "Chủ nhật, 15/03/2020",
       "movieIds": [
-        {"id": "Movie001", "session": ["08:00", "13:00", "15:00", "17:00", "22:00"]},
-        {"id": "Movie002", "session": ["08:00", "11:00", "15:00", "19:00", "22:00"]},
-        {"id": "Movie003", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]},
-        {"id": "Movie006", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]},
-        {"id": "Movie005", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]}
-      ] 
+        {
+          "id": "Movie001",
+          "session": [
+            "08:00",
+            "13:00",
+            "15:00",
+            "17:00",
+            "22:00"
+          ]
+        },
+        {
+          "id": "Movie002",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "19:00",
+            "22:00"
+          ]
+        },
+        {
+          "id": "Movie003",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        },
+        {
+          "id": "Movie006",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        },
+        {
+          "id": "Movie005",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        }
+      ]
     },
     {
       "dayOfWeek": "Thứ hai",
       "id": "day002",
       "name": "Thứ hai, 16/03/2020",
       "movieIds": [
-        {"id": "Movie001", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]},
-        {"id": "Movie007", "session": ["08:00", "11:00", "15:00", "19:00", "22:00"]},
-        {"id": "Movie004", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]}
-      ] 
+        {
+          "id": "Movie001",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        },
+        {
+          "id": "Movie007",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "19:00",
+            "22:00"
+          ]
+        },
+        {
+          "id": "Movie004",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        }
+      ]
     },
     {
       "dayOfWeek": "Thứ ba",
       "id": "day001",
       "name": "Thứ ba, 17/03/2020",
       "movieIds": [
-        {"id": "Movie002", "session": ["08:00", "11:00", "15:00", "19:00", "22:00"]},
-        {"id": "Movie003", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]},
-        {"id": "Movie004", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]},
-        {"id": "Movie005", "session": ["08:00", "11:00", "15:00", "18:00", "21:00"]}
-      ] 
+        {
+          "id": "Movie002",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "19:00",
+            "22:00"
+          ]
+        },
+        {
+          "id": "Movie003",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        },
+        {
+          "id": "Movie004",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        },
+        {
+          "id": "Movie005",
+          "session": [
+            "08:00",
+            "11:00",
+            "15:00",
+            "18:00",
+            "21:00"
+          ]
+        }
+      ]
+    }
+  ],
+  "tickets": [
+    {
+      "name": "Ve 2D thanh vien",
+      "des": "Vé 2D cho khách thành viên",
+      "price": 50000
+    },
+    {
+      "name": "Nguoi lon",
+      "des": "Vé 2D",
+      "price": 60000
+    }
+  ],
+  "booking": {},
+  "foodCombo": [
+    {
+      "id": "combo1",
+      "name": "Combo 1 big",
+      "des": "1 Bắp (Ngọt/ mặn) + 1 nước(PEPSI/ 7UP/ MIRINDA)",
+      "price": 65000
+    },
+    {
+      "id": "combo2",
+      "name": "Combo 2 small",
+      "des": "1 Bắp (Ngọt/ mặn) + 2 nước(PEPSI/ 7UP/ MIRINDA)",
+      "price": 81000
+    },
+    {
+      "id": "combo3",
+      "name": "Combo 3 big",
+      "des": "2 Bắp (Ngọt/ mặn) + 2 nước(PEPSI/ 7UP/ MIRINDA)",
+      "price": 107000
     }
   ]
 }

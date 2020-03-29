@@ -21,3 +21,10 @@ export const getShowtimes = () => {
   return AxiosService.get(`${urlDate}`);
 };
 
+export const getTickets = () => {
+  return AxiosService.get(`tickets`);
+};
+
+export const getFoods = () => {
+  return AxiosService.get(`foodCombo`);
+};
