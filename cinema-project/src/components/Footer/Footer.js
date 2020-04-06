@@ -1,6 +1,6 @@
 import React from "react";
 import "./styleFooter.css";
-
+import { Link } from 'react-router-dom'
 class Footer extends React.Component {
   render() {
     return (
@@ -42,17 +42,20 @@ class Footer extends React.Component {
                     <ul className="list-items">
                       <li>
                         <a href="#">
-                          <i className="fa fa-angle-double-right"></i>thể loại phim
+                          <i className="fa fa-angle-double-right"></i>thể loại
+                          phim
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-angle-double-right"></i>bình luận phim
+                          <i className="fa fa-angle-double-right"></i>bình luận
+                          phim
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-angle-double-right"></i>blog điện ảnh
+                          <i className="fa fa-angle-double-right"></i>blog điện
+                          ảnh
                         </a>
                       </li>
                     </ul>
@@ -66,18 +69,21 @@ class Footer extends React.Component {
                     <ul className="list-items">
                       <li>
                         <a href="#">
-                          <i className="fa fa-angle-double-right"></i>góp ý
+                          <Link to="/support" href="contact.html">
+                            <i className="fa fa-angle-double-right"></i>Giải đáp
+                          </Link>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-angle-double-right"></i>sale &#38; services
+                          <i className="fa fa-angle-double-right"></i>sale &#38;
+                          services
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-angle-double-right"></i> rạp / giá vé
-                          bảo mật
+                          <i className="fa fa-angle-double-right"></i> rạp / giá
+                          vé bảo mật
                         </a>
                       </li>
                     </ul>
@@ -90,9 +96,15 @@ class Footer extends React.Component {
                     <h5 className="title-widget">kết nối cinema</h5>
                     <ul className="list-items">
                       <li>
-                        <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/> </a>
-                        <a href="#"><img src="https://img.icons8.com/bubbles/50/000000/youtube.png"/></a>
-                        <a href="#"><img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png"/></a>
+                        <a href="#">
+                          <img src="https://img.icons8.com/color/48/000000/facebook-circled.png" />{" "}
+                        </a>
+                        <a href="#">
+                          <img src="https://img.icons8.com/bubbles/50/000000/youtube.png" />
+                        </a>
+                        <a href="#">
+                          <img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png" />
+                        </a>
                       </li>
                     </ul>
                   </li>

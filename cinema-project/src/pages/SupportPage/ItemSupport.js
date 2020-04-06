@@ -32,7 +32,7 @@ class ItemSupport extends React.Component {
       color: "white"
     }
     let bgColorFalse = {
-      backgroundColor: "white",
+      backgroundColor: "#fafafa",
       color: "black"
     }
     return (
