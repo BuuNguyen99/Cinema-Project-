@@ -8,14 +8,14 @@ import {
 } from '../../actions/action';
 import Table from '../../components/Table/Table';
 import styles from './BuyTicketDetailStyle';
-import SeatPickers from '../../components/SeatPicker/SeatPicker';
+import SeatPickers from '../../components/SeatPicker/SeatPickers';
 class BuyTicketDetailPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       ticketArr: [],
       foodArr: [],
-      onNextPage: false
+      onNextPage: true
     };
   }
 

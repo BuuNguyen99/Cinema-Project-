@@ -29,6 +29,18 @@
     transform: translateX(-50%);
 }
 
+.btn-header {
+    background-color: unset;
+    border: unset;
+    font-size: 14px;
+    outline: none;
+}
+.btn-header:hover {
+    color: #494f54 !important
+}
+.btn-header:active, .btn-header:focus{
+    outline: unset;
+}
 @media only screen and (max-width: 767px) {
     .imageLogo {
         width: 120%

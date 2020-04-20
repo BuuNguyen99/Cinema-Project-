@@ -139,14 +139,14 @@ if (account.length === 0) {
       if (stringID === 'admin') {      
     return (
       <div>
-        <span>Admin: {account[0].name} | </span> <a href="#" onClick=  {() => onDelete(account[0].id)}> Thoát </a>
+        <span>Admin: {account[0].name} | </span> <Link to='/' onClick=  {() => onDelete(account[0].id)}> Thoát </Link>
       </div>
     );
       }
       else {
         return (
           <div>
-            <span>User: {account[0].name} | </span> <a href="#" onClick = {() => onDelete(account[0].id)}> Thoát </a>
+            <span>User: {account[0].name} | </span> <Link to='/' onClick = {() => onDelete(account[0].id)}> Thoát </Link>
           </div>
         );
       }

@@ -28,7 +28,6 @@ function reducerUsers(state = stateDefault, action) {
     }
 
     case Types.FETCH_DATA_USERS: {
-      console.log('hi', action.users)
       newState.users = action.users;
       return newState;
     }

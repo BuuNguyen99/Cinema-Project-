@@ -6,7 +6,7 @@ import ColumnBlock from '../../components/ColumnBlock/ColumnBlock';
 import styles from './BuyTicketStyle';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import {actFetchDataMovieRequest, actFetchShowtimesRequest, actReceiveMovieChoosing, actFetchDataUsersRequest} from '../../actions/action'
+import {actFetchDataMovieRequest, actFetchShowtimesRequest, actReceiveMovieChoosing, actFetchDataAccountRequest} from '../../actions/action'
 import { Box } from '@material-ui/core';
 
 class BuyTicketPage extends Component {
@@ -22,7 +22,7 @@ class BuyTicketPage extends Component {
   componentDidMount() {
     this.props.fetchAllDataMovie();
     this.props.fetchShowTimes();
-    this.props.fetchDataUsers();
+    this.props.fetchDataAccount();
   }
 
   handleOnChooseMovie = (mv, showtimes) => {
@@ -52,15 +52,19 @@ class BuyTicketPage extends Component {
       })
   }
 
-  handleOnChooseSession = (item, session) => {
-    const movie = this.state.active
-    this.props.receiveMovieChoosing(movie, item, session)
-    const { history } = this.props
-    const slug = movie.slug
-    history.push(`/buy-ticket-detail/${slug}`)
+  handleOnChooseSession = (item, session, account) => {
+    if(account[0]) {
+      const movie = this.state.active
+      this.props.receiveMovieChoosing(movie, item, session)
+      const { history } = this.props
+      const slug = movie.slug
+      history.push(`/buy-ticket-detail/${slug}`)
+    } else {
+      alert("Vui long dang nhap!")
+    }
   }
 
-  showTimeOfMovie = (arr, classes) => {
+  showTimeOfMovie = (arr, classes, account) => {
     return arr.map((item, index) => {
       return (
         <div key={index} className={`${classes.block} p-4`} >
@@ -69,7 +73,7 @@ class BuyTicketPage extends Component {
               { item.session.map((session, index) => {
                   return <Box key={index} py={1} px={2} 
                               className={classes.session}
-                              onClick={() => this.handleOnChooseSession(item, session)}
+                              onClick={() => this.handleOnChooseSession(item, session, account)}
                               >{session}
                           </Box>
                 })
@@ -81,10 +85,10 @@ class BuyTicketPage extends Component {
   }
 
   render() {
-    const { classes, movies, movieShowing,showtimes, users } = this.props;
+    const { classes, movies, movieShowing,showtimes, account } = this.props;
     const { timeOfMovie, isShow } = this.state;
     console.log('showtimesss:', showtimes)
-    console.log('users', users)
+    console.log('account', account)
     return (
         <div className="container my-4">
           <div className="row">
@@ -93,7 +97,7 @@ class BuyTicketPage extends Component {
             </ColumnBlock>
 
             <ColumnBlock title='Chọn suất'>
-              { isShow && this.showTimeOfMovie(timeOfMovie, classes)}
+              { isShow && this.showTimeOfMovie(timeOfMovie, classes, account)}
             </ColumnBlock>
           </div>
         </div>
@@ -106,7 +110,7 @@ const mapStateToProps = (state) => {
     movies: state.reducerMovie.movie,
     movieShowing: state.reducerMovie.movieShowing,
     showtimes: state.reducerShowtimes.showtime,
-    user: state.reducerUsers.users
+    account: state.reducerUsers.account
   }
 }
 
@@ -121,8 +125,8 @@ const mapDispatchToProps = (dispatch) => {
     receiveMovieChoosing: (movie, date, time) => {
       dispatch(actReceiveMovieChoosing(movie, date, time))
     },
-    fetchDataUsers: () => {
-      dispatch(actFetchDataUsersRequest())
+    fetchDataAccount: () => {
+      dispatch(actFetchDataAccountRequest())
     }
   }
 }

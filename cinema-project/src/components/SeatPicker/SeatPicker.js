@@ -15,13 +15,13 @@ class SeatPickers extends Component {
 				},
 				async () => {
 					if (removeCb) {
-						await new Promise(resolve => setTimeout(resolve, 200));
+						await new Promise(resolve => setTimeout(resolve, 750));
 						console.log(
 							`Removed seat ${params.number}, row ${params.row}, id ${params.id}`
 						);
 						removeCb(params.row, params.number);
 					}
-					await new Promise(resolve => setTimeout(resolve, 200));
+					await new Promise(resolve => setTimeout(resolve, 750));
 					console.log(`Added seat ${number}, row ${row}, id ${id}`);
 					const newTooltip = `tooltip for id-${id} added by callback`;
 					addCb(row, number, id, newTooltip);
@@ -36,7 +36,7 @@ class SeatPickers extends Component {
 					loading: true
 				},
 				async () => {
-					await new Promise(resolve => setTimeout(resolve, 200));
+					await new Promise(resolve => setTimeout(resolve, 1500));
 					console.log(`Removed seat ${number}, row ${row}, id ${id}`);
 					// A value of null will reset the tooltip to the original while '' will hide the tooltip
 					const newTooltip = ["A", "B", "C"].includes(row) ? null : "";
@@ -52,7 +52,7 @@ class SeatPickers extends Component {
 					loading: true
 				},
 				async () => {
-					await new Promise(resolve => setTimeout(resolve, 200));
+					await new Promise(resolve => setTimeout(resolve, 1500));
 					console.log(`Added seat ${number}, row ${row}, id ${id}`);
 					const newTooltip = `tooltip for id-${id} added by callback`;
 					addCb(row, number, id, newTooltip);
@@ -166,7 +166,7 @@ class SeatPickers extends Component {
 								visible
 								//selectedByDefault
 								//loading={loading}
-								tooltipProps={{ multiline: true }}
+								//tooltipProps={{ multiline: true }}
 								continuous
 					/>
 			</div>

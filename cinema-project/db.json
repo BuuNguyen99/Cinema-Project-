@@ -369,6 +369,17 @@
       "image": "",
       "address": "1",
       "id": "user0002"
+    },
+    {
+      "name": "huelinh",
+      "email": "nguyenhue@gmail.com",
+      "phone": "0981234567",
+      "gender": "Nữ",
+      "birth": "",
+      "pass": "12345abcde",
+      "image": "",
+      "address": "Da Nang",
+      "id": "fE6XAWZ"
     }
   ],
   "admin": [
@@ -394,7 +405,19 @@
       "image": ""
     }
   ],
-  "account": [],
+  "account": [
+    {
+      "id": "fE6XAWZ",
+      "name": "huelinh",
+      "email": "nguyenhue@gmail.com",
+      "phone": "0981234567",
+      "gender": "Nữ",
+      "birth": "",
+      "pass": "12345abcde",
+      "image": "",
+      "address": "Da Nang"
+    }
+  ],
   "reviewMovie": [
     {
       "id": "",

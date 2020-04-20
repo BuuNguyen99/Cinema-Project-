@@ -7,7 +7,7 @@ import {
   actFetchDataAdminRequest
 } from "./../../actions/action";
 import { connect } from "react-redux";
-
+import {  Link } from "react-router-dom";
 class Login extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -116,10 +116,12 @@ class Login extends React.Component {
                 pass: admin[j].pass,
                 image: admin[j].image
               };
+              console.log('accountAdmin:', accountAdmin)
               alert("Đăng nhập thành công");
+              
               this.props.onLoginAccount(accountAdmin);
               this.setState({ show: false });
-              window.location.reload();
+              //window.location.reload();
               return null;
             }
           }
@@ -133,6 +135,7 @@ class Login extends React.Component {
 
   render() {
     let { txtEmail, txtPassword } = this.state;
+    let { account } = this.props;
 
     let toolbar = {
       display: "content"
@@ -154,13 +157,12 @@ class Login extends React.Component {
     };
     return (
       <ButtonToolbar style={toolbar}>
-        <a
+        <button
           onClick={this.handleShow}
-          className="pl-2 text-secondary text-decoration-none"
-          href="#"
+          className="btn-header pl-2 text-secondary text-decoration-none"
         >
           <i className="fas fa-user mr-1"></i> Đăng nhập
-        </a>
+        </button>
         <Modal
           {...this.props}
           show={this.state.show}
