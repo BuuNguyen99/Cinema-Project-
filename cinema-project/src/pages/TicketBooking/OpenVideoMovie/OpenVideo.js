@@ -1,8 +1,7 @@
-import React from 'react';
-import { Button,Modal, ButtonToolbar } from 'react-bootstrap';
+import React from "react";
+import { Button, Modal, ButtonToolbar } from "react-bootstrap";
 
-
-function MyVerticallyCenteredModal(props) {
+function MyVerticallyCenteredModal(props) {    
   return (
     <Modal
       {...props}
@@ -11,17 +10,18 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+        <Modal.Title id="contained-modal-title-vcenter" className="text-uppercase">
+         {props.info.name}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <div className="embed-responsive embed-responsive-16by9">
+          <iframe
+            className="embed-responsive-item"
+            src= {props.info.video}
+            allowfullscreen
+          ></iframe>
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
@@ -30,17 +30,17 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-function OpenVideo() {
+function OpenVideo(props) {  
   const [modalShow, setModalShow] = React.useState(false);
-
   return (
     <ButtonToolbar>
       <a href="#" variant="primary" onClick={() => setModalShow(true)}>
-          <i className="fa fa-play"></i> 
+        <i className="far fa-play-circle play-video"></i>
       </a>
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        info = {props.info}
       />
     </ButtonToolbar>
   );

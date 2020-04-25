@@ -70,7 +70,7 @@ class Header extends Component {
         <div className=" container-fluid">
           <div className="container">
             <div className="wrap-header row d-flex align-items-center py-3">
-              <div className="col-4">
+              <div className="col-4 col-md-4 col-lg-3">
                 <Link to='/'>
                   <img
                     className="imageLogo"
@@ -78,7 +78,7 @@ class Header extends Component {
                     alt="logo"></img>
                 </Link>
               </div>
-              <div className="col-8 text-right text-secondary">
+              <div className="col-8 col-md-8 col-lg-9 text-right text-secondary">
               <ShowFunction account = {this.props}  onDelete = {this.onDelete} />
               </div>
             </div>
@@ -139,14 +139,14 @@ if (account.length === 0) {
       if (stringID === 'admin') {      
     return (
       <div>
-        <span>Admin: {account[0].name} | </span> <Link to='/' onClick=  {() => onDelete(account[0].id)}> Thoát </Link>
+        <span>Admin: {account[0].name} | </span> <a href="#" onClick=  {() => onDelete(account[0].id)}> Thoát </a>
       </div>
     );
       }
       else {
         return (
           <div>
-            <span>User: {account[0].name} | </span> <Link to='/' onClick = {() => onDelete(account[0].id)}> Thoát </Link>
+            <span>User: {account[0].name} | </span> <a href="#" onClick = {() => onDelete(account[0].id)}> Thoát </a>
           </div>
         );
       }

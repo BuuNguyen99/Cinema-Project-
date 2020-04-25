@@ -68,14 +68,14 @@ class Navigation extends Component {
                 </li>
                 
                 <li onClick={()=> this.handleClickMenu('menu2')} className={`nav-item-c nav-item dropdown ${styleMenu2}`}>
-                  <a
+                  <Link
                     className="nav-link-c text-uppercase nav-link dropdown-toggle"
                     id="navbarDropdownPortfolio"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded={isExpand2}>
                     Góc điện ảnh
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-c dropdown-menu dropdown-menu-right ${styleMenu2}`}
                     aria-labelledby="navbarDropdownPortfolio">

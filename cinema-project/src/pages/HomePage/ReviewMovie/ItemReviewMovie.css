@@ -20,12 +20,12 @@
     transform: scaleX(1);
 }
 
-.linkReivew:hover .col-5 .linkReviewMovie .imgMovie{
+.linkReivew:hover  .linkReviewMovie .imgMovie{
     opacity: 0.7;
     cursor: pointer;
 }
 
-.linkReivew:hover .col-7 .linkReviewMovie .title{
+.linkReivew:hover .linkReviewMovie .title{
     color: coral;
     cursor: pointer;
 }
@@ -39,7 +39,7 @@
     color: gray;
 }
 
-.linkReivew:hover .col-7 .viewReview{
+.linkReivew:hover .viewReview{
     cursor: text;
 }
 

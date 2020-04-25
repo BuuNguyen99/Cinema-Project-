@@ -3,7 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
 import { actRegisterUserRequest, actFetchDataUsersRequest } from "./../../actions/action";
 import { connect } from "react-redux";
-import {  Link } from "react-router-dom";
 
 class Register extends React.Component {
   constructor(props, context) {
@@ -175,13 +174,13 @@ class Register extends React.Component {
     } = this.state;
     return (
       <ButtonToolbar style={toolbar}>
-        <button
+        <a
           onClick={this.handleShow}
-          className="btn-header text-secondary text-decoration-none"
-          to=''
+          className="text-secondary text-decoration-none"
+          href="#"
         >
           Đăng Ký
-        </button>
+        </a>
         <Modal
           {...this.props}
           show={this.state.show}
