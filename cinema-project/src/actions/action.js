@@ -177,3 +177,31 @@ export const actFetchDataSupport = (support) => {
         support
     }
 }
+
+
+
+
+
+export function addMovieInformation(movie) {
+    return {
+      type: Types.SHOW_INFORMATION_MOVIE,
+      movie
+    };
+  }
+
+
+  export const actRatingItemMovieRequest = (movie) => {
+      return dispatch => {
+        return callApi(`movie/${movie.id}`, 'PUT' , movie).then(res => {
+            dispatch(actRatingItemMovie(res.data));
+        })
+      }
+  }
+
+
+  export const actRatingItemMovie = (movie) => {
+    return {
+        type: Types.RATING_ITEM_MOVIE,
+        movie
+    }
+  }

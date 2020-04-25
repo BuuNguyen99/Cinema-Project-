@@ -12,7 +12,7 @@ class Movies extends React.Component {
       <div className="container mb-5">
         <div className="row nav-tabs">
           <ul className="nav movie-home link-cout">
-            <li className=" mr-3 link-wrapper">
+            <li className="mr-3 link-wrapper">
               <a
                 className="link hover-2"
                 href="#tab_default_1"
@@ -20,7 +20,7 @@ class Movies extends React.Component {
                 aria-expanded="true"
                 style={linksStyle}
               >
-                Phim đang chiếu
+              Phim đang chiếu
               </a>
             </li>
             <li className=" mr-3 link-wrapper">
