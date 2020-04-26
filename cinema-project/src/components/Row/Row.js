@@ -16,7 +16,7 @@ class Row extends Component {
       count: this.state.count + 1,
       total: (this.state.count + 1) * price
     });
-    this.props.totalRow({...ticket, total: (this.state.count + 1) * price})
+    this.props.totalRow({...ticket, total: (this.state.count + 1) })
   };
 
   handleOnSub = ticket => {
@@ -25,7 +25,7 @@ class Row extends Component {
       count: this.state.count - 1,
       total: (this.state.count - 1) * price
     });
-    this.props.totalRow({...ticket, total: (this.state.count - 1) * price})
+    this.props.totalRow({...ticket, total: (this.state.count - 1) })
   };
   handleOnChangeInput = (e) => {
     let value = e.target.value;

@@ -1,66 +1,94 @@
-import React, { Component } from 'react';
-import styles from './SeatPickerStyle';
-import { withStyles } from '@material-ui/styles';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import classNames from 'classnames';
-import { chunk } from 'lodash';
+import React, { Component } from "react";
+import styles from "./SeatPickerStyle";
+import { withStyles } from "@material-ui/styles";
+import { connect } from "react-redux";
+import { compose } from "redux";
+import classNames from "classnames";
+import { chunk } from "lodash";
+//import "./SeatPickerStyle.css";
 
 class SeatPickers extends Component {
-	
+	constructor(props) {
+		super(props);
+		this.state = {
+			arrSeatReserved: []
+		};
+	}
+
+	handleOnChooseSeat = (item, amountTicket) => {
+		if(item.isReversed === undefined) {
+			let { arrSeatReserved, choosing } = this.state;
+			let newArr = arrSeatReserved.includes(item.id) ? arrSeatReserved.filter(i => i !== item.id) : [...arrSeatReserved, item.id];
+			if(newArr.length > amountTicket) {
+				newArr.splice(0, 1)
+			}
+			this.setState({
+				arrSeatReserved: newArr,
+				choosing: choosing
+			})
+			this.props.showNameSeat(newArr)
+		}
+	};
+
 	render() {
-			let { classes } = this.props;
-			let room = {
-					id: 'room2',
-					name: 'Rap 2',
-					numberSeat: 80,
-					seatReserved: [34, 35, 67, 68, 90]
+
+		console.log('this.state.arrSeatReserved',this.state.arrSeatReserved)
+		let { classes, amountTicket, roomDetail } = this.props;
+		let { arrSeatReserved } = this.state;
+		let room = roomDetail;
+		let ArrSeats = [];
+		for (let i = 0; i < room.numberSeat; i++) {
+			if (room.seatReserved.includes(i + 1)) {
+				ArrSeats.push({
+					id: i + 1,
+					number: (i + 1) % 10 !== 0 ? (i + 1) % 10 : 10,
+					isReversed: true,
+				});
+			} else {
+				ArrSeats.push({
+					id: i + 1,
+					number: (i + 1) % 10 !== 0 ? (i + 1) % 10 : 10,
+				});
 			}
-			let ArrSeats = [];
-			for(let i = 0; i < room.numberSeat; i++) {
-				if(room.seatReserved.includes(i + 1)) {
-					ArrSeats.push({id: i + 1, number: (i+1)%10, isReversed: true})
-				} else {
-					ArrSeats.push({id: i + 1, number: (i+1)%10})
-				}
-			}
-			let arrChunk = chunk(ArrSeats, 10);
-			
-			// var btnClass = classNames('btn', this.props.className, {
-			// 	'btn-pressed': this.state.isPressed,
-			// 	'btn-over': !this.state.isPressed && this.state.isHovered
-			// });
-			return (
-				<div className={classes.wrapSeat}>
-					<table className={classes.table}>
-					{
-						arrChunk.map((arrItem, index) => (
-							<tr>
+		}
+
+		let arrChunk = chunk(ArrSeats, 10);
+
+		return (
+			<div className={classes.wrapSeat}>
+				<table className={classes.table}>
+					{arrChunk.map((arrItem, index) => {
+						return (
+							<tr key={index}>
 								<td className='pr-3'>{String.fromCharCode(index + 65)}</td>
-							{
-								arrItem.map((item) => {
-								console.log('item:', item.number)
-									return <td key={item.id} className={classes.seat}>{item.number}</td>
-								})
-							}
-						</tr>
-						))
-					}
-					</table>
-				</div>
-			);
+								{arrItem.map((item) => {
+									const style =
+										item.isReversed !== undefined ? classes.reversed : arrSeatReserved.includes(item.id) ? classes.choosing : classes.normal;
+									return (
+										<td
+											key={item.id}
+											className={`${classes.seat} ${style}`}
+											onClick={() => this.handleOnChooseSeat(item, amountTicket)}>
+											{item.number}
+										</td>
+									);
+								})}
+							</tr>
+						);
+					})}
+				</table>
+			</div>
+		);
 	}
 }
-const mapStateToProps = state => {
-    return {
-    };
-  };
-  
-  const mapDispatchToProps = dispatch => {
-    return {
-    };
-  };
-  
-  const withConnect = connect(mapStateToProps, mapDispatchToProps);
-  
-  export default compose(withStyles(styles), withConnect)(SeatPickers);
+const mapStateToProps = (state) => {
+	return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {};
+};
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withStyles(styles), withConnect)(SeatPickers);

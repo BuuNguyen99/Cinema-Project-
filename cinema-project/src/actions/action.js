@@ -152,12 +152,13 @@ export const  actFetchShowtimes = (data) => {
 }
 
 // act receive moving choosing
-export const actReceiveMovieChoosing = (movie, date, time) => {
+export const actReceiveMovieChoosing = (movie, date, time, idUser) => {
     return {
         type: Types.RECEIVE_MOVIE_CHOOSING,
         movie,
         date,
-        time
+        time,
+        idUser
     }
 }
 
@@ -210,5 +211,24 @@ export const actFetchDataSupport = (support) => {
     return {
         type: Types.FETCH_DATA_SUPPORT,
         support
+    }
+}
+
+export const actCreateBookingRequest = (data) => {
+    return (dispatch) => {
+        return callApi('Booking','POST', data).then(res => {
+            if(res.status === 200 || res.status === 201) {
+                console.log('res booking:', res.data)
+                alert('Đặt vé thành công!')
+                dispatch(actCreateBooking(res.data))
+            } else alert('Không thể kết nối dữ liệu!')
+        })
+    }
+}
+
+export const actCreateBooking = (data) => {
+    return {
+        type: Types.CREATE_BOOKING,
+        data
     }
 }

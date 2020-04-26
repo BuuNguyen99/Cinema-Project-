@@ -55,7 +55,7 @@ class BuyTicketPage extends Component {
   handleOnChooseSession = (item, session, account) => {
     if(account[0]) {
       const movie = this.state.active
-      this.props.receiveMovieChoosing(movie, item, session)
+      this.props.receiveMovieChoosing(movie, item, session, account[0].id)
       const { history } = this.props
       const slug = movie.slug
       history.push(`/buy-ticket-detail/${slug}`)
@@ -122,8 +122,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchShowTimes: () => {
       dispatch(actFetchShowtimesRequest())
     },
-    receiveMovieChoosing: (movie, date, time) => {
-      dispatch(actReceiveMovieChoosing(movie, date, time))
+    receiveMovieChoosing: (movie, date, time, idUser) => {
+      dispatch(actReceiveMovieChoosing(movie, date, time, idUser))
     },
     fetchDataAccount: () => {
       dispatch(actFetchDataAccountRequest())

@@ -5,7 +5,8 @@ const stateDefault = {
   movieShowing: [],
   movieComingSoon: [],
   searchMovie: [],
-  choosing: {}
+  choosing: {},
+  booking: []
 };
 
 const isMovieShowing = (date) => {
@@ -32,8 +33,18 @@ function reducerMovie(state = stateDefault, action) {
         choosing: {
           movie: action.movie,
           date: action.date,
-          time: action.time
+          time: action.time,
+          idUser: action.idUser
         }
+      }
+    }
+    case Types.CREATE_BOOKING: {
+      return {
+        ...state,
+        booking: [
+          ...state.booking,
+          action.data
+        ]
       }
     }
     default: {

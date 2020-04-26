@@ -1,4 +1,7 @@
 const styles = (theme) => ({
+    table: {
+        minWidth: '350px'
+    },
     tableHead: {
         backgroundColor: theme.color.brown,
         color: 'white',

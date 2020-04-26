@@ -454,15 +454,17 @@
   ],
   "Booking": [
     {
-      "id": "",
-      "idUser": "",
-      "idMovie": "",
-      "idDate": "",
-      "time": "13:00",
+      "idUser": "fE6XAWZ",
+      "idRoom": "room2",
+      "idMovie": "Movie002",
+      "idDate": "day001",
+      "time": "11:00",
       "seat": [
-        "F6",
-        "F7"
-      ]
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "id": 1
     }
   ],
   "dates": [
@@ -620,7 +622,19 @@
       "price": 60000
     }
   ],
-  "booking": {},
+  "booking": {
+    "idUser": "fE6XAWZ",
+    "idRoom": "room2",
+    "idMovie": "Movie002",
+    "idDate": "day001",
+    "time": "11:00",
+    "seat": [
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "id": 1
+  },
   "foodCombo": [
     {
       "id": "combo1",
