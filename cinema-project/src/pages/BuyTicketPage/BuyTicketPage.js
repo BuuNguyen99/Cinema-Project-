@@ -53,7 +53,7 @@ class BuyTicketPage extends Component {
   }
 
   handleOnChooseSession = (item, session, account) => {
-    if(account[0]) {
+    if(account && account.length > 0) {
       const movie = this.state.active
       this.props.receiveMovieChoosing(movie, item, session, account[0].id)
       const { history } = this.props
@@ -87,8 +87,11 @@ class BuyTicketPage extends Component {
   render() {
     const { classes, movies, movieShowing,showtimes, account } = this.props;
     const { timeOfMovie, isShow } = this.state;
+    // let movieShowing = [];
+    // if(Object.keys(movies).length > 0) {
+    //   movieShowing = movies.movieShowing
+    // }
     console.log('showtimesss:', showtimes)
-    console.log('account', account)
     return (
         <div className="container my-4">
           <div className="row">
@@ -110,7 +113,7 @@ const mapStateToProps = (state) => {
     movies: state.reducerMovie.movie,
     movieShowing: state.reducerMovie.movieShowing,
     showtimes: state.reducerShowtimes.showtime,
-    account: state.reducerUsers.account
+    account: state.reducerUsers.account,
   }
 }
 
@@ -127,6 +130,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     fetchDataAccount: () => {
       dispatch(actFetchDataAccountRequest())
+
     }
   }
 }

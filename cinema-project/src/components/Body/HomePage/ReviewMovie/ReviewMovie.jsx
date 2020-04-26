@@ -27,9 +27,9 @@ class ReviewMovie extends Component {
                             <h5 className="title">[Review] END GAME: Bản anh hùng ca khép lại kỷ nguyên huy hoàng của Marvel</h5>
                         </a>
                         <div>
-                            <button className="btn btn-primary mr-3"><i className="far fa-thumbs-up"></i> &nbsp; Thích 3</button>
-                            <button className="btn btn-light ml-3 mr-3 viewReview"><i className="far fa-eye"></i>&nbsp;3250</button>
-                            <span className="ml-3 mr-3"><i className="fas fa-star"></i>&nbsp;<span className="markReport">7.1</span> /10(40)</span>
+                            <button className="btn btn-primary mr-3"><i class="far fa-thumbs-up"></i> &nbsp; Thích 3</button>
+                            <button className="btn btn-light ml-3 mr-3 viewReview"><i class="far fa-eye"></i>&nbsp;3250</button>
+                            <span className="ml-3 mr-3"><i class="fas fa-star"></i>&nbsp;<span className="markReport">7.1</span> /10(40)</span>
                             <button className="ml-3 btn btn-warning">Đánh giá</button>
                         </div>
                         <p className="mt-3 contentReviewMovie">
@@ -49,9 +49,9 @@ class ReviewMovie extends Component {
                             <h5 className="title">[Review] END GAME: Bản anh hùng ca khép lại kỷ nguyên huy hoàng của Marvel</h5>
                         </a>
                         <div>
-                            <button className="btn btn-primary mr-3"><i className="far fa-thumbs-up"></i> &nbsp; Thích 3</button>
-                            <button className="btn btn-light ml-3 mr-3 viewReview"><i className="far fa-eye"></i>&nbsp;3250</button>
-                            <span className="ml-3 mr-3"><i className="fas fa-star"></i>&nbsp;<span className="markReport">7.1</span> /10(40)</span>
+                            <button className="btn btn-primary mr-3"><i class="far fa-thumbs-up"></i> &nbsp; Thích 3</button>
+                            <button className="btn btn-light ml-3 mr-3 viewReview"><i class="far fa-eye"></i>&nbsp;3250</button>
+                            <span className="ml-3 mr-3"><i class="fas fa-star"></i>&nbsp;<span className="markReport">7.1</span> /10(40)</span>
                             <button className="ml-3 btn btn-warning">Đánh giá</button>
                         </div>
                         <p className="mt-3 contentReviewMovie">
@@ -71,9 +71,9 @@ class ReviewMovie extends Component {
                             <h5 className="title">[Review] END GAME: Bản anh hùng ca khép lại kỷ nguyên huy hoàng của Marvel</h5>
                         </a>
                         <div>
-                            <button className="btn btn-primary mr-3"><i className="far fa-thumbs-up"></i> &nbsp; Thích 3</button>
-                            <button className="btn btn-light ml-3 mr-3 viewReview"><i className="far fa-eye"></i>&nbsp;3250</button>
-                            <span className="ml-3 mr-3"><i className="fas fa-star"></i>&nbsp;<span className="markReport">7.1</span> /10(40)</span>
+                            <button className="btn btn-primary mr-3"><i class="far fa-thumbs-up"></i> &nbsp; Thích 3</button>
+                            <button className="btn btn-light ml-3 mr-3 viewReview"><i class="far fa-eye"></i>&nbsp;3250</button>
+                            <span className="ml-3 mr-3"><i class="fas fa-star"></i>&nbsp;<span className="markReport">7.1</span> /10(40)</span>
                             <button className="ml-3 btn btn-warning">Đánh giá</button>
                         </div>
                         <p className="mt-3 contentReviewMovie">

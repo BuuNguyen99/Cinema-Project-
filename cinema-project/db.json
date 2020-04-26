@@ -7,23 +7,158 @@
       "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
       "type": "Hài, Tình cảm , Gia đình",
       "author": "Đồng Đăng Giao",
-      "actor": [
+      "actor": "Khả Như, Kiều Minh Tuấn",
+      "time": "105 minutes",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
         {
-          "id": "Actor001",
-          "name": "Khả Như"
+          "id": "movie001_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
         },
         {
-          "id": "Actor002",
-          "name": "Kiều Minh Tuấn"
+          "id": "movie001_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie001_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ],
-      "time": "105 minute",
-      "nation": "Việt Name",
-      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
       "price": "75000",
       "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/26/nang-3---poster-khong-logo_1582692152072.jpg",
+      "video": "https://www.youtube.com/embed/DymKqNH_m8w?autoplay=1",
+      "vote": {
+        "rate": "6.32",
+        "numberOfReviews": "69"
+      }
     },
     {
       "id": "Movie002",
@@ -32,23 +167,158 @@
       "intro": "Lấy bối cảnh vùng ngoại ô một thế giới kỳ ảo, hai anh em yêu tinh tuổi teen bắt đầu hành trình khám phá xem, liệu rằng đâu đó ngoài kia có còn tồn tại ma thuật không?",
       "type": "Hoạt Hình",
       "author": "Dan Scanlon",
-      "actor": [
-        {
-          "id": "Actor003",
-          "name": "Tom Holland,"
-        },
-        {
-          "id": "Actor004",
-          "name": "Chris Pratt"
-        }
-      ],
+      "actor": "Tom Holland, Chris Pratt",
       "time": "105 minute",
       "nation": "Mỹ",
       "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie002_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "11:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "19:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie002_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie002_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "price": "75000",
       "image": "https://galaxycine.vn/media/2020/2/24/450x300_1582529315801.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/1/16/poster-onward-official_1579158439704.jpg",
+      "video": "https://www.youtube.com/embed/UCfgXvSzllA?autoplay=1",
+      "vote": {
+        "rate": "7.53",
+        "numberOfReviews": "42"
+      }
     },
     {
       "id": "Movie003",
@@ -57,23 +327,158 @@
       "intro": "Một nhóm bạn đi nghỉ dưỡng tại ngôi nhà bên hồ, tuy nhiên cuộc vui đã trở nên kinh hoàng khi có người bị sát hại. Thế lực bí ẩn dưới đáy hồ thực sự là gì?",
       "type": "Kinh dị, tâm lý",
       "author": "Quang Huy",
-      "actor": [
-        {
-          "id": "Actor005",
-          "name": "Patrick Walshe McBride"
-        },
-        {
-          "id": "Actor006",
-          "name": "Iben Akerlie"
-        }
-      ],
+      "actor": "Patrick Walshe McBride, Iben Akerlie",
       "time": "105 minute",
       "nation": "Na Uy",
       "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie003_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie003_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie003_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "price": "75000",
       "image": "https://galaxycine.vn/media/2020/2/27/450x300_1582775198057.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/27/300x450-1_1582775190404.jpg",
+      "video": "https://www.youtube.com/embed/VWjlmdhvCy0?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie004",
@@ -82,23 +487,158 @@
       "intro": "Phim là câu chuyện có thật về gia đình bị ma ám tại vùng Madrid khi họ chuyển đến căn nhà mới, các thế lực đen tối tại đây đã gây nỗi ám ảnh kinh hoàng cho họ.",
       "type": "Kinh dị",
       "author": "Albert Pintó",
-      "actor": [
+      "actor": "Begoña Vargas , Iván Marcos",
+      "time": "105 minute",
+      "nation": "Italia",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
         {
-          "id": "Actor007",
-          "name": "Begoña Vargas"
+          "id": "movie004_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
         },
         {
-          "id": "Actor008",
-          "name": "Iván Marcos"
+          "id": "movie004_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie004_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ],
-      "time": "105 minute",
-      "nation": "Viet nam",
-      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
       "price": "75000",
       "image": "https://galaxycine.vn/media/2020/2/24/450x300-32_1582530414160.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/24/300x450-32_1582530404329.jpg",
+      "video": "https://www.youtube.com/embed/5b4RLQssyuc?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie005",
@@ -107,23 +647,158 @@
       "intro": "Một cô gái đang bị truy sát bởi một tên ác nhân mà cô không thể nhìn thấy. Mục đích của kẻ vô hình này là gì? Hắn có liên hệ ra sao với cô gái kia? Đón xem!",
       "type": "Kinh dị, ly kì, giả tưởng",
       "author": "Quang Huy",
-      "actor": [
-        {
-          "id": "Acto009",
-          "name": "Elisabeth Moss "
-        },
-        {
-          "id": "Actor010",
-          "name": "Oliver Jackson-Cohen"
-        }
-      ],
+      "actor": "Elisabeth Moss, Oliver Jackson-Cohen",
       "time": "105 minute",
       "nation": "Mỹ",
       "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie005_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie005_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie005_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "price": "75000",
       "image": "https://galaxycine.vn/media/2020/2/19/450x300_1582096375218.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie006",
@@ -132,94 +807,339 @@
       "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
       "type": "Hành động, tâm lý",
       "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
+      "actor": "Hoàng Yến Chibi, Quách Ngọc Tuyên",
       "time": "105 minute",
       "nation": "Việt Nam",
       "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie006_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie006_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie006_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "price": "75000",
       "image": "https://galaxycine.vn/media/2020/2/20/450x300-cuoc-xe_1582172123848.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/UCfgXvSzllA?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
-      "id": "Movie020",
+      "id": "Movie007",
       "name": "Nắng 4: lời hứa của cha",
       "slug": "nang-4-loi-hua-cua-cha",
       "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
       "type": "Hài, Tình cảm , Gia đình",
       "author": "Đồng Đăng Giao",
-      "actor": [
-        {
-          "id": "Actor001",
-          "name": "Khả Như"
-        },
-        {
-          "id": "Actor002",
-          "name": "Kiều Minh Tuấn"
-        }
-      ],
-      "time": "105 minute",
+      "actor": "Khả Như , Kiều Minh Tuấn",
+      "time": "105 minutes",
       "nation": "Việt Name",
       "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie007_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie007_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie007_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "price": "75000",
       "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
-      "id": "Movie007",
+      "id": "Movie008",
       "name": "MINIONS: THE RISE OF GRU",
       "slug": "minions-the-rise-of-gru",
       "intro": "Minions - Những Quả Chuối Vàng biết đi sẽ trở lại trong câu chuyện chưa kể về tuổi thơ của Gru - cậu bé mười hai tuổi mơ được trở thành ác nhân xuất sắc nhất thế giới.",
       "type": "Hoạt hình",
       "author": "Lyle Balda",
-      "actor": [
-        {
-          "id": "Actor0071",
-          "name": "Minion"
-        }
-      ],
+      "actor": "Minions, ALl",
       "time": "105 minute",
       "nation": "Mỹ",
       "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
       "price": "75000",
       "image": "https://i.picsum.photos/id/199/600/400.jpg",
-      "video": "",
-      "vote": ""
-    },
-    {
-      "id": "Movie008",
-      "name": "Cuốc Xe Nửa Đêm",
-      "slug": "cuoc-xe-nua-dem",
-      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
-      "type": "Hành động, tâm lý",
-      "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
-      "time": "105 minute",
-      "nation": "Việt Nam",
-      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-      "price": "75000",
-      "image": "https://i.picsum.photos/id/201/600/400.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie009",
@@ -228,48 +1148,40 @@
       "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
       "type": "Hành động, tâm lý",
       "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
+      "actor": "Khả Như , Kiều Minh Tuấn",
       "time": "105 minute",
       "nation": "Việt Nam",
       "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
       "price": "75000",
-      "image": "https://i.picsum.photos/id/202/600/400.jpg",
-      "video": "",
-      "vote": ""
+      "image": "https://i.picsum.photos/id/201/600/400.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
-      "id": "Movie010",
+      "id": "Movie0010",
       "name": "Cuốc Xe Nửa Đêm",
       "slug": "cuoc-xe-nua-dem",
       "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
       "type": "Hành động, tâm lý",
       "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
+      "actor": "Khả Như , Kiều Minh Tuấn",
       "time": "105 minute",
       "nation": "Việt Nam",
       "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
       "price": "75000",
-      "image": "https://i.picsum.photos/id/203/600/400.jpg",
-      "video": "",
-      "vote": ""
+      "image": "https://i.picsum.photos/id/202/600/400.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie011",
@@ -278,23 +1190,19 @@
       "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
       "type": "Hành động, tâm lý",
       "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
+      "actor": "Khả Như , Kiều Minh Tuấn",
       "time": "105 minute",
       "nation": "Việt Nam",
       "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
       "price": "75000",
-      "image": "https://i.picsum.photos/id/204/600/400.jpg",
-      "video": "",
-      "vote": ""
+      "image": "https://i.picsum.photos/id/203/600/400.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie012",
@@ -303,23 +1211,19 @@
       "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
       "type": "Hành động, tâm lý",
       "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
+      "actor": "Khả Như , Kiều Minh Tuấn",
       "time": "105 minute",
       "nation": "Việt Nam",
       "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
       "price": "75000",
-      "image": "https://i.picsum.photos/id/211/600/400.jpg",
-      "video": "",
-      "vote": ""
+      "image": "https://i.picsum.photos/id/204/600/400.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     },
     {
       "id": "Movie013",
@@ -328,23 +1232,40 @@
       "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
       "type": "Hành động, tâm lý",
       "author": "Nguyễn Nguyên Hoàng",
-      "actor": [
-        {
-          "id": "Actor011",
-          "name": "Hoàng Yến Chibi"
-        },
-        {
-          "id": "Actor012",
-          "name": "Quách Ngọc Tuyên"
-        }
-      ],
+      "actor": "Khả Như , Kiều Minh Tuấn",
       "time": "105 minute",
       "nation": "Việt Nam",
       "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
+      "price": "75000",
+      "image": "https://i.picsum.photos/id/211/600/400.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
+    },
+    {
+      "id": "Movie014",
+      "name": "Cuốc Xe Nửa Đêm",
+      "slug": "cuoc-xe-nua-dem",
+      "intro": "Hoàng Yến Chibi trở lại điện ảnh với vai công nàng xe ôm với vai Thư, cô gặp Sỹ (do diễn viên Quách Ngọc Tuyên thủ vai) trong một dịp tình cờ. Sau đấy cả hai yêu nhau, tuy nhiên dường như Thư và Sỹ đều có sự liên quan đến những nhân vật trong thế giới ngầm đầy đen tối. Liệu số phận của họ sẽ đi đến đâu?",
+      "type": "Hành động, tâm lý",
+      "author": "Nguyễn Nguyên Hoàng",
+      "actor": "Khả Như , Kiều Minh Tuấn",
+      "time": "105 minute",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [],
       "price": "75000",
       "image": "https://i.picsum.photos/id/206/600/400.jpg",
-      "video": "",
-      "vote": ""
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/20/300x450-cuoc-xe_1582172116913.jpg",
+      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     }
   ],
   "users": [
@@ -353,33 +1274,106 @@
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": "",
+      "birth": {
+        "value": "1999-03-05"
+      },
       "pass": "nguyenbuu99",
-      "image": "",
       "address": "856/34 Tôn Đức Thắng",
+      "city": "Thừa Thiên Huế",
+      "county": "Huyện Phú Vang",
+      "currentStar": 100,
+      "targets": 0,
+      "myDeal": [
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 10
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0002",
+          "room": "ROOM 2",
+          "movie": "Chiến Binh Rồng (2D)",
+          "price": 65000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0003",
+          "room": "ROOM 3",
+          "movie": "Gái Già Lắm Chiêu (2D)",
+          "price": 45000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        }
+      ],
       "id": "user0001"
-    },
-    {
-      "name": "a",
-      "email": "nguyenbuubkdn@gmail.com",
-      "phone": "12121212121",
-      "gender": "Nam",
-      "birth": "",
-      "pass": "12121212q",
-      "image": "",
-      "address": "1",
-      "id": "user0002"
     },
     {
       "name": "huelinh",
       "email": "nguyenhue@gmail.com",
       "phone": "0981234567",
       "gender": "Nữ",
-      "birth": "",
+      "birth": "24/03/1996",
       "pass": "12345abcde",
-      "image": "",
-      "address": "Da Nang",
+      "address": "856/34 Tôn Đức Thắng",
+      "city": "Đà Nẵng",
+      "county": "Quận Liên Chiểu",
+      "currentStar": 100,
+      "targets": 0,
+      "myDeal": [
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        }
+      ],
       "id": "fE6XAWZ"
+    },
+    {
+      "name": "Nguyễn Bữu",
+      "email": "nguyenbuu3599@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": {
+        "value": "1999-03-05"
+      },
+      "pass": "nguyenbuu99",
+      "address": "Thừa Thiên Huế",
+      "city": "",
+      "county": "",
+      "currentStar": 0,
+      "targets": 0,
+      "myDeal": [],
+      "id": "xQ--20H"
     }
   ],
   "admin": [
@@ -407,15 +1401,21 @@
   ],
   "account": [
     {
-      "id": "fE6XAWZ",
-      "name": "huelinh",
-      "email": "nguyenhue@gmail.com",
-      "phone": "0981234567",
-      "gender": "Nữ",
-      "birth": "",
-      "pass": "12345abcde",
-      "image": "",
-      "address": "Da Nang"
+      "id": "xQ--20H",
+      "name": "Nguyễn Bữu",
+      "email": "nguyenbuu3599@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": {
+        "value": "1999-03-05"
+      },
+      "pass": "nguyenbuu99",
+      "address": "Thừa Thiên Huế",
+      "city": "",
+      "county": "",
+      "currentStar": 0,
+      "targets": 0,
+      "myDeal": []
     }
   ],
   "reviewMovie": [
@@ -447,24 +1447,72 @@
   },
   "support": [
     {
-      "id": "",
-      "title": "",
-      "content": ""
-    }
-  ],
-  "Booking": [
+      "id": "Support001",
+      "title": "Tôi có thể dùng tài khoản thành viên của mình để mua vé nhóm được không?",
+      "content": [
+        "Bạn có thể cung cấp mã barcode trên mobile app/thẻ thành viên trong quá trình giao dịch mua vé nhóm để được tích điểm bạn nhé, tuy nhiên mỗi tài khoản chỉ áp dụng giá vé thành viên tối đa 8 vé/ngày bạn nhé."
+      ]
+    },
     {
-      "idUser": "fE6XAWZ",
-      "idRoom": "room2",
-      "idMovie": "Movie002",
-      "idDate": "day001",
-      "time": "11:00",
-      "seat": [
-        "C4",
-        "C5",
-        "C6"
-      ],
-      "id": 1
+      "id": "Support002",
+      "title": "Làm sao để khiếu nại hoặc góp ý với Galaxy?",
+      "content": [
+        "Khi có bất kỳ khiếu nại, hoặc vấn đề phát sinh với dịch vụ của Galaxy Cinema, quý khách vui lòng gọi hotline 19002224 hoặc gửi thông tin đến email: hotro@galaxy.com.vn hoặc gửi tin nhắn đến fanpage Facebook chính thức của Galaxy Cinema tại địa chỉ: https://facebook.com/galaxycine.vn "
+      ]
+    },
+    {
+      "id": "Support003",
+      "title": "Thanh toán online đã bị trừ tiền nhưng không nhận được mã đặt vé?",
+      "content": [
+        "Bạn có thể inbox qua fanpage Facebook chính thức của Galaxy Cinema tại địa chỉ https://facebook.com/galaxycine.vn hoặc liên hệ với hotline 19002224 để được hỗ trợ bạn nhé (Thời gian làm việc từ 8:00 đến 22:00 hàng ngày)",
+        "Cập nhật lại thời gian của thẻ ATM từ 7 đến 15 ngày làm việc, thẻ Visa/Master từ 7 đến 45 ngày làm việc (không tính Cuối tuần và Ngày Lễ)"
+      ]
+    },
+    {
+      "id": "Support004",
+      "title": "Thẻ thành viên Star/G-Star/X-Star có hết hạn sử dụng không?",
+      "content": [
+        " Sau khi đăng ký tài khoản thành viên, điểm tích lũy của bạn (Star) sẽ được sử dụng trong năm (tính từ ngày 01/01/2020 đến 31/12/2020), sau thời gian 01 năm, điểm tích lũy (Star) sẽ trừ khỏi tài khoản thành viên"
+      ]
+    },
+    {
+      "id": "Support005",
+      "title": "Làm thế nào để duy trì hạn mức G-Star/X-Star?",
+      "content": [
+        "Đối với hạng mức G-Star: bạn cần chi tiêu từ 2,000,000 VND đến 3,999,999 VND (tính từ ngày 01/01/2020 đến 31/12/2020)",
+        "Đối với hạng mức X-Star: bạn cần chi tiêu từ 4,000,000 VND trở lên (tính từ ngày 01/01/2010 đến 31/12/2020)"
+      ]
+    },
+    {
+      "id": "Support006",
+      "title": "Công dụng của thẻ thành viên Star/G-Star/X-Star?",
+      "content": [
+        " Xuất trình barcode trên mobile app/thẻ thành viên tại rạp hoặc đăng nhập tài khoản thành viên khi mua vé online để được áp dụng giá vé thành viên.",
+        " Xuất trình barcode trên mobile app/thẻ thành viên khi giao dịch tại rạp hoặc đăng nhập tài khoản khi mua vé online, bạn sẽ nhận được số điểm tích lũy tương ứng với số tiền chi tiêu. Điểm thưởng này dùng để đổi các phần quà từ Galaxy. Bên cạnh, khi bạn cung cấp thông tin thành viên tại quầy bắp nước sẽ được giảm giá theo hạng mức của tài khoản thành viên.",
+        " Ngoài ra, với lịch sử giao dịch của bạn sẽ giúp Galaxy có cơ hội hiểu rõ hơn về bạn và từ đó chúng tôi sẽ đưa ra được các chương trình khuyến mãi phù hợp và gửi đến bạn những thông tin các bộ phim bạn yêu thích."
+      ]
+    },
+    {
+      "id": "Support007",
+      "title": "Làm thế nào để tích lũy Stars?",
+      "content": [
+        " Với mỗi 10.000VND khi chi tiêu tại Galaxy bạn sẽ tích lũy tương ứng với 1 Star trong tài khoản thành viên của bạn. Bạn vui lòng xuất trình tài khoản thành viên tại rạp hoạc đăng nhập tài khoản trên Web/App của Galaxy khi tiến hành giao dịch bạn nhé."
+      ]
+    },
+    {
+      "id": "Support008",
+      "title": "Trường hợp để kiểm tra số lượng Stars trong tài khoản, tôi phải liên hệ ai?",
+      "content": [
+        " Bạn vui lòng gọi hotline 19002224 hoặc gửi thông tin đến email: hotro@galaxy.com.vn hoặc gửi tin nhắn đến fanpage Facebook chính thức của Galaxy Cinema tại địa chỉ: https://facebook.com/galaxycine.vn cung cấp mã thẻ thành viên/SĐT tài khoản để được hỗ trợ bạn nhé.",
+        " Bên cạnh bạn cũng có thể đăng nhập tài khoản thành viên tại Web/App của Galaxy, vào mục Tài khoản -> Giao dịch để kiểm tra số Star và lịch sử giao dịch."
+      ]
+    },
+    {
+      "id": "Support009",
+      "title": "Trường hợp tôi có nhiều tài khoản thành viên, tôi có thể tích các Star vào 1 tài khoản không?",
+      "content": [
+        " Số Star của mỗi tài khoản sẽ không được tích gộp vào 1 tài khoản bạn nhé."
+      ]
     }
   ],
   "dates": [
@@ -622,19 +1670,7 @@
       "price": 60000
     }
   ],
-  "booking": {
-    "idUser": "fE6XAWZ",
-    "idRoom": "room2",
-    "idMovie": "Movie002",
-    "idDate": "day001",
-    "time": "11:00",
-    "seat": [
-      "C4",
-      "C5",
-      "C6"
-    ],
-    "id": 1
-  },
+  "booking": {},
   "foodCombo": [
     {
       "id": "combo1",

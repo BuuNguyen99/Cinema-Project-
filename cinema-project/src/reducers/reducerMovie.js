@@ -6,14 +6,15 @@ const stateDefault = {
   movieComingSoon: [],
   searchMovie: [],
   choosing: {},
-  booking: []
+  booking: [],
+  showInfoMovie: [],
 };
 
 const isMovieShowing = (date) => {
   const now = new Date().setHours(0, 0, 0, 0);
-  if(Date.parse(date) <= now) return true;
-  else return false
-}
+  if (Date.parse(date) <= now) return true;
+  else return false;
+};
 
 function reducerMovie(state = stateDefault, action) {
   switch (action.type) {
@@ -21,13 +22,16 @@ function reducerMovie(state = stateDefault, action) {
       return {
         ...state,
         movie: action.movie,
-        movieShowing: action.movie.filter(item => isMovieShowing(item.premiereDate)),
-        movieComingSoon: action.movie.filter(item => !isMovieShowing(item.premiereDate))
-      }
+        movieShowing: action.movie.filter((item) =>
+          isMovieShowing(item.premiereDate)
+        ),
+        movieComingSoon: action.movie.filter(
+          (item) => !isMovieShowing(item.premiereDate)
+        ),
+      };
     }
-    
+
     case Types.RECEIVE_MOVIE_CHOOSING: {
-      console.log('action in reducer:', action.movie, action.date, action.time)
       return {
         ...state,
         choosing: {
@@ -35,9 +39,30 @@ function reducerMovie(state = stateDefault, action) {
           date: action.date,
           time: action.time,
           idUser: action.idUser
+        },
+      };
+    }
+    case Types.SHOW_INFORMATION_MOVIE: {
+      let newState = { ...state };
+      if (newState.showInfoMovie.length === 1) {
+        newState.showInfoMovie.splice(0, 1);
+        newState.showInfoMovie.push(action.movie);
+      } else {
+        newState.showInfoMovie.push(action.movie);
+      }
+      return newState;
+    }
+    case Types.RATING_ITEM_MOVIE: {
+      let newState = { ...state };
+      for (let i = 0 ; i < newState.movie.length ; i++) {
+        if(newState.movie[i].id === action.movie.id) {
+            newState.movie[i] = action.movie;
         }
       }
+      
+      return newState;
     }
+
     case Types.CREATE_BOOKING: {
       return {
         ...state,

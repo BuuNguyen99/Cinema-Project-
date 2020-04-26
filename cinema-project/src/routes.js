@@ -2,7 +2,6 @@ import React from 'react';
 import HomePage from './pages/HomePage/HomePage';
 import NotFoundPage from './pages/NotFoundFage/NotFoundPage';
 import SearchPage from './pages/SearchPage/SearchPage';
-import AccountPage from './pages/AccountPage/AccountPage';
 import SupportPage from './pages/SupportPage/SupportPage';
 import TheaterPage from './pages/TheaterPage/TheaterPage';
 import EventPage from './pages/EventPage/EventPage';
@@ -14,7 +13,9 @@ import BuyTicketPage from './pages/BuyTicketPage/BuyTicketPage';
 import MoviePage from './pages/MoviePage/MoviePage';
 import MovieGenrePage from './pages/MovieGenrePage/MovieGenrePage';
 import BuyTicketDetailPage from './pages/BuyTicketDetailPage/BuyTicketDetailPage';
-
+import TicketBooking from './pages/TicketBooking/TicketBooking';
+import UserPage from './pages/AccountPage/UserPage/UserPage';
+import AdminPage from './pages/AdminPage/AdminPage';
 const routes = [
     {
         path: '/',
@@ -27,9 +28,14 @@ const routes = [
         main: () => <SearchPage/>
     },
     {
-        path: '/account',
+        path: '/user-page',
         exact: false,
-        main: () => <AccountPage/>
+        main: () => <UserPage/>
+    },
+    {
+        path: '/admin-page',
+        exact: false,
+        main: () => <AdminPage/>
     },
     {
         path: '/support',
@@ -97,6 +103,11 @@ const routes = [
         path: '/buy-ticket-detail/:movie',
         exact: false,
         main: () => <BuyTicketDetailPage/>
+    },
+    {
+        path: '/ticket-booking',
+        exact: false,
+        main: () => <TicketBooking/>
     },
     {
         path: '',

@@ -34,6 +34,7 @@ function reducerUsers(state = stateDefault, action) {
 
     case Types.FETCH_DATA_ACCOUNT: {
       newState.account = action.account;
+      console.log('newState:', newState)
       return newState;
     }
 

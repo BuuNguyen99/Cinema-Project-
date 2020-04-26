@@ -2,14 +2,15 @@ import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import routes from "./routes";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, Router } from "react-router-dom";
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './constants/themes'
+import history from './commons/history'
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
           <ThemeProvider theme={theme}>
           <div className="Container">
             <Header />

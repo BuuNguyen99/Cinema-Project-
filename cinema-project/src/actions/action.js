@@ -3,6 +3,8 @@ import callApi from '../utils/ApiCaller'
 import * as ApiCall  from '../utils/ApiCall';
 import { object } from 'prop-types';
 
+import history from '../commons/history';
+
 // Get data movie
 export const  actFetchDataMovieRequest = () => {
     return (dispatch) => {
@@ -80,9 +82,9 @@ export const actRegisterUserRequest = (user) => {
 export const  actFetchDataAccountRequest = () => {
     return (dispatch) => {
         return callApi('account','GET', null).then (res => {
-            if(res) {
+            if(res.status === 200) {
                 dispatch(actFetchDataAccount(res.data))
-            }
+            } else alert('Không thể kết nối đến dữ liệu!')
         });
     }
 }
@@ -162,42 +164,6 @@ export const actReceiveMovieChoosing = (movie, date, time, idUser) => {
     }
 }
 
-// act receive data ticket
-export const  actFetchDataTicketRequest = () => {
-    return (dispatch) => {
-        return ApiCall.getTickets().then(res => {
-            if(res.status === 200) {
-                dispatch(actFetchDataTicket(res.data))
-            } else alert('Không thể kết nối dữ liệu!')
-        })
-    }
-}
-
-export const actFetchDataTicket = (data) => {
-    return {
-        type: Types.FETCH_DATA_TICKETS,
-        data
-    }
-}
-
-// act receive data food
-export const  actFetchDataFoodRequest = () => {
-    return (dispatch) => {
-        return ApiCall.getFoods().then(res => {
-            if(res.status === 200) {
-                dispatch(actFetchDataData(res.data))
-            } else alert('Không thể kết nối dữ liệu!')
-        })
-    }
-}
-
-export const actFetchDataData = (data) => {
-    return {
-        type: Types.FETCH_DATA_FOOD,
-        data
-    }
-}
-
 export const  actFetchDataSupportRequest = () => {
     return (dispatch) => {
         return callApi('support','GET', null).then (res => {
@@ -218,8 +184,8 @@ export const actCreateBookingRequest = (data) => {
     return (dispatch) => {
         return callApi('Booking','POST', data).then(res => {
             if(res.status === 200 || res.status === 201) {
-                console.log('res booking:', res.data)
                 alert('Đặt vé thành công!')
+                history.push('/')
                 dispatch(actCreateBooking(res.data))
             } else alert('Không thể kết nối dữ liệu!')
         })
@@ -229,6 +195,67 @@ export const actCreateBookingRequest = (data) => {
 export const actCreateBooking = (data) => {
     return {
         type: Types.CREATE_BOOKING,
+        data
+    }
+}
+
+
+export function addMovieInformation(movie) {
+    return {
+      type: Types.SHOW_INFORMATION_MOVIE,
+      movie
+    };
+  }
+
+
+  export const actRatingItemMovieRequest = (movie) => {
+      return dispatch => {
+        return callApi(`movie/${movie.id}`, 'PUT' , movie).then(res => {
+            dispatch(actRatingItemMovie(res.data));
+        })
+      }
+  }
+
+
+  export const actRatingItemMovie = (movie) => {
+    return {
+        type: Types.RATING_ITEM_MOVIE,
+        movie
+    }
+  }
+
+  // act receive data food
+export const  actFetchDataFoodRequest = () => {
+    return (dispatch) => {
+        return ApiCall.getFoods().then(res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataData(res.data))
+            } else alert('Không thể kết nối dữ liệu!')
+        })
+    }
+}
+
+export const actFetchDataData = (data) => {
+    return {
+        type: Types.FETCH_DATA_FOOD,
+        data
+    }
+}
+
+// act receive data ticket
+export const  actFetchDataTicketRequest = () => {
+    return (dispatch) => {
+        return ApiCall.getTickets().then(res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataTicket(res.data))
+            } else alert('Không thể kết nối dữ liệu!')
+        })
+    }
+}
+
+export const actFetchDataTicket = (data) => {
+    return {
+        type: Types.FETCH_DATA_TICKETS,
         data
     }
 }

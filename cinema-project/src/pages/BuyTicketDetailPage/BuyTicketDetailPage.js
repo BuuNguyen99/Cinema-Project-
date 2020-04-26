@@ -4,13 +4,12 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import {
 	actFetchDataFoodRequest,
-  actFetchDataTicketRequest,
-  actCreateBookingRequest
+	actFetchDataTicketRequest,
+	actCreateBookingRequest,
 } from "../../actions/action";
 import Table from "../../components/Table/Table";
 import styles from "./BuyTicketDetailStyle";
 import SeatPickers from "../../components/SeatPicker/SeatPickers";
-import classNames from "classnames";
 class BuyTicketDetailPage extends Component {
 	constructor(props) {
 		super(props);
@@ -74,31 +73,34 @@ class BuyTicketDetailPage extends Component {
 		this.setState({
 			arrSeatChoosing: nameSeat,
 		});
-  };
-  
-  handleSubmit = (choosing, roomId) => {
-    if(this.state.arrSeatChoosing.length > 0) {
-    let data = {
-      idUser: choosing.idUser,
-      idRoom: roomId,
-      idMovie: choosing.movie.id,
-      idDate: choosing.date.id,
-      time: choosing.time,
-      seat: this.state.arrSeatChoosing
-    }
-    this.props.createBooking(data);
-  } else alert('Vui lòng chọn ghế!')
-  }
+	};
 
+	handleSubmit = (choosing, roomId, amountTicket) => {
+		if (this.state.arrSeatChoosing.length === amountTicket) {
+			let data = {
+				idUser: choosing.idUser,
+				idRoom: roomId,
+				idMovie: choosing.movie.id,
+				idDate: choosing.date.id,
+				time: choosing.time,
+				seat: this.state.arrSeatChoosing,
+			};
+			this.props.createBooking(data);
+		} else if (this.state.arrSeatChoosing.length === 0) {
+			alert("Vui lòng chọn ghế!");
+		} else {
+			alert("Vui lòng chọn đủ số ghế!");
+		}
+	};
 	render() {
-    let room = {
+		let room = {
 			id: "room2",
 			name: "Rap 2",
 			numberSeat: 80,
 			seatReserved: [34, 35, 67, 68, 78],
 		};
-    let { choosing, classes, tickets, foodCombo } = this.props;
-    console.log('choosing:', choosing)
+		let { choosing, classes, tickets, foodCombo } = this.props;
+		console.log("choosing:", choosing);
 		if (Object.keys(choosing).length !== 0) {
 			localStorage.setItem("choosing", JSON.stringify(choosing));
 		} else {
@@ -149,8 +151,8 @@ class BuyTicketDetailPage extends Component {
 									<div className={classes.wrapScreen}>
 										<div className={classes.screen}>Screen show</div>
 									</div>
-                  <SeatPickers
-                    roomDetail={room}
+									<SeatPickers
+										roomDetail={room}
 										amountTicket={amountTicket}
 										showNameSeat={(arr) => this.showNameSeatArr(arr)}
 										className='w-100'
@@ -230,7 +232,9 @@ class BuyTicketDetailPage extends Component {
 										Quay Lại <i className='pl-2 fas fa-arrow-left'></i>
 									</button>
 									<button
-										onClick={() => this.handleSubmit(choosing, room.id, )}
+										onClick={() =>
+											this.handleSubmit(choosing, room.id, amountTicket)
+										}
 										className={`${classes.button} ${classes.buttonNomargin} ml-2`}>
 										Đặt vé <i className='pl-2 fas fa-arrow-right'></i>
 									</button>
@@ -255,8 +259,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		fetchDataTicket: () => dispatch(actFetchDataTicketRequest()),
-    fetchDataFood: () => dispatch(actFetchDataFoodRequest()),
-    createBooking: (data) => dispatch(actCreateBookingRequest(data))
+		fetchDataFood: () => dispatch(actFetchDataFoodRequest()),
+		createBooking: (data) => dispatch(actCreateBookingRequest(data)),
 	};
 };
 

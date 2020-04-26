@@ -1,3 +1,4 @@
+
 const styles = (theme) => ({
     chooseMovie: {
         backgroundColor: theme.color.orange,

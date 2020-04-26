@@ -24,6 +24,8 @@ class ItemSupport extends React.Component {
 
   render() {
     let { support } = this.props;
+    console.log('support:', support);
+    
     let DataItemSupport = support.content.map((content, index) => {
       return <ItemTypoSupport key={index} content={content} />;
     });

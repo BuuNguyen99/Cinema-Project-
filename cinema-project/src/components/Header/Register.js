@@ -3,7 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import { Button, ButtonToolbar } from "react-bootstrap";
 import { actRegisterUserRequest, actFetchDataUsersRequest } from "./../../actions/action";
 import { connect } from "react-redux";
-import {  Link } from "react-router-dom";
 
 class Register extends React.Component {
   constructor(props, context) {
@@ -25,6 +24,9 @@ class Register extends React.Component {
         errorMessage: ""
       },
       txtGender: "Nam",
+      txtBirth: {
+       value: ""
+      },
       txtEmail: {
         value: "",
         isInputValid: true,
@@ -44,7 +46,7 @@ class Register extends React.Component {
         value: "",
         isInputValid: true,
         errorMessage: ""
-      }
+      },
     };
   }
 
@@ -87,7 +89,8 @@ class Register extends React.Component {
       txtPassword,
       txtRePassword,
       txtEmail,
-      txtAddress
+      txtAddress,
+      txtBirth,
     } = this.state;
 
     let { users } = this.props;
@@ -110,11 +113,15 @@ class Register extends React.Component {
         email: txtEmail.value,
         phone: txtPhone.value,
         gender: txtGender,
-        birth: "",
+        birth: txtBirth,
         pass: txtPassword.value,
-        image: "",
-        address: txtAddress.value
-      };
+        address: txtAddress.value,
+        city: "",
+        county: "",
+        currentStar: 0,
+        targets: 0,
+        myDeal: []
+      }
 
       let lengthUsers = users.length;
       if (lengthUsers > 0) {
@@ -171,17 +178,18 @@ class Register extends React.Component {
       txtPassword,
       txtRePassword,
       txtEmail,
-      txtAddress
+      txtAddress,
+      txtBirth
     } = this.state;
     return (
       <ButtonToolbar style={toolbar}>
-        <button
+        <a
           onClick={this.handleShow}
-          className="btn-header text-secondary text-decoration-none"
-          to=''
+          className="text-secondary text-decoration-none"
+          href="#"
         >
           Đăng Ký
-        </button>
+        </a>
         <Modal
           {...this.props}
           show={this.state.show}
@@ -318,6 +326,22 @@ class Register extends React.Component {
                     type="txtAddress"
                     isHidden={this.state.txtAddress.isInputValid}
                     errorMessage={this.state.txtAddress.errorMessage}
+                  />
+                </div>
+              </div>
+              <div className="row mt-3">
+                <div className="col-md-12">
+                  <input
+                    name="txtBirth"
+                    value={txtBirth.value}
+                    onChange={this.handleInput}
+                    type="date"
+                    id="dayOfBirth"
+                    max="3000-12-31"
+                    min="1000-01-01"
+                    className="form-control"
+                    placeholder="Ngày sinh"
+                    required
                   />
                 </div>
               </div>
