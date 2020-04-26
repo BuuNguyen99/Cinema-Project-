@@ -1274,33 +1274,106 @@
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": "",
+      "birth": {
+        "value": "1999-03-05"
+      },
       "pass": "nguyenbuu99",
-      "image": "",
       "address": "856/34 Tôn Đức Thắng",
+      "city": "Thừa Thiên Huế",
+      "county": "Huyện Phú Vang",
+      "currentStar": 100,
+      "targets": 0,
+      "myDeal": [
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 10
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0002",
+          "room": "ROOM 2",
+          "movie": "Chiến Binh Rồng (2D)",
+          "price": 65000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0003",
+          "room": "ROOM 3",
+          "movie": "Gái Già Lắm Chiêu (2D)",
+          "price": 45000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        }
+      ],
       "id": "user0001"
-    },
-    {
-      "name": "nguyenbuu",
-      "email": "1212@gmail.com",
-      "phone": "1212121212",
-      "gender": "Nam",
-      "birth": "",
-      "pass": "1212121212A",
-      "image": "",
-      "address": "1",
-      "id": "user0002"
     },
     {
       "name": "huelinh",
       "email": "nguyenhue@gmail.com",
       "phone": "0981234567",
       "gender": "Nữ",
-      "birth": "",
+      "birth": "24/03/1996",
       "pass": "12345abcde",
-      "image": "",
-      "address": "Da Nang",
+      "address": "856/34 Tôn Đức Thắng",
+      "city": "Đà Nẵng",
+      "county": "Quận Liên Chiểu",
+      "currentStar": 100,
+      "targets": 0,
+      "myDeal": [
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        }
+      ],
       "id": "fE6XAWZ"
+    },
+    {
+      "name": "Nguyễn Bữu",
+      "email": "nguyenbuu3599@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": {
+        "value": "1999-03-05"
+      },
+      "pass": "nguyenbuu99",
+      "address": "Thừa Thiên Huế",
+      "city": "",
+      "county": "",
+      "currentStar": 0,
+      "targets": 0,
+      "myDeal": [],
+      "id": "xQ--20H"
     }
   ],
   "admin": [
@@ -1328,15 +1401,21 @@
   ],
   "account": [
     {
-      "id": "fE6XAWZ",
-      "name": "huelinh",
-      "email": "nguyenhue@gmail.com",
-      "phone": "0981234567",
-      "gender": "Nữ",
-      "birth": "",
-      "pass": "12345abcde",
-      "image": "",
-      "address": "Da Nang"
+      "id": "xQ--20H",
+      "name": "Nguyễn Bữu",
+      "email": "nguyenbuu3599@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nam",
+      "birth": {
+        "value": "1999-03-05"
+      },
+      "pass": "nguyenbuu99",
+      "address": "Thừa Thiên Huế",
+      "city": "",
+      "county": "",
+      "currentStar": 0,
+      "targets": 0,
+      "myDeal": []
     }
   ],
   "reviewMovie": [

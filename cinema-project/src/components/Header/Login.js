@@ -91,8 +91,12 @@ class Login extends React.Component {
               gender: users[i].gender,
               birth: users[i].birth,
               pass: users[i].pass,
-              image: users[i].image,
-              address: users[i].address
+              address: users[i].address,
+              city: users[i].city,
+              county: users[i].county,
+              currentStar: users[i].currentStar,
+              targets: users[i].targets,
+              myDeal: users[i].myDeal
             };
             alert("Đăng nhập thành công");
             this.props.onLoginAccount(accountUser);
@@ -265,7 +269,7 @@ const validateInput = (type, checkingText) => {
   }
 };
 function FormError(props) {
-  /* nếu isHidden = true, return null ngay từ đầu */
+  
   let color = {
     color: "red"
   };
