@@ -5,6 +5,7 @@ import Rating from "material-ui-rating";
 import ShowTimesMovie from "../ShowTimesMovie/ShowTimesMovie";
 import { actRatingItemMovieRequest } from "../../../actions/action";
 import { connect } from "react-redux";
+import moment from 'moment'
 
 class MovieInfo extends Component {
   constructor(props) {
@@ -59,9 +60,9 @@ class MovieInfo extends Component {
     }
 
 
-    let { itemMovieInfo } = this.props;
+    let { itemMovieInfo, account } = this.props;
     let dataDateMovie = itemMovieInfo.date.map((date, index) => {
-      return <ShowTimesMovie key={`date ${index}`} date={date} />;
+      return <ShowTimesMovie key={`date ${index}`} date={date} itemMovieInfo={itemMovieInfo} account={account} />;
     });
 
     return (
@@ -128,37 +129,37 @@ class MovieInfo extends Component {
             </div>
             <div className="rating mt-3">
               <span>
-                <i class="far fa-clock"></i> {itemMovieInfo.time}
+                <i className="far fa-clock"></i> {itemMovieInfo.time}
               </span>
             </div>
-            <div class="detail-info mt-3">
-              <div class="detail-info-row">
-                <label>Diễn viên:&nbsp;</label>
+            <div className="detail-info mt-3">
+              <div className="detail-info-row">
+                <span className='font-weight-bold'>Diễn viên:&nbsp;</span>
+                <div className="detail-info-right">
+                  {itemMovieInfo.actor}
+                </div>
+              </div>
+              <div className="detail-info-row">
+                <span className='font-weight-bold'>Thể loại:&nbsp;</span>
+                <div className="detail-info-right">
+                   {itemMovieInfo.type}
+                </div>
+              </div>
+              <div className="detail-info-row">
+                <span className='font-weight-bold'>Quốc gia:&nbsp;</span>
                 <div class="detail-info-right">
-                  <span>{itemMovieInfo.actor}</span>
+                  {itemMovieInfo.nation}
                 </div>
               </div>
               <div class="detail-info-row">
-                <label>Thể loại:&nbsp;</label>
+                <span className='font-weight-bold'>Nhà sản xuất:&nbsp;</span>
                 <div class="detail-info-right">
-                  <span> {itemMovieInfo.type}</span>
+                  {itemMovieInfo.author}
                 </div>
               </div>
               <div class="detail-info-row">
-                <label>Quốc gia:&nbsp;</label>
-                <div class="detail-info-right">
-                  <span>{itemMovieInfo.nation}</span>
-                </div>
-              </div>
-              <div class="detail-info-row">
-                <label>Nhà sản xuất:&nbsp;</label>
-                <div class="detail-info-right">
-                  <span>{itemMovieInfo.author}</span>
-                </div>
-              </div>
-              <div class="detail-info-row">
-                <label>Ngày:&nbsp;</label>
-                <div class="detail-info-right">22/5/2020</div>
+                <span className='font-weight-bold'>Ngày:&nbsp;</span>
+                <div class="detail-info-right">{moment(itemMovieInfo.premiereDate).format('LL')}</div>
               </div>
             </div>
           </div>

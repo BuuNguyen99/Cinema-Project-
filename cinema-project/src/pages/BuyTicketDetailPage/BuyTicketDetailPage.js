@@ -190,7 +190,7 @@ class BuyTicketDetailPage extends Component {
 							<hr className='m-0' />
 							<div className='p-2'>
 								<strong>Suất chiếu: </strong>
-								{time} | {date.name}
+								{time} | {date.datemovie}
 							</div>
 							<hr className='m-0' />
 							<div className='p-2'>

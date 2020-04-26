@@ -156,8 +156,8 @@
       "imageInfo": "https://www.galaxycine.vn/media/2020/2/26/nang-3---poster-khong-logo_1582692152072.jpg",
       "video": "https://www.youtube.com/embed/DymKqNH_m8w?autoplay=1",
       "vote": {
-        "rate": "6.32",
-        "numberOfReviews": "69"
+        "rate": "6.3",
+        "numberOfReviews": "70"
       }
     },
     {
@@ -1670,7 +1670,20 @@
       "price": 60000
     }
   ],
-  "booking": {},
+  "booking": {
+    "idUser": "xQ--20H",
+    "idRoom": "room2",
+    "idMovie": "Movie001",
+    "idDate": "movie001_15032020",
+    "time": "13:00",
+    "seat": [
+      "C5",
+      "C6",
+      "C8",
+      "C9",
+      "B7"
+    ]
+  },
   "foodCombo": [
     {
       "id": "combo1",

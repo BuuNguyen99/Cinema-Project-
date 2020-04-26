@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import {actFetchDataMovieRequest, actFetchShowtimesRequest, actReceiveMovieChoosing, actFetchDataAccountRequest} from '../../actions/action'
 import { Box } from '@material-ui/core';
+import history from '../../commons/history'
 
 class BuyTicketPage extends Component {
   constructor() {
@@ -25,14 +26,16 @@ class BuyTicketPage extends Component {
     this.props.fetchDataAccount();
   }
 
-  handleOnChooseMovie = (mv, showtimes) => {
-    let listTime = []
-    showtimes.forEach(item => {
-      let movie = item.movieIds.find(movie => movie.id === mv.id)
-      if (movie !== undefined) listTime.push({...item, session: movie.session})
-    });
+  handleOnChooseMovie = (mv) => {
+    //let listTime = []
+    // showtimes.forEach(item => {
+    //   let movie = item.movieIds.find(movie => movie.id === mv.id)
+    //   if (movie !== undefined) listTime.push({...item, session: movie.session})
+    // });
+    // console.log('listTime:', listTime)
+    console.log('mv:', mv)
     this.setState({
-      timeOfMovie: listTime,
+      timeOfMovie: mv.date,
       isShow: true,
       active: mv
     })
@@ -42,7 +45,7 @@ class BuyTicketPage extends Component {
     return arr.map((item, index) => {
       let active = this.state.active.id === item.id ? classes.active : ''
       return (
-        <div key={index} className={`${classes.block}`} onClick={() => {this.handleOnChooseMovie(item, showtimes)}}>
+        <div key={index} className={`${classes.block}`} onClick={() => {this.handleOnChooseMovie(item)}}>
           <div className={`${classes.link} ${active} row no-gutters p-3`}>
             <span className='col-3'><img className={classes.img} src={item.image}/></span>
             <p className={`${classes.title} col-9 pl-4`}>{item.name}</p>
@@ -56,7 +59,7 @@ class BuyTicketPage extends Component {
     if(account && account.length > 0) {
       const movie = this.state.active
       this.props.receiveMovieChoosing(movie, item, session, account[0].id)
-      const { history } = this.props
+      //const { history } = this.props
       const slug = movie.slug
       history.push(`/buy-ticket-detail/${slug}`)
     } else {
@@ -66,11 +69,12 @@ class BuyTicketPage extends Component {
 
   showTimeOfMovie = (arr, classes, account) => {
     return arr.map((item, index) => {
+      const listSession = item.frametime.map(obj => obj.time);
       return (
         <div key={index} className={`${classes.block} p-4`} >
-            <div>{item.name}</div>
+            <div>{item.datemovie}</div>
             <div className='d-flex flex-wrap'>
-              { item.session.map((session, index) => {
+              { listSession.map((session, index) => {
                   return <Box key={index} py={1} px={2} 
                               className={classes.session}
                               onClick={() => this.handleOnChooseSession(item, session, account)}
@@ -87,16 +91,17 @@ class BuyTicketPage extends Component {
   render() {
     const { classes, movies, movieShowing,showtimes, account } = this.props;
     const { timeOfMovie, isShow } = this.state;
+    console.log('movieShowing:', movieShowing)
     // let movieShowing = [];
     // if(Object.keys(movies).length > 0) {
     //   movieShowing = movies.movieShowing
     // }
-    console.log('showtimesss:', showtimes)
+   
     return (
         <div className="container my-4">
           <div className="row">
             <ColumnBlock title='Chọn phim'>
-              {this.showMovieToChoose(movieShowing, classes, showtimes)}
+              {this.showMovieToChoose(movieShowing, classes)}
             </ColumnBlock>
 
             <ColumnBlock title='Chọn suất'>
