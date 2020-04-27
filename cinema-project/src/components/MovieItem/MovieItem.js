@@ -2,7 +2,7 @@ import React from "react";
 import "./MovieItem.css";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { addMovieInformation } from "../../actions/action";
+import { addMovieInformationRequest } from "../../actions/action";
 
 class MovieItem extends React.Component {
   onTicketBooking = (movie) => {
@@ -39,7 +39,7 @@ class MovieItem extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  handlerAddMovieInfo: (movie) => dispatch(addMovieInformation(movie)),
+  handlerAddMovieInfo: (movie) => dispatch(addMovieInformationRequest(movie)),
 });
 
 export default connect(null, mapDispatchToProps)(MovieItem);

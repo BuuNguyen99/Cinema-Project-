@@ -181,8 +181,15 @@ export const actFetchDataSupport = (support) => {
 
 
 
+export const addMovieInformationRequest = (movie) => {
+    return (dispatch) => {
+        return callApi('itemMovie', 'POST', movie).then(res => {
+            dispatch(addMovieInformation(res.data))
+        });
+    }
+} 
 
-export function addMovieInformation(movie) {
+export const addMovieInformation = (movie) =>{
     return {
       type: Types.SHOW_INFORMATION_MOVIE,
       movie

@@ -156,8 +156,8 @@
       "imageInfo": "https://www.galaxycine.vn/media/2020/2/26/nang-3---poster-khong-logo_1582692152072.jpg",
       "video": "https://www.youtube.com/embed/DymKqNH_m8w?autoplay=1",
       "vote": {
-        "rate": "6.58",
-        "numberOfReviews": "57"
+        "rate": "6.55",
+        "numberOfReviews": "59"
       }
     },
     {
@@ -1268,19 +1268,339 @@
       }
     }
   ],
+  "itemMovie": [
+    {
+      "id": "Movie001",
+      "name": "Nắng 3: lời hứa của cha",
+      "slug": "nang-3-loi-hua-cua-cha",
+      "intro": "Cuộc sống của một bà mẹ đơn thân cùng đứa con gái nhỏ thêm phần thú vị khi có sự xuất hiện của một người đàn ông lịch lãm, kế hoạch tìm chồng, tìm cha từ đây bắt đầu",
+      "type": "Hài, Tình cảm , Gia đình",
+      "author": "Đồng Đăng Giao",
+      "actor": "Khả Như, Kiều Minh Tuấn",
+      "time": "105 minutes",
+      "nation": "Việt Nam",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie001_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie001_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie001_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://www.galaxycine.vn/media/2020/2/25/450x300_1582597508575.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/2/26/nang-3---poster-khong-logo_1582692152072.jpg",
+      "video": "https://www.youtube.com/embed/DymKqNH_m8w?autoplay=1",
+      "vote": {
+        "rate": "6.55",
+        "numberOfReviews": "59"
+      }
+    },
+    {
+      "id": "Movie002",
+      "name": "Onward: Truy Tìm Phép Thuật",
+      "slug": "onward-truy-tim-phep-thuat",
+      "intro": "Lấy bối cảnh vùng ngoại ô một thế giới kỳ ảo, hai anh em yêu tinh tuổi teen bắt đầu hành trình khám phá xem, liệu rằng đâu đó ngoài kia có còn tồn tại ma thuật không?",
+      "type": "Hoạt Hình",
+      "author": "Dan Scanlon",
+      "actor": "Tom Holland, Chris Pratt",
+      "time": "105 minute",
+      "nation": "Mỹ",
+      "premiereDate": "Wed Mar 10 2020 00:00:00 GMT+0700 (Indochina Time)",
+      "date": [
+        {
+          "id": "movie002_15032020",
+          "datemovie": "Chủ nhật, 15/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "11:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "19:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie002_16032020",
+          "datemovie": "Thứ 2, 16/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movie002_17032020",
+          "datemovie": "Thứ Ba, 17/03/2020",
+          "frametime": [
+            {
+              "Room": "Room 1",
+              "time": "08:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "13:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 3",
+              "time": "15:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 1",
+              "time": "17:00",
+              "seats": [
+                "",
+                ""
+              ]
+            },
+            {
+              "Room": "Room 2",
+              "time": "22:00",
+              "seats": [
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "price": "75000",
+      "image": "https://galaxycine.vn/media/2020/2/24/450x300_1582529315801.jpg",
+      "imageInfo": "https://www.galaxycine.vn/media/2020/1/16/poster-onward-official_1579158439704.jpg",
+      "video": "https://www.youtube.com/embed/UCfgXvSzllA?autoplay=1",
+      "vote": {
+        "rate": "7.53",
+        "numberOfReviews": "42"
+      }
+    }
+  ],
   "users": [
     {
-      "name": "nguyễn Bữu",
+      "name": "Nguyễn Bữu",
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
-      "gender": "Nam",
+      "gender": "Nữ",
       "birth": {
         "value": "1999-03-05"
       },
       "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
-      "city": "Thừa Thiên Huế",
-      "county": "Huyện Phú Vang",
       "currentStar": 100,
       "targets": 0,
       "myDeal": [
@@ -1328,8 +1648,6 @@
       "birth": "24/03/1996",
       "pass": "12345abcde",
       "address": "856/34 Tôn Đức Thắng",
-      "city": "Đà Nẵng",
-      "county": "Quận Liên Chiểu",
       "currentStar": 100,
       "targets": 0,
       "myDeal": [
@@ -1368,8 +1686,6 @@
       },
       "pass": "nguyenbuu99",
       "address": "Thừa Thiên Huế",
-      "city": "",
-      "county": "",
       "currentStar": 0,
       "targets": 0,
       "myDeal": [],
@@ -1401,21 +1717,53 @@
   ],
   "account": [
     {
-      "id": "xQ--20H",
+      "id": "user0001",
       "name": "Nguyễn Bữu",
-      "email": "nguyenbuu3599@gmail.com",
+      "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
-      "gender": "Nam",
+      "gender": "Nữ",
       "birth": {
         "value": "1999-03-05"
       },
       "pass": "nguyenbuu99",
-      "address": "Thừa Thiên Huế",
-      "city": "",
-      "county": "",
-      "currentStar": 0,
+      "address": "856/34 Tôn Đức Thắng",
+      "currentStar": 100,
       "targets": 0,
-      "myDeal": []
+      "myDeal": [
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 10
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0002",
+          "room": "ROOM 2",
+          "movie": "Chiến Binh Rồng (2D)",
+          "price": 65000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0003",
+          "room": "ROOM 3",
+          "movie": "Gái Già Lắm Chiêu (2D)",
+          "price": 45000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        }
+      ]
     }
   ],
   "reviewMovie": [

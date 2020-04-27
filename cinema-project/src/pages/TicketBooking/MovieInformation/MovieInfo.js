@@ -37,7 +37,7 @@ class MovieInfo extends Component {
     movie.vote.rate = vote.toString();
     movie.vote.numberOfReviews = number.toString();
     this.props.onUpdateRatingItemMovie(movie);
-    alert(`Bạn đã đánh giá ${value}`);
+    alert(`Bạn đã đánh giá ${value} sao`);
   };
   render() {
     let color = {

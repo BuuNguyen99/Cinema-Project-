@@ -20,7 +20,6 @@ class TicketBooking extends Component {
 const mapStateToProps = (state) => {
   return {
     itemMovieInfo: state.reducerMovie.showInfoMovie,
-    showtimes: state.reducerShowtimes.showtime
   };
 };
 
