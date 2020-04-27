@@ -122,6 +122,22 @@ export const actUpdateUser = (user) => {
 }
 
 
+export const actUpdateAccountRequest = (account) => {
+    return dispatch => {
+      return callApi(`account/${account.id}`, 'PUT' , account).then(res => {
+          dispatch(actUpdateAccount(res.data));
+      })
+    }
+}
+
+
+export const actUpdateAccount = (account) => {
+  return {
+      type: Types.UPDATE_ACCOUNT,
+      account
+  }
+}
+
 
 export const actLoginAccountRequest = (account) => {
     return (dispatch) => {
@@ -276,5 +292,40 @@ export const actFetchDataTicket = (data) => {
     return {
         type: Types.FETCH_DATA_TICKETS,
         data
+    }
+}
+
+
+export const  actFetchDataTheaterRequest = () => {
+    return (dispatch) => {
+        return callApi('theater','GET', null).then (res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataTheater(res.data))
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+}
+
+export const actFetchDataTheater = (theater) => {
+    return {
+        type: Types.FETCH_DATA_THEATER,
+        theater
+    }
+}
+
+export const  actFetchDataPromotionRequest = () => {
+    return (dispatch) => {
+        return callApi('promotion','GET', null).then (res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataPromotion(res.data))
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+}
+
+export const actFetchDataPromotion = (promotion) => {
+    return {
+        type: Types.FETCH_DATA_PROMOTION,
+        promotion
     }
 }
