@@ -1276,9 +1276,7 @@
       "phone": "0357175762",
       "gender": "Nam",
       "birth": "1999-03-05",
-      "pass": {
-        "value": "nguyenbuu99"
-      },
+      "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
       "targets": 0,
@@ -1397,19 +1395,51 @@
   ],
   "account": [
     {
-      "id": "xQ--20H",
+      "id": "user0001",
       "name": "Nguyễn Bữu",
-      "email": "nguyenbuu3599@gmail.com",
-      "phone": "0358323651",
+      "email": "nguyenbuubkdn@gmail.com",
+      "phone": "0357175762",
       "gender": "Nam",
-      "birth": {
-        "value": "1999-05-03"
-      },
-      "pass": "nguyenbuu0305",
-      "address": "Phú Vang - Thừa Thiên Huế ",
-      "currentStar": 0,
+      "birth": "1999-03-05",
+      "pass": "nguyenbuu99",
+      "address": "856/34 Tôn Đức Thắng",
+      "currentStar": 100,
       "targets": 0,
-      "myDeal": []
+      "myDeal": [
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0001",
+          "room": "ROOM 1",
+          "movie": "Cuộc chiến  vô cực (2D)",
+          "price": 75000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 10
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0002",
+          "room": "ROOM 2",
+          "movie": "Chiến Binh Rồng (2D)",
+          "price": 65000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        },
+        {
+          "dayTrading": "21/02/2020",
+          "tranNumber": "1021031",
+          "tickCode": "MSC0003",
+          "room": "ROOM 3",
+          "movie": "Gái Già Lắm Chiêu (2D)",
+          "price": 45000,
+          "numberOfTicks": 3,
+          "star": 100,
+          "targets": 0
+        }
+      ]
     }
   ],
   "reviewMovie": [
