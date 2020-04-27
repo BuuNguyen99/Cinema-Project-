@@ -94,7 +94,6 @@ class InforUser extends Component {
       txtPassword,
       getPassword,
       txtNewPassword,
-      txtRePassword,
       txtEmail,
       txtAddress,
       txtBirth,
