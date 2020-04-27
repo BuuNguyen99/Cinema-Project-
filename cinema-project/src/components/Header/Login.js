@@ -92,8 +92,6 @@ class Login extends React.Component {
               birth: users[i].birth,
               pass: users[i].pass,
               address: users[i].address,
-              city: users[i].city,
-              county: users[i].county,
               currentStar: users[i].currentStar,
               targets: users[i].targets,
               myDeal: users[i].myDeal

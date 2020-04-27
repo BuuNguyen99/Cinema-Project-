@@ -104,6 +104,25 @@ export const actRegisterUser = (user) => {
 
 }
 
+
+export const actUpdateUserRequest = (users) => {
+    return dispatch => {
+      return callApi(`users/${users.id}`, 'PUT' , users).then(res => {
+          dispatch(actUpdateUser(res.data));
+      })
+    }
+}
+
+
+export const actUpdateUser = (user) => {
+  return {
+      type: Types.UPDATE_USER,
+      user
+  }
+}
+
+
+
 export const actLoginAccountRequest = (account) => {
     return (dispatch) => {
         return callApi('account', 'POST', account).then(res => {
@@ -208,7 +227,7 @@ export function addMovieInformation(movie) {
   }
 
 
-  export const actRatingItemMovieRequest = (movie) => {
+export const actRatingItemMovieRequest = (movie) => {
       return dispatch => {
         return callApi(`movie/${movie.id}`, 'PUT' , movie).then(res => {
             dispatch(actRatingItemMovie(res.data));

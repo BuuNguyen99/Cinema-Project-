@@ -9,6 +9,8 @@ export const SAVE_ACCOUNT = 'SAVE_ACCOUNT';
 
 export const REGISTER_USER = 'REGISTER_USER';
 
+export const UPDATE_USER = 'UPDATE_USER';
+
 export const DELETE_ACCOUNT = 'DELETE_ACCOUNT';
 
 export const SEARCH_MOVIE = 'SEARCH_MOVIE';

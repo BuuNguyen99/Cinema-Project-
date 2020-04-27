@@ -156,8 +156,8 @@
       "imageInfo": "https://www.galaxycine.vn/media/2020/2/26/nang-3---poster-khong-logo_1582692152072.jpg",
       "video": "https://www.youtube.com/embed/DymKqNH_m8w?autoplay=1",
       "vote": {
-        "rate": "6.3",
-        "numberOfReviews": "70"
+        "rate": "6.27",
+        "numberOfReviews": "74"
       }
     },
     {
@@ -316,8 +316,8 @@
       "imageInfo": "https://www.galaxycine.vn/media/2020/1/16/poster-onward-official_1579158439704.jpg",
       "video": "https://www.youtube.com/embed/UCfgXvSzllA?autoplay=1",
       "vote": {
-        "rate": "7.53",
-        "numberOfReviews": "42"
+        "rate": "7.52",
+        "numberOfReviews": "43"
       }
     },
     {
@@ -1270,17 +1270,16 @@
   ],
   "users": [
     {
-      "name": "nguyễn Bữu",
+      "id": "user0001",
+      "name": "Nguyễn Bữu",
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": {
-        "value": "1999-03-05"
+      "birth": "1999-03-05",
+      "pass": {
+        "value": "nguyenbuu99"
       },
-      "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
-      "city": "Thừa Thiên Huế",
-      "county": "Huyện Phú Vang",
       "currentStar": 100,
       "targets": 0,
       "myDeal": [
@@ -1317,19 +1316,18 @@
           "star": 100,
           "targets": 0
         }
-      ],
-      "id": "user0001"
+      ]
     },
     {
       "name": "huelinh",
       "email": "nguyenhue@gmail.com",
       "phone": "0981234567",
       "gender": "Nữ",
-      "birth": "24/03/1996",
+      "birth": {
+        "value": "1996-24-03"
+      },
       "pass": "12345abcde",
       "address": "856/34 Tôn Đức Thắng",
-      "city": "Đà Nẵng",
-      "county": "Quận Liên Chiểu",
       "currentStar": 100,
       "targets": 0,
       "myDeal": [
@@ -1359,21 +1357,19 @@
       "id": "fE6XAWZ"
     },
     {
+      "id": "xQ--20H",
       "name": "Nguyễn Bữu",
       "email": "nguyenbuu3599@gmail.com",
-      "phone": "0357175762",
+      "phone": "0358323651",
       "gender": "Nam",
       "birth": {
-        "value": "1999-03-05"
+        "value": "1999-05-03"
       },
-      "pass": "nguyenbuu99",
-      "address": "Thừa Thiên Huế",
-      "city": "",
-      "county": "",
+      "pass": "nguyenbuu0305",
+      "address": "Phú Vang - Thừa Thiên Huế ",
       "currentStar": 0,
       "targets": 0,
-      "myDeal": [],
-      "id": "xQ--20H"
+      "myDeal": []
     }
   ],
   "admin": [
@@ -1404,15 +1400,13 @@
       "id": "xQ--20H",
       "name": "Nguyễn Bữu",
       "email": "nguyenbuu3599@gmail.com",
-      "phone": "0357175762",
+      "phone": "0358323651",
       "gender": "Nam",
       "birth": {
-        "value": "1999-03-05"
+        "value": "1999-05-03"
       },
-      "pass": "nguyenbuu99",
-      "address": "Thừa Thiên Huế",
-      "city": "",
-      "county": "",
+      "pass": "nguyenbuu0305",
+      "address": "Phú Vang - Thừa Thiên Huế ",
       "currentStar": 0,
       "targets": 0,
       "myDeal": []
@@ -1673,15 +1667,14 @@
   "booking": {
     "idUser": "xQ--20H",
     "idRoom": "room2",
-    "idMovie": "Movie001",
-    "idDate": "movie001_15032020",
-    "time": "13:00",
+    "idMovie": "Movie004",
+    "idDate": "movie004_15032020",
+    "time": "08:00",
     "seat": [
-      "C5",
-      "C6",
-      "C8",
-      "C9",
-      "B7"
+      "D9",
+      "E9",
+      "E0",
+      "F0"
     ]
   },
   "foodCombo": [

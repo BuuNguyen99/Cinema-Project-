@@ -5,7 +5,7 @@ import Rating from "material-ui-rating";
 import ShowTimesMovie from "../ShowTimesMovie/ShowTimesMovie";
 import { actRatingItemMovieRequest } from "../../../actions/action";
 import { connect } from "react-redux";
-import moment from 'moment'
+import moment from "moment";
 
 class MovieInfo extends Component {
   constructor(props) {
@@ -16,14 +16,11 @@ class MovieInfo extends Component {
   }
 
   onRating = () => {
-    if(this.state.showRating === false){
-      this.setState ({
-        showRating: true
-      })
+    if (this.state.showRating === false) {
+      this.setState({
+        showRating: true,
+      });
     }
-    console.log(this.state.showRating);
-    
-    
   };
 
   onChangeRating = (value, movie) => {
@@ -38,7 +35,7 @@ class MovieInfo extends Component {
     movie.vote.rate = vote.toString();
     movie.vote.numberOfReviews = number.toString();
     this.props.onUpdateRatingItemMovie(movie);
-    alert(`Bạn đã đánh giá ${value}`);
+    alert(`Bạn đã đánh giá ${value} sao`);
   };
   render() {
     let color = {
@@ -53,16 +50,22 @@ class MovieInfo extends Component {
       fontSize: "18px",
     };
     let showRatingHide = {
-      display: "none"
-    }
+      display: "none",
+    };
     let showRatingUp = {
-      display: "block"
-    }
-
+      display: "block",
+    };
 
     let { itemMovieInfo, account } = this.props;
     let dataDateMovie = itemMovieInfo.date.map((date, index) => {
-      return <ShowTimesMovie key={`date ${index}`} date={date} itemMovieInfo={itemMovieInfo} account={account} />;
+      return (
+        <ShowTimesMovie
+          key={`date ${index}`}
+          date={date}
+          itemMovieInfo={itemMovieInfo}
+          account={account}
+        />
+      );
     });
 
     return (
@@ -110,7 +113,7 @@ class MovieInfo extends Component {
                 {itemMovieInfo.vote.rate} /10
               </span>
               <span className="align-self-center mr-2">
-               ( {itemMovieInfo.vote.numberOfReviews} )
+                ( {itemMovieInfo.vote.numberOfReviews} )
               </span>
               <button
                 type="button"
@@ -120,7 +123,7 @@ class MovieInfo extends Component {
                 ĐÁNH GIÁ
               </button>
               <Rating
-                style={ this.state.showRating ? showRatingUp : showRatingHide}
+                style={this.state.showRating ? showRatingUp : showRatingHide}
                 value={0}
                 max={10}
                 precision={0.5}
@@ -134,32 +137,26 @@ class MovieInfo extends Component {
             </div>
             <div className="detail-info mt-3">
               <div className="detail-info-row">
-                <span className='font-weight-bold'>Diễn viên:&nbsp;</span>
-                <div className="detail-info-right">
-                  {itemMovieInfo.actor}
-                </div>
+                <span className="font-weight-bold">Diễn viên:&nbsp;</span>
+                <div className="detail-info-right">{itemMovieInfo.actor}</div>
               </div>
               <div className="detail-info-row">
-                <span className='font-weight-bold'>Thể loại:&nbsp;</span>
-                <div className="detail-info-right">
-                   {itemMovieInfo.type}
-                </div>
+                <span className="font-weight-bold">Thể loại:&nbsp;</span>
+                <div className="detail-info-right">{itemMovieInfo.type}</div>
               </div>
               <div className="detail-info-row">
-                <span className='font-weight-bold'>Quốc gia:&nbsp;</span>
-                <div class="detail-info-right">
-                  {itemMovieInfo.nation}
-                </div>
+                <span className="font-weight-bold">Quốc gia:&nbsp;</span>
+                <div class="detail-info-right">{itemMovieInfo.nation}</div>
               </div>
               <div class="detail-info-row">
-                <span className='font-weight-bold'>Nhà sản xuất:&nbsp;</span>
-                <div class="detail-info-right">
-                  {itemMovieInfo.author}
-                </div>
+                <span className="font-weight-bold">Nhà sản xuất:&nbsp;</span>
+                <div class="detail-info-right">{itemMovieInfo.author}</div>
               </div>
               <div class="detail-info-row">
-                <span className='font-weight-bold'>Ngày:&nbsp;</span>
-                <div class="detail-info-right">{moment(itemMovieInfo.premiereDate).format('LL')}</div>
+                <span className="font-weight-bold">Ngày:&nbsp;</span>
+                <div class="detail-info-right">
+                  {moment(itemMovieInfo.premiereDate).format("LL")}
+                </div>
               </div>
             </div>
           </div>

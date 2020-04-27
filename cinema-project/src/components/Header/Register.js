@@ -102,7 +102,7 @@ class Register extends React.Component {
       txtPassword.value !== "" &&
       txtPassword.isInputValid === true &&
       txtRePassword.value !== "" &&
-      txtRePassword.isInputValid == true &&
+      txtRePassword.isInputValid === true &&
       txtEmail.value !== "" &&
       txtEmail.isInputValid === true &&
       txtAddress.value !== "" &&
@@ -432,7 +432,7 @@ const validateInput = (type, checkingText, pass) => {
     } else {
       return {
         isInputValid: false,
-        errorMessage: "Mật khẩu từ 8 kí tự bao gồm chữ và số"
+        errorMessage: "Vui lòng nhập"
       };
     }
   }
