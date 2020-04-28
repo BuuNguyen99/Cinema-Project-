@@ -316,8 +316,8 @@
       "imageInfo": "https://www.galaxycine.vn/media/2020/1/16/poster-onward-official_1579158439704.jpg",
       "video": "https://www.youtube.com/embed/UCfgXvSzllA?autoplay=1",
       "vote": {
-        "rate": "7.52",
-        "numberOfReviews": "43"
+        "rate": "7.58",
+        "numberOfReviews": "44"
       }
     },
     {
@@ -1275,7 +1275,9 @@
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": "1999-03-05",
+      "birth": {
+        "value": "1999-05-03"
+      },
       "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
@@ -1400,7 +1402,9 @@
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": "1999-03-05",
+      "birth": {
+        "value": "1999-05-03"
+      },
       "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
@@ -1453,21 +1457,48 @@
   ],
   "promotion": [
     {
-      "id": "",
-      "title": "",
-      "image": "",
-      "content": ""
+      "id": "promotion001",
+      "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
+      "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
+      "imagePro":"https://www.galaxycine.vn/media/2019/12/9/300x450_1575874237175.jpg",
+      "content": ["Vậy là, ngày 02/03/2020, các Stars sẽ được xem phim thả ga với giá vé đồng nhất 45.000 đ cho tất cả các phim 2D. Ngoài ra, trong Ngày Tri Ân này, khách hàng còn được nhận một ưu đãi đặc biệt - thoải mái thưởng thức bắp nước khi được 01 lần Refill miễn phí với tất cả các phần bắp và nước ngọt dạng ly (Pepsi, 7Up, Mirinda Cam/Mirinda Sarsi), Lipton Trà Chanh 22oz và Combo đang bán tại rạp.",
+       " Đừng bỏ lỡ Ngày Tri Ân tại Galaxy Cinema  - Ngày thứ Hai ĐẦU TIÊN của mỗi tháng. Với Ngày Tri Ân, các Stars chắc chắn sẽ có thêm nhiều trải nghiệm tuyệt vời và một buổi xem phim thú vị tại Galaxy Cinema."
+      ]
     },
     {
-      "id": "",
-      "title": "",
-      "image": "",
-      "content": ""
+      "id": "promotion002",
+      "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
+      "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
+      "imagePro":"https://www.galaxycine.vn/media/2020/2/27/300x450_1582773542863.jpg",
+      "content": ["Vậy là, ngày 02/03/2020, các Stars sẽ được xem phim thả ga với giá vé đồng nhất 45.000 đ cho tất cả các phim 2D. Ngoài ra, trong Ngày Tri Ân này, khách hàng còn được nhận một ưu đãi đặc biệt - thoải mái thưởng thức bắp nước khi được 01 lần Refill miễn phí với tất cả các phần bắp và nước ngọt dạng ly (Pepsi, 7Up, Mirinda Cam/Mirinda Sarsi), Lipton Trà Chanh 22oz và Combo đang bán tại rạp.",
+       " Đừng bỏ lỡ Ngày Tri Ân tại Galaxy Cinema  - Ngày thứ Hai ĐẦU TIÊN của mỗi tháng. Với Ngày Tri Ân, các Stars chắc chắn sẽ có thêm nhiều trải nghiệm tuyệt vời và một buổi xem phim thú vị tại Galaxy Cinema."
+      ]
+    },
+    {
+      "id": "promotion003",
+      "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
+      "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
+      "imagePro":"https://www.galaxycine.vn/media/2019/10/11/300x450_1570766652733.jpg",
+      "content": ["Vậy là, ngày 02/03/2020, các Stars sẽ được xem phim thả ga với giá vé đồng nhất 45.000 đ cho tất cả các phim 2D. Ngoài ra, trong Ngày Tri Ân này, khách hàng còn được nhận một ưu đãi đặc biệt - thoải mái thưởng thức bắp nước khi được 01 lần Refill miễn phí với tất cả các phần bắp và nước ngọt dạng ly (Pepsi, 7Up, Mirinda Cam/Mirinda Sarsi), Lipton Trà Chanh 22oz và Combo đang bán tại rạp.",
+       " Đừng bỏ lỡ Ngày Tri Ân tại Galaxy Cinema  - Ngày thứ Hai ĐẦU TIÊN của mỗi tháng. Với Ngày Tri Ân, các Stars chắc chắn sẽ có thêm nhiều trải nghiệm tuyệt vời và một buổi xem phim thú vị tại Galaxy Cinema."
+      ]
+    },
+    {
+      "id": "promotion004",
+      "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
+      "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
+      "imagePro":"https://www.galaxycine.vn/media/2019/9/30/300x450-80-1569464713921_1569830041346.jpg",
+      "content": ["Vậy là, ngày 02/03/2020, các Stars sẽ được xem phim thả ga với giá vé đồng nhất 45.000 đ cho tất cả các phim 2D. Ngoài ra, trong Ngày Tri Ân này, khách hàng còn được nhận một ưu đãi đặc biệt - thoải mái thưởng thức bắp nước khi được 01 lần Refill miễn phí với tất cả các phần bắp và nước ngọt dạng ly (Pepsi, 7Up, Mirinda Cam/Mirinda Sarsi), Lipton Trà Chanh 22oz và Combo đang bán tại rạp.",
+       " Đừng bỏ lỡ Ngày Tri Ân tại Galaxy Cinema  - Ngày thứ Hai ĐẦU TIÊN của mỗi tháng. Với Ngày Tri Ân, các Stars chắc chắn sẽ có thêm nhiều trải nghiệm tuyệt vời và một buổi xem phim thú vị tại Galaxy Cinema."
+      ]
     }
   ],
   "theater": {
-    "name": "",
-    "about": ""
+      "ticket2d" : "https://galaxycine.vn/media/2019/8/30/banggiave-cm-082019-2d_1567135206319.jpg",
+      "ticket3d" : "https://www.galaxycine.vn/media/2019/8/30/banggiave-082019-3d_1567135215938.jpg",
+      "address": "Lầu 2 Sense City, số 9, Trần Hưng Đạo, P.5, Tp. Cà Mau",
+      "phone" : "1900 1302",
+      "addressMap": "https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
   },
   "support": [
     {

@@ -56,6 +56,13 @@ function reducerUsers(state = stateDefault, action) {
       return newState;
     }
 
+    case Types.UPDATE_ACCOUNT: {
+      index = findIndex(newState.account,action.account.id);
+      newState.account[index] = action.account;
+      
+      return newState;
+    }
+
     default: {
       return state;
     }

@@ -2,30 +2,31 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./TheaterPage.css";
 import CarouselTheater from "./CarouselTheater";
+import { connect } from "react-redux";
+import { actFetchDataTheaterRequest } from "../../actions/action";
 
 class TheaterPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      setImage:
-        "https://galaxycine.vn/media/2019/8/30/banggiave-cm-082019-2d_1567135206319.jpg",
+      setImage: "https://galaxycine.vn/media/2019/8/30/banggiave-cm-082019-2d_1567135206319.jpg",
     };
   }
 
-  changeImage2D = () => {
+  changeImage2D = (ticket2d) => {
     this.setState({
-      setImage:
-        "https://galaxycine.vn/media/2019/8/30/banggiave-cm-082019-2d_1567135206319.jpg",
+      setImage: ticket2d,
     });
   };
 
-  changeImage3D = () => {
+  changeImage3D = (ticket3d) => {
     this.setState({
-      setImage:
-        "https://www.galaxycine.vn/media/2019/8/30/banggiave-082019-3d_1567135215938.jpg",
+      setImage: ticket3d,
     });
   };
-
+  componentDidMount() {
+    this.props.onFetchDataTheater();
+  }
   render() {
     let color = {
       color: "#b9b9b9",
@@ -35,6 +36,7 @@ class TheaterPage extends Component {
       color: "black",
       textTransform: "uppercase",
     };
+
     return (
       <div className="container my-4">
         <div className="row my-5">
@@ -73,14 +75,14 @@ class TheaterPage extends Component {
             <button
               type="button"
               className="btn btn-outline-info mr-4"
-              onClick={this.changeImage2D}
+              onClick={() => this.changeImage2D(this.props.theater.ticket2d)}
             >
               2D
             </button>
             <button
               type="button"
               className="btn btn-outline-info"
-              onClick={this.changeImage3D}
+              onClick={() => this.changeImage3D(this.props.theater.ticket3d)}
             >
               3D
             </button>
@@ -108,12 +110,11 @@ class TheaterPage extends Component {
           <div className="col-md-12">
             <span style={color}> Địa chỉ:</span>{" "}
             <span>
-              {" "}
-              Lầu 2 Sense City, số 9, Trần Hưng Đạo, P.5, Tp. Cà Mau{" "}
+              {this.props.theater.address}
             </span>
           </div>
           <div className="col-md-12">
-            <span style={color}> Số điện thoại:</span> <span> 0357175762 </span>
+            <span style={color}> Số điện thoại:</span> <span>  {this.props.theater.phone} </span>
           </div>
         </div>
         <div className="row my-4">
@@ -121,7 +122,7 @@ class TheaterPage extends Component {
             <div className="map-responsive">
               <iframe
                 className="map"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                src= {this.props.theater.addressMap}
                 height="450"
                 frameborder="0"
                 allowfullscreen
@@ -151,4 +152,16 @@ class TheaterPage extends Component {
   }
 }
 
-export default TheaterPage;
+const mapStateToProps = (state) => {
+  return {
+    theater: state.reducerMovie.theater,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onFetchDataTheater: () => {
+      dispatch(actFetchDataTheaterRequest());
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(TheaterPage);

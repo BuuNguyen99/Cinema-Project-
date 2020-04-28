@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { actUpdateUserRequest } from "../../actions/action";
+import { actUpdateUserRequest, actUpdateAccountRequest } from "../../actions/action";
 
 class InforUser extends Component {
   constructor(props, context) {
@@ -130,7 +130,8 @@ class InforUser extends Component {
           myDeal: myDeal
         };
         this.props.onUpdateUser(accountUser);
-        alert("Lưu thông tin thành công, vui lòng đăng nhập lại");
+        this.props.onUpdateAccount(accountUser);
+        alert("Lưu thông tin thành công");
         
       }
     }
@@ -156,7 +157,8 @@ class InforUser extends Component {
         myDeal: myDeal
       };
       this.props.onUpdateUser(accountUser);
-      alert("Lưu thông tin thành công, vui lòng đăng nhập lại");
+      this.props.onUpdateAccount(accountUser);
+      alert("Lưu thông tin thành công");
     }
     else {
       alert("Vui Lòng điền đầy đủ thông tin và đúng định dạng");
@@ -467,6 +469,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onUpdateUser: (user) => {
       dispatch(actUpdateUserRequest(user));
+    },
+    onUpdateAccount: (account) => {
+      dispatch(actUpdateAccountRequest(account));
     },
   };
 };
