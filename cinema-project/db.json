@@ -1695,16 +1695,15 @@
     }
   ],
   "booking": {
-    "idUser": "xQ--20H",
+    "idUser": "user0001",
     "idRoom": "room2",
-    "idMovie": "Movie004",
-    "idDate": "movie004_15032020",
-    "time": "08:00",
+    "idMovie": "Movie001",
+    "idDate": "movie001_15032020",
+    "time": "13:00",
     "seat": [
-      "D9",
-      "E9",
-      "E0",
-      "F0"
+      "B8",
+      "B7",
+      "B9"
     ]
   },
   "foodCombo": [

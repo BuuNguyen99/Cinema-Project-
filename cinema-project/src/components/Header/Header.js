@@ -60,7 +60,7 @@ class Header extends Component {
   handleOnEnter = (e, keyword) => {
     if (e.keyCode === 13) {
       this.props.searchMovie(keyword);
-      history.push("./search");
+      history.push("/search");
     }
   };
   render() {

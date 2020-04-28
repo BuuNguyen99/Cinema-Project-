@@ -91,7 +91,7 @@ function TabControl({ tab1, tab2, data1, data2, path, tabDefault, history }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
     if(path !== '/') {
-      const path = value === 0 ? './coming-soon' : './now-showing';
+      const path = value === 0 ? '/coming-soon' : '/now-showing';
       history.push(path)
     }
   };
