@@ -8,6 +8,8 @@ const stateDefault = {
   choosing: {},
   booking: [],
   showInfoMovie: [],
+  theater: [],
+  promotion: [],
 };
 
 const isMovieShowing = (date) => {
@@ -38,7 +40,7 @@ function reducerMovie(state = stateDefault, action) {
           movie: action.movie,
           date: action.date,
           time: action.time,
-          idUser: action.idUser
+          idUser: action.idUser,
         },
       };
     }
@@ -54,23 +56,30 @@ function reducerMovie(state = stateDefault, action) {
     }
     case Types.RATING_ITEM_MOVIE: {
       let newState = { ...state };
-      for (let i = 0 ; i < newState.movie.length ; i++) {
-        if(newState.movie[i].id === action.movie.id) {
-            newState.movie[i] = action.movie;
+      for (let i = 0; i < newState.movie.length; i++) {
+        if (newState.movie[i].id === action.movie.id) {
+          newState.movie[i] = action.movie;
         }
       }
-      
+
       return newState;
     }
 
     case Types.CREATE_BOOKING: {
       return {
         ...state,
-        booking: [
-          ...state.booking,
-          action.data
-        ]
-      }
+        booking: [...state.booking, action.data],
+      };
+    }
+    case Types.FETCH_DATA_THEATER: {
+      let newState = { ...state };
+      newState.theater = action.theater;
+      return newState;
+    }
+    case Types.FETCH_DATA_PROMOTION: {
+      let newState = { ...state };
+      newState.promotion = action.promotion;
+      return newState;
     }
     default: {
       return state;

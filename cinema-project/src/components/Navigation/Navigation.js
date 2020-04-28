@@ -149,7 +149,7 @@ class Navigation extends Component {
                     className="nav-link-c text-uppercase nav-link"
                     href="services.html"
                   >
-                    sự kiện
+                   Ưu Đãi
                   </Link>
                 </li>
 

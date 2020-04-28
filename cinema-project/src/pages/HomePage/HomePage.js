@@ -3,7 +3,9 @@ import "./HomePage.css";
 import CarouselBanner from "./Carousel/CarouselBanner";
 import Movies from "./Movies/Movies";
 import ReviewMovie from "./ReviewMovie/ReviewMovie";
-import Promotion from "./Promotion/Promotion"
+import Pro from "./Promotion/Pro"
+import InforCinema from "./Promotion/InforCinema";
+
 
 class HomePage extends React.Component {
     render() {
@@ -12,7 +14,8 @@ class HomePage extends React.Component {
                <CarouselBanner/>
                <Movies/> 
                <ReviewMovie/>
-               <Promotion/>
+               <Pro/>
+               <InforCinema/>
             </div>
         )
     }
