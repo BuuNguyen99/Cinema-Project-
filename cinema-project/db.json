@@ -1458,6 +1458,7 @@
   "promotion": [
     {
       "id": "promotion001",
+      "links": "tung-bung-hai-sao--nhan-uu-dai-khung",
       "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
       "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
       "imagePro":"https://www.galaxycine.vn/media/2019/12/9/300x450_1575874237175.jpg",
@@ -1467,6 +1468,7 @@
     },
     {
       "id": "promotion002",
+      "links": "ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang",
       "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
       "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
       "imagePro":"https://www.galaxycine.vn/media/2020/2/27/300x450_1582773542863.jpg",
@@ -1476,6 +1478,7 @@
     },
     {
       "id": "promotion003",
+      "links": "bat-kip-thoi-dai-40-bye-bye-the-thanh-vien-nhua",
       "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
       "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
       "imagePro":"https://www.galaxycine.vn/media/2019/10/11/300x450_1570766652733.jpg",
@@ -1485,6 +1488,7 @@
     },
     {
       "id": "promotion004",
+      "links": "dat-ve-online-khong-lo-tre-nai",
       "title": "Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng",
       "image": "https://www.galaxycine.vn/media/2020/2/27/1135x660_1582773509378.jpg",
       "imagePro":"https://www.galaxycine.vn/media/2019/9/30/300x450-80-1569464713921_1569830041346.jpg",

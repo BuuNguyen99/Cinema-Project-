@@ -16,6 +16,10 @@ import BuyTicketDetailPage from './pages/BuyTicketDetailPage/BuyTicketDetailPage
 import TicketBooking from './pages/TicketBooking/TicketBooking';
 import UserPage from './pages/AccountPage/UserPage/UserPage';
 import AdminPage from './pages/AdminPage/AdminPage';
+import Item1 from './pages/HomePage/Promotion/ShowInforPro/Item1';
+import Item2 from './pages/HomePage/Promotion/ShowInforPro/Item2';
+import Item3 from './pages/HomePage/Promotion/ShowInforPro/Item3';
+import Item4 from './pages/HomePage/Promotion/ShowInforPro/Item4';
 const routes = [
     {
         path: '/',
@@ -108,6 +112,26 @@ const routes = [
         path: '/ticket-booking',
         exact: false,
         main: () => <TicketBooking/>
+    },
+    {
+        path: '/promotion/tung-bung-hai-sao--nhan-uu-dai-khung',
+        exact: false,
+        main: () => <Item1/>
+    },
+    {
+        path: '/promotion/ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang',
+        exact: false,
+        main: () => <Item2/>
+    },
+    {
+        path: '/promotion/bat-kip-thoi-dai-40-bye-bye-the-thanh-vien-nhua',
+        exact: false,
+        main: () => <Item3/>
+    },
+    {
+        path: '/promotion/dat-ve-online-khong-lo-tre-nai',
+        exact: false,
+        main: () => <Item4/>
     },
     {
         path: '',
