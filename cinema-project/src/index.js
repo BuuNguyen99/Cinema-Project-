@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import thunk from 'redux-thunk';
 
+
 const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
