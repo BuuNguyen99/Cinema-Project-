@@ -1321,7 +1321,7 @@
     {
       "name": "huelinh",
       "email": "nguyenhue@gmail.com",
-      "phone": "0981234567",
+      "phone": "0981234567",  
       "gender": "Nữ",
       "birth": {
         "value": "1996-24-03"
@@ -1397,11 +1397,19 @@
   ],
   "account": [
     {
-      "id": "admin0001",
-      "name": "admin1",
-      "email": "admin@123",
-      "pass": "123456789q",
-      "image": ""
+      "id": "xQ--20H",
+      "name": "Nguyễn Bữu",
+      "email": "nguyenbuu3599@gmail.com",
+      "phone": "0358323651",
+      "gender": "Nam",
+      "birth": {
+        "value": "1999-05-03"
+      },
+      "pass": "nguyenbuu0305",
+      "address": "Phú Vang - Thừa Thiên Huế ",
+      "currentStar": 0,
+      "targets": 0,
+      "myDeal": []
     }
   ],
   "reviewMovie": [
@@ -1692,15 +1700,13 @@
     }
   ],
   "booking": {
-    "idUser": "admin0001",
+    "idUser": "user0001",
     "idRoom": "room2",
-    "idMovie": "Movie001",
-    "idDate": "movie001_15032020",
-    "time": "15:00",
+    "idMovie": "Movie006",
+    "idDate": "movie006_16032020",
+    "time": "13:00",
     "seat": [
-      "C8",
-      "C9",
-      "D0"
+      "B8"
     ]
   },
   "foodCombo": [
