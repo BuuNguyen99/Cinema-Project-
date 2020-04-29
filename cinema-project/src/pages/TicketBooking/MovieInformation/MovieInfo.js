@@ -35,6 +35,7 @@ class MovieInfo extends Component {
     movie.vote.rate = vote.toString();
     movie.vote.numberOfReviews = number.toString();
     this.props.onUpdateRatingItemMovie(movie);
+    //localStorage.setItem("movie", JSON.stringify(movie));
     alert(`Bạn đã đánh giá ${value} sao`);
   };
   render() {
