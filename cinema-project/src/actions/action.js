@@ -220,7 +220,7 @@ export const actCreateBookingRequest = (data) => {
         return callApi('Booking','POST', data).then(res => {
             if(res.status === 200 || res.status === 201) {
                 alert('Đặt vé thành công!')
-                history.push('/')
+                history.push('/pay-movie')
                 dispatch(actCreateBooking(res.data))
             } else alert('Không thể kết nối dữ liệu!')
         })
