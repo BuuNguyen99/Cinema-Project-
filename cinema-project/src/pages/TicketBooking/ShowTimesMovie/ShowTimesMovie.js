@@ -11,7 +11,7 @@ class ShowTimesMovie extends Component {
 			const slug = movie.slug;
 			history.push(`/buy-ticket-detail/${slug}`);
 		} else {
-			alert("Vui long dang nhap!");
+			alert("Vui lòng đăng nhập!");
 		}
 	};
 

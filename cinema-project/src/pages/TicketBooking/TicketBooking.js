@@ -22,9 +22,7 @@ class TicketBooking extends Component {
 		} else {
 			account = JSON.parse(localStorage.getItem("account"));
     }
-    console.log('account:', account)
 
-    
     let ItemMovie = itemMovieInfo.map((itemMovieInfo, index) => {
       return <MovieInfo key={`movie ${index}`} itemMovieInfo={itemMovieInfo} account={account}/>;
     });
