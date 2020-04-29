@@ -1694,13 +1694,11 @@
   "booking": {
     "idUser": "user0001",
     "idRoom": "room2",
-    "idMovie": "Movie001",
-    "idDate": "movie001_15032020",
+    "idMovie": "Movie006",
+    "idDate": "movie006_16032020",
     "time": "13:00",
     "seat": [
-      "B8",
-      "B7",
-      "B9"
+      "B8"
     ]
   },
   "foodCombo": [

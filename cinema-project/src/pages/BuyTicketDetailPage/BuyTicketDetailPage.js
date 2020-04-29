@@ -18,6 +18,9 @@ class BuyTicketDetailPage extends Component {
 			foodArr: [],
 			onNextPage: false,
 			arrSeatChoosing: [],
+			totalAllTicket: 0,
+			totalAllFood: 0
+
 		};
 	}
 
@@ -75,17 +78,24 @@ class BuyTicketDetailPage extends Component {
 		});
 	};
 
-	handleSubmit = (choosing, roomId, amountTicket) => {
+	handleSubmit = (choosing, roomName, amountTicket, totalAllFood, totalAllTicket) => {
+		console.log('totalAllTicket', totalAllTicket)
+		console.log('totalAllFood', totalAllFood)
 		if (this.state.arrSeatChoosing.length === amountTicket) {
+			console.log('date:', choosing.date)
+			console.log('movie:', choosing.movie)
 			let data = {
 				idUser: choosing.idUser,
-				idRoom: roomId,
-				idMovie: choosing.movie.id,
-				idDate: choosing.date.id,
+				room: roomName,
+				nameMovie: choosing.movie.name,
+				date: choosing.date.datemovie,
 				time: choosing.time,
 				seat: this.state.arrSeatChoosing,
+				ticketPrice: totalAllTicket,
+				foodPrice: totalAllFood
 			};
-			this.props.createBooking(data);
+			console.log('data:', data)
+			//this.props.createBooking(data);
 		} else if (this.state.arrSeatChoosing.length === 0) {
 			alert("Vui lòng chọn ghế!");
 		} else {
@@ -233,7 +243,7 @@ class BuyTicketDetailPage extends Component {
 									</button>
 									<button
 										onClick={() =>
-											this.handleSubmit(choosing, room.id, amountTicket)
+											this.handleSubmit(choosing, room.name, amountTicket, totalAllFood, totalAllTicket)
 										}
 										className={`${classes.button} ${classes.buttonNomargin} ml-2`}>
 										Đặt vé <i className='pl-2 fas fa-arrow-right'></i>

@@ -20,6 +20,7 @@ import Item1 from './pages/HomePage/Promotion/ShowInforPro/Item1';
 import Item2 from './pages/HomePage/Promotion/ShowInforPro/Item2';
 import Item3 from './pages/HomePage/Promotion/ShowInforPro/Item3';
 import Item4 from './pages/HomePage/Promotion/ShowInforPro/Item4';
+import PayMovie from './pages/PayMovie/PayMovie'
 const routes = [
     {
         path: '/',
@@ -132,6 +133,11 @@ const routes = [
         path: '/promotion/dat-ve-online-khong-lo-tre-nai',
         exact: false,
         main: () => <Item4/>
+    },
+    {
+        path: '/pay-movie',
+        exact: false,
+        main: () => <PayMovie/>
     },
     {
         path: '',
