@@ -48,7 +48,18 @@ function reducerUsers(state = stateDefault, action) {
 
       return newState;
     }
+    case Types.ADD_USER: {
+      newState.users.push(action.user);
+      return newState;
+    }
 
+    case Types.DELETE_USER: {
+      index = findIndex(newState.users,id);
+      console.log(index);
+      state.users.splice(index,1);
+
+      return newState;
+    }
     case Types.UPDATE_USER: {
       index = findIndex(newState.users,action.user.id);
       newState.users[index] = action.user;

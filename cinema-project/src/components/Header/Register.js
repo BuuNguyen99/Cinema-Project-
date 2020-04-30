@@ -24,9 +24,7 @@ class Register extends React.Component {
         errorMessage: ""
       },
       txtGender: "Nam",
-      txtBirth: {
-       value: ""
-      },
+      txtBirth:"",
       txtEmail: {
         value: "",
         isInputValid: true,
@@ -76,6 +74,12 @@ class Register extends React.Component {
     })
   };
 
+  handleChangeBirth= event => {
+    this.setState ({
+      txtBirth : event.target.value
+    })
+  };
+
   componentDidMount() {
     this.props.onFetchDataUser();
   }
@@ -116,8 +120,6 @@ class Register extends React.Component {
         birth: txtBirth,
         pass: txtPassword.value,
         address: txtAddress.value,
-        city: "",
-        county: "",
         currentStar: 0,
         targets: 0,
         myDeal: []
@@ -333,8 +335,8 @@ class Register extends React.Component {
                 <div className="col-md-12">
                   <input
                     name="txtBirth"
-                    value={txtBirth.value}
-                    onChange={this.handleInput}
+                    value={txtBirth}
+                    onChange={this.handleChangeBirth}
                     type="date"
                     id="dayOfBirth"
                     max="3000-12-31"

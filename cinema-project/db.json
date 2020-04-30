@@ -156,8 +156,8 @@
       "imageInfo": "https://www.galaxycine.vn/media/2020/2/26/nang-3---poster-khong-logo_1582692152072.jpg",
       "video": "https://www.youtube.com/embed/DymKqNH_m8w?autoplay=1",
       "vote": {
-        "rate": "6.24",
-        "numberOfReviews": "76"
+        "rate": "6.32",
+        "numberOfReviews": "80"
       }
     },
     {
@@ -1275,101 +1275,31 @@
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": {
-        "value": "1999-05-03"
-      },
+      "birth": "1999-05-13T00:00:00.000Z",
       "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
-      "targets": 0,
-      "myDeal": [
-        {
-          "dayTrading": "21/02/2020",
-          "tranNumber": "1021031",
-          "tickCode": "MSC0001",
-          "room": "ROOM 1",
-          "movie": "Cuộc chiến  vô cực (2D)",
-          "price": 75000,
-          "numberOfTicks": 3,
-          "star": 100,
-          "targets": 10
-        },
-        {
-          "dayTrading": "21/02/2020",
-          "tranNumber": "1021031",
-          "tickCode": "MSC0002",
-          "room": "ROOM 2",
-          "movie": "Chiến Binh Rồng (2D)",
-          "price": 65000,
-          "numberOfTicks": 3,
-          "star": 100,
-          "targets": 0
-        },
-        {
-          "dayTrading": "21/02/2020",
-          "tranNumber": "1021031",
-          "tickCode": "MSC0003",
-          "room": "ROOM 3",
-          "movie": "Gái Già Lắm Chiêu (2D)",
-          "price": 45000,
-          "numberOfTicks": 3,
-          "star": 100,
-          "targets": 0
-        }
-      ]
+      "targets": "12",
+      "myDeal": [],
+      "tableData": {
+        "id": 0
+      }
     },
     {
       "name": "huelinh",
       "email": "nguyenhue@gmail.com",
       "phone": "0981234567",
       "gender": "Nữ",
-      "birth": {
-        "value": "1996-24-03"
-      },
+      "birth": "1996-06-22",
       "pass": "12345abcde",
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
       "targets": 0,
-      "myDeal": [
-        {
-          "dayTrading": "21/02/2020",
-          "tranNumber": "1021031",
-          "tickCode": "MSC0001",
-          "room": "ROOM 1",
-          "movie": "Cuộc chiến  vô cực (2D)",
-          "price": 75000,
-          "numberOfTicks": 3,
-          "star": 100,
-          "targets": 0
-        },
-        {
-          "dayTrading": "21/02/2020",
-          "tranNumber": "1021031",
-          "tickCode": "MSC0001",
-          "room": "ROOM 1",
-          "movie": "Cuộc chiến  vô cực (2D)",
-          "price": 75000,
-          "numberOfTicks": 3,
-          "star": 100,
-          "targets": 0
-        }
-      ],
-      "id": "fE6XAWZ"
-    },
-    {
-      "id": "xQ--20H",
-      "name": "Nguyễn Bữu",
-      "email": "nguyenbuu3599@gmail.com",
-      "phone": "0358323651",
-      "gender": "Nam",
-      "birth": {
-        "value": "1999-05-03"
-      },
-      "pass": "nguyenbuu0305",
-      "address": "Phú Vang - Thừa Thiên Huế ",
-      "currentStar": 0,
-      "targets": 0,
-      "myDeal": []
+      "myDeal": [],
+      "id": "fE6XAWZ",
+      "tableData": {
+        "id": 1
+      }
     }
   ],
   "admin": [
@@ -1406,11 +1336,44 @@
   ],
   "reviewMovie": [
     {
-      "id": "",
-      "title": "",
-      "image": "",
-      "content": "",
-      "vote": ""
+      "id": "reviewMovie0001",
+      "title": "[Review] Bloodshot: Vin Diesel Và Giấc Mơ Siêu Anh Hùng",
+      "image": "https://www.galaxycine.vn/media/2020/3/12/unnamed_1584006435812.jpg",
+      "content": "Dù hóa thân thành Groot trong Guardians Of The Galaxy là siêu anh hùng nhưng Vin Diesel chỉ lồng tiếng chứ chẳng đóng một cảnh giải cứu thế giới nào cả.",
+      "vote": {
+        "rate": "7.37",
+        "numberOfReviews": "50"
+      }
+    },
+    {
+      "id": "reviewMovie0002",
+      "title": "[Review] Onward: Lộ Diện Ứng Viên Đầu Tiên Cho Oscar Hoạt Hình 2021?",
+      "image": "https://www.galaxycine.vn/media/2020/3/4/mv5bmwmzzwiyzgmtzwe2ms00njfilwe4otutmmrizde2m2zkmzq3xkeyxkfqcgdeqxvyndg4njy5otq--v1-sx1777-cr0-0-1777-744-al-_1583313777077.jpg",
+      "content": "Pixar luôn là Pixar. Dù rất nhiều ý kiến cho rằng việc về dưới trướng Disney khiến hãng phim hoạt hình dần mai một, đánh mất chính mình thì theo thời gian, họ tiếp tục ra mắt những phim hay “để đời”. Năm 2020, Onward lần nữa chứng minh rằng, Pixar vẫn luôn xuất sắc.",
+      "vote": {
+        "rate": "7.44",
+        "numberOfReviews": "41"
+      }
+    },
+    {
+      "id": "reviewMovie0003",
+      "title": "Phía Sau Màn Ảnh: Khi Sao Hollywood Hy Sinh Vì Nghệ Thuật",
+      "image": "https://www.galaxycine.vn/media/2020/4/27/450_1587982051894.jpg",
+      "content": "Để các bộ phim được hoàn hảo, các diễn viên Hollywood không ngần ngại hy sinh, thể hiện nhân vật theo cách chân thật nhất có thể.",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
+    },
+    {
+      "id": "reviewMovie0004",
+      "title": "[Preview] A Quiet Place 2: Hé Lộ Bí Mật Hậu Tận Thế?",
+      "image": "https://www.galaxycine.vn/media/2020/2/21/mv5bodqxmmnhnjytmzk3yi00nzdmltk1ywqtnjvhytkzyzm3zwu4xkeyxkfqcgdeqxvynjczote0mzm--v1-_1582261927882.jpg",
+      "content": "90 phút căng như dây đàn của A Quiet Place giúp nhà sản xuất kiếm cả núi tiền từ kinh phí chỉ 17 triệu $. Bộ phim đã tạo cơn sốt trên toàn thế giới, thu về hơn 340 triệu $ và nhanh chóng được hãng phim lên kế hoạch ra mắt phần tiếp theo.",
+      "vote": {
+        "rate": "7.5",
+        "numberOfReviews": "40"
+      }
     }
   ],
   "promotion": [

@@ -87,60 +87,14 @@ class Navigation extends Component {
                     </Link>
                   </div>
                 </li>
-
-                <li
-                  onClick={() => this.handleClickMenu("menu2")}
-                  className={`nav-item-c nav-item dropdown ${styleMenu2}`}
-                >
+                <li className="nav-item-c nav-item">
                   <Link
-                    className="nav-link-c text-uppercase nav-link dropdown-toggle"
-                    id="navbarDropdownPortfolio"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded={isExpand2}
+                    to="/review-film"
+                    className="nav-link-c text-uppercase nav-link"
+                    href="portfolio-2-col.html"
                   >
-                    Góc điện ảnh
+                    bình luận phim
                   </Link>
-                  <div
-                    className={`dropdown-c dropdown-menu dropdown-menu-right ${styleMenu2}`}
-                    aria-labelledby="navbarDropdownPortfolio"
-                  >
-                    <Link
-                      to="/movie-genre"
-                      className="nav-link-sub text-uppercase dropdown-item"
-                      href="portfolio-1-col.html"
-                    >
-                      thể loại phim
-                    </Link>
-                    <Link
-                      to="/cast"
-                      className="nav-link-sub text-uppercase dropdown-item"
-                      href="portfolio-2-col.html"
-                    >
-                      diễn viên
-                    </Link>
-                    <Link
-                      to="/directors"
-                      className="nav-link-sub text-uppercase dropdown-item"
-                      href="portfolio-2-col.html"
-                    >
-                      đạo diễn
-                    </Link>
-                    <Link
-                      to="/review-film"
-                      className="nav-link-sub text-uppercase dropdown-item"
-                      href="portfolio-2-col.html"
-                    >
-                      bình luận phim
-                    </Link>
-                    <Link
-                      to="/blog-film"
-                      className="nav-link-sub text-uppercase dropdown-item"
-                      href="portfolio-2-col.html"
-                    >
-                      blog điện ảnh
-                    </Link>
-                  </div>
                 </li>
 
                 <li className="nav-item-c nav-item">
@@ -149,7 +103,7 @@ class Navigation extends Component {
                     className="nav-link-c text-uppercase nav-link"
                     href="services.html"
                   >
-                   Ưu Đãi
+                    Ưu Đãi
                   </Link>
                 </li>
 

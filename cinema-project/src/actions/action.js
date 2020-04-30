@@ -70,14 +70,7 @@ export const actFetchDataUsers = (users) => {
 
 
 
-//Post register user
-export const actRegisterUserRequest = (user) => {
-        return (dispatch) => {
-            return callApi('users', 'POST', user).then(res => {
-                dispatch(actRegisterUser(res.data))
-            });
-        }
-} 
+
 
 export const  actFetchDataAccountRequest = () => {
     return (dispatch) => {
@@ -96,6 +89,16 @@ export const actFetchDataAccount = (account) => {
     }
 }
 
+
+export const actRegisterUserRequest = (user) => {
+    return (dispatch) => {
+        return callApi('users', 'POST', user).then(res => {
+            dispatch(actRegisterUser(res.data))
+        });
+    }
+} 
+
+
 export const actRegisterUser = (user) => {
     return {
         type: Types.REGISTER_USER,
@@ -104,6 +107,22 @@ export const actRegisterUser = (user) => {
 
 }
 
+export const actAddUserRequest = (user) => {
+    return (dispatch) => {
+        return callApi('users', 'POST', user).then(res => {
+            dispatch(actAddUser(res.data))
+        });
+    }
+} 
+
+
+export const actAddUser = (user) => {
+    return {
+        type: Types.ADD_USER,
+        user
+    }
+
+}
 
 export const actUpdateUserRequest = (users) => {
     return dispatch => {
@@ -119,6 +138,21 @@ export const actUpdateUser = (user) => {
       type: Types.UPDATE_USER,
       user
   }
+}
+
+export const actDeleteUserRequest = (id) => {
+    return dispatch => {
+        return callApi(`users/${id}`, 'DELETE', null).then(res => {
+            dispatch( actDeleteUser(id))
+        })
+    }
+}
+
+export const actDeleteUser = (id) => {
+    return {
+        type: Types.DELETE_USER,
+        id
+    }
 }
 
 
@@ -259,6 +293,25 @@ export const actRatingItemMovieRequest = (movie) => {
     }
   }
 
+
+
+  export const actRatingItemReviewMovieRequest = (reviewMovie) => {
+    return dispatch => {
+      return callApi(`reviewMovie/${reviewMovie.id}`, 'PUT' , reviewMovie).then(res => {
+          dispatch(actRatingItemReviewMovie(res.data));
+      })
+    }
+}
+
+
+export const actRatingItemReviewMovie = (reviewMovie) => {
+  return {
+      type: Types.RATING_ITEM_REVIEW_MOVIE,
+      reviewMovie
+  }
+}
+
+
   // act receive data food
 export const  actFetchDataFoodRequest = () => {
     return (dispatch) => {
@@ -327,5 +380,23 @@ export const actFetchDataPromotion = (promotion) => {
     return {
         type: Types.FETCH_DATA_PROMOTION,
         promotion
+    }
+}
+
+
+export const  actFetchDataReviewMovieRequest = () => {
+    return (dispatch) => {
+        return callApi('reviewMovie','GET', null).then (res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataReviewMovie(res.data))
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+}
+
+export const actFetchDataReviewMovie = (reviewMovie) => {
+    return {
+        type: Types.FETCH_DATA_REVIEW_MOVIE,
+        reviewMovie
     }
 }

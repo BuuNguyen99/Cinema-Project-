@@ -14,7 +14,7 @@ class TicketBooking extends Component {
     if (Object.keys(itemMovieInfo).length !== 0) {
 			localStorage.setItem("movie", JSON.stringify(itemMovieInfo));
 		} else {
-			itemMovieInfo = JSON.parse(localStorage.getItem("movie"));
+       itemMovieInfo = JSON.parse(localStorage.getItem("movie"));
     }
     
     if (Object.keys(account).length !== 0) {

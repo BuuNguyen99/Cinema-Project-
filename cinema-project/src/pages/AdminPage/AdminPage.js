@@ -6,20 +6,21 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import ManageUsers from './ManageUsers';
+import ManageUsers from "./ManageUsers";
+import ManageMovies from "./ManageMovies";
+import ManageRevenue from "./ManageRevenue";
 import "./AdminPage.css";
 
 class AdminPage extends React.Component {
+ 
   render() {
     return (
-        <div className="container-fluid my-4">
-          <NavTabs/>
-        </div>
+      <div className="container-fluid my-4">
+        <NavTabs />
+      </div>
     );
   }
 }
-
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function NavTabs() {
+function NavTabs(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -90,19 +91,19 @@ function NavTabs() {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="Quản lý Users" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="Quản lý Người Dùng" href="/drafts" {...a11yProps(0)} />
+          <LinkTab label="Quản lý Phim" href="/trash" {...a11yProps(1)} />
+          <LinkTab label="Quản Lý doanh thu" href="/spam" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <ManageUsers/>
+        <ManageUsers />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+        <ManageMovies/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Page Three
+        <ManageRevenue/>
       </TabPanel>
     </div>
   );
@@ -110,4 +111,3 @@ function NavTabs() {
 
 
 export default AdminPage;
-
