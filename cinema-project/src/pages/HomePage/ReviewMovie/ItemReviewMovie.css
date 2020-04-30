@@ -46,3 +46,35 @@
 .title{
     line-height: 30px;
 }
+.rating {
+    display: flex;
+    font-size: 16px;
+  }
+
+i.fas.fa-star.align-self-center.mr-1 {
+    margin-top: -2px;
+}
+
+@media only screen and (max-width: 992px) {
+    .col-4.col-md-5.col-lg-4.col-xl-3 {
+        margin-top: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 769px) {
+    .contentReviewMovie{
+       font-size: 12px;
+    }
+    .col-4.col-md-5.col-lg-4.col-xl-3 {
+        margin-top: 0px;
+    }
+    .title{
+        font-size: 12px;
+    }
+    .rating.mt-2 {
+        display: none;
+    }
+    .row.content {
+        margin-top: -22px;
+    }
+  }

@@ -18,9 +18,7 @@ class InforUser extends Component {
         errorMessage: "",
       },
       txtGender:  props.account.gender,
-      txtBirth: {
-        value: props.account.birth.value,
-      },
+      txtBirth: props.account.birth,
       txtEmail: {
         value: props.account.email,
       },
@@ -84,6 +82,12 @@ class InforUser extends Component {
       isChecked: e.target.checked,
     });
   };
+  handleChangeBirth= event => {
+    this.setState ({
+      txtBirth : event.target.value
+    })
+  };
+
   onSave = (e) => {
     e.preventDefault();
 
@@ -241,8 +245,8 @@ class InforUser extends Component {
                 max="3000-12-31"
                 min="1000-01-01"
                 className="form-control"
-                value={txtBirth.value}
-                onChange={this.handleInput}
+                value={txtBirth}
+                onChange={this.handleChangeBirth}
               />
             </div>
           </div>
