@@ -33,3 +33,5 @@ export const FETCH_DATA_TICKETS = 'FETCH_DATA_TICKETS';
 export const FETCH_DATA_FOOD = 'FETCH_DATA_FOOD';
 
 export const CREATE_BOOKING = 'CREATE_BOOKING';
+
+export const GET_BOOKING = 'GET_BOOKING'

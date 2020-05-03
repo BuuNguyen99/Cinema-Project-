@@ -10,6 +10,7 @@ const stateDefault = {
   showInfoMovie: [],
   theater: [],
   promotion: [],
+  getBookingById: {}
 };
 
 const isMovieShowing = (date) => {
@@ -80,6 +81,12 @@ function reducerMovie(state = stateDefault, action) {
       let newState = { ...state };
       newState.promotion = action.promotion;
       return newState;
+    }
+    case Types.GET_BOOKING: {
+      return {
+        ...state,
+        getBookingById: action.data
+      }
     }
     default: {
       return state;

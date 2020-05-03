@@ -217,11 +217,11 @@ export const actFetchDataSupport = (support) => {
 
 export const actCreateBookingRequest = (data) => {
     return (dispatch) => {
-        return callApi('Booking','POST', data).then(res => {
+        return callApi('booking','POST', data).then(res => {
             if(res.status === 200 || res.status === 201) {
-                alert('Đặt vé thành công!')
-                history.push('/pay-movie')
+                alert('Đặt vé thành công, chúng tôi đã gửi mã QR code qua điện thoại của bạn, vui lòng đem mã số này đến quầy để nhận vé!')
                 dispatch(actCreateBooking(res.data))
+                history.push('/');
             } else alert('Không thể kết nối dữ liệu!')
         })
     }
@@ -327,5 +327,24 @@ export const actFetchDataPromotion = (promotion) => {
     return {
         type: Types.FETCH_DATA_PROMOTION,
         promotion
+    }
+}
+
+export const actFetchDataBookingRequest = (id) => {
+    return (dispatch) => {
+        console.log('id in action:', id);
+        
+        return callApi(`booking/${id}`, 'GET', null).then(res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataBooking(res.data))
+            } else alert('Không thể kết nối đến dữ liệu!')
+        })
+    }
+}
+
+export const actFetchDataBooking = (data) => {
+    return {
+        type: Types.GET_BOOKING,
+        data
     }
 }

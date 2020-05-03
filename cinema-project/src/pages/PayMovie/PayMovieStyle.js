@@ -1,9 +1,13 @@
 
 const styles = (theme) => ({
-    info: {
-        fontSize: '17px',
-        textTransform: 'uppercase',
-        fontWeight: 'bold'
+    Card: {
+        backgroundColor: '#f9f7f7'
+    },
+    cardItem: {
+        "&:hover": {
+            backgroundColor: '#f9cba4',
+            cursor: "pointer"
+        }
     }
 })
 

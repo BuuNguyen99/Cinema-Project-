@@ -137,7 +137,7 @@ const routes = [
     {
         path: '/pay-movie',
         exact: false,
-        main: () => <PayMovie/>
+        main: ({match}) => <PayMovie match={match} />
     },
     {
         path: '',

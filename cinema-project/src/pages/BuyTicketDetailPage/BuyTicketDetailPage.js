@@ -10,6 +10,7 @@ import {
 import Table from "../../components/Table/Table";
 import styles from "./BuyTicketDetailStyle";
 import SeatPickers from "../../components/SeatPicker/SeatPickers";
+import history from '../../commons/history';
 class BuyTicketDetailPage extends Component {
 	constructor(props) {
 		super(props);
@@ -78,12 +79,22 @@ class BuyTicketDetailPage extends Component {
 		});
 	};
 
+	makeid = (length) => {
+		var result           = '';
+		var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		var charactersLength = characters.length;
+		for ( var i = 0; i < length; i++ ) {
+		   result += characters.charAt(Math.floor(Math.random() * charactersLength));
+		}
+		return result;
+	 }
+
 	handleSubmit = (choosing, roomName, amountTicket, totalAllFood, totalAllTicket) => {
 		console.log('totalAllTicket', totalAllTicket)
 		console.log('totalAllFood', totalAllFood)
 		if (this.state.arrSeatChoosing.length === amountTicket) {
-			console.log('date:', choosing.date)
-			console.log('movie:', choosing.movie)
+			let tickCode = this.makeid(8);
+			console.log('tickCode:', tickCode)
 			let data = {
 				idUser: choosing.idUser,
 				room: roomName,
@@ -92,9 +103,12 @@ class BuyTicketDetailPage extends Component {
 				time: choosing.time,
 				seat: this.state.arrSeatChoosing,
 				ticketPrice: totalAllTicket,
-				foodPrice: totalAllFood
+				foodPrice: totalAllFood,
+				tickCode
 			};
 			console.log('data:', data)
+			localStorage.setItem('booking', JSON.stringify(data))
+			history.push(`/pay-movie`)
 			//this.props.createBooking(data);
 		} else if (this.state.arrSeatChoosing.length === 0) {
 			alert("Vui lòng chọn ghế!");

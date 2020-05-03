@@ -1691,16 +1691,94 @@
       "price": 60000
     }
   ],
-  "booking": {
-    "idUser": "user0001",
-    "idRoom": "room2",
-    "idMovie": "Movie006",
-    "idDate": "movie006_16032020",
-    "time": "13:00",
-    "seat": [
-      "B8"
-    ]
-  },
+  "booking": [
+    {
+      "idUser": "admin0001",
+      "room": "Rap 2",
+      "nameMovie": "Onward: Truy Tìm Phép Thuật",
+      "date": "Thứ 2, 16/03/2020",
+      "time": "08:00",
+      "seat": [
+        "E6",
+        "E7"
+      ],
+      "ticketPrice": 110000,
+      "foodPrice": 65000,
+      "tickCode": "HnOCHbbk",
+      "id": 1
+    },
+    {
+      "idUser": "admin0001",
+      "room": "Rap 2",
+      "nameMovie": "Onward: Truy Tìm Phép Thuật",
+      "date": "Thứ 2, 16/03/2020",
+      "time": "08:00",
+      "seat": [
+        "E6",
+        "E7"
+      ],
+      "ticketPrice": 110000,
+      "foodPrice": 65000,
+      "tickCode": "HnOCHbbk",
+      "id": 2
+    },
+    {
+      "idUser": "admin0001",
+      "room": "Rap 2",
+      "nameMovie": "Onward: Truy Tìm Phép Thuật",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "11:00",
+      "seat": [
+        "I0"
+      ],
+      "ticketPrice": 60000,
+      "foodPrice": 0,
+      "tickCode": "cidoVOc8",
+      "id": 3
+    },
+    {
+      "idUser": "admin0001",
+      "room": "Rap 2",
+      "nameMovie": "Ác mộng bên hồ",
+      "date": "Thứ 2, 16/03/2020",
+      "time": "08:00",
+      "seat": [
+        "F7"
+      ],
+      "ticketPrice": 60000,
+      "foodPrice": 0,
+      "tickCode": "80wq1hQk",
+      "id": 4
+    },
+    {
+      "idUser": "admin0001",
+      "room": "Rap 2",
+      "nameMovie": "Ác mộng bên hồ",
+      "date": "Thứ 2, 16/03/2020",
+      "time": "13:00",
+      "seat": [
+        "F7"
+      ],
+      "ticketPrice": 60000,
+      "foodPrice": 0,
+      "tickCode": "WYA2nKPW",
+      "id": 5
+    },
+    {
+      "idUser": "admin0001",
+      "room": "Rap 2",
+      "nameMovie": "Onward: Truy Tìm Phép Thuật",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "19:00",
+      "seat": [
+        "E7"
+      ],
+      "ticketPrice": 60000,
+      "foodPrice": 0,
+      "tickCode": "UA3ltTcH",
+      "id": 6
+    }
+  ],
   "foodCombo": [
     {
       "id": "combo1",
