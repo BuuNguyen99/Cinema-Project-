@@ -21,6 +21,10 @@ import Item2 from './pages/HomePage/Promotion/ShowInforPro/Item2';
 import Item3 from './pages/HomePage/Promotion/ShowInforPro/Item3';
 import Item4 from './pages/HomePage/Promotion/ShowInforPro/Item4';
 import PayMovie from './pages/PayMovie/PayMovie'
+import ItemReview1 from './pages/HomePage/ReviewMovie/ShowInfoReviewMovie/ItemReview1';
+import ItemReview2 from './pages/HomePage/ReviewMovie/ShowInfoReviewMovie/ItemReview2';
+import ItemReview3 from './pages/HomePage/ReviewMovie/ShowInfoReviewMovie/ItemReview3';
+import ItemReview4 from './pages/HomePage/ReviewMovie/ShowInfoReviewMovie/ItemReview4';
 const routes = [
     {
         path: '/',
@@ -133,6 +137,26 @@ const routes = [
         path: '/promotion/dat-ve-online-khong-lo-tre-nai',
         exact: false,
         main: () => <Item4/>
+    },
+    {
+        path: '/reviewMovie0001',
+        exact: false,
+        main: () => <ItemReview1/>
+    },
+    {
+        path: '/reviewMovie0002',
+        exact: false,
+        main: () => <ItemReview2/>
+    },
+    {
+        path: '/reviewMovie0003',
+        exact: false,
+        main: () => <ItemReview3/>
+    },
+    {
+        path: '/reviewMovie0004',
+        exact: false,
+        main: () => <ItemReview4/>
     },
     {
         path: '/pay-movie',

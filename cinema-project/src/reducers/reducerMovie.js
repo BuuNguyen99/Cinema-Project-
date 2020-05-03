@@ -10,7 +10,8 @@ const stateDefault = {
   showInfoMovie: [],
   theater: [],
   promotion: [],
-  getBookingById: {}
+  getBookingById: {},
+  reviewMovie:[]
 };
 
 const isMovieShowing = (date) => {
@@ -87,6 +88,20 @@ function reducerMovie(state = stateDefault, action) {
         ...state,
         getBookingById: action.data
       }
+    }
+    case Types.FETCH_DATA_REVIEW_MOVIE: {
+      let newState = { ...state };
+      newState.reviewMovie = action.reviewMovie;      
+      return newState;
+    }
+    case Types.RATING_ITEM_REVIEW_MOVIE: {
+      let newState = { ...state };
+      for (let i = 0; i < newState.reviewMovie.length; i++) {
+        if (newState.reviewMovie[i].id === action.reviewMovie.id) {
+          newState.reviewMovie[i] = action.reviewMovie;
+        } 
+      }
+      return newState;
     }
     default: {
       return state;
