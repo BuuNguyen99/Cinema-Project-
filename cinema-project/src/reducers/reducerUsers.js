@@ -3,7 +3,8 @@ import * as Types from "../constants/ActionTypes";
 const stateDefault = {
   users: [],
   registerUser: [],
-  account: []
+  account: [],
+  updateUser: [],
 };
 
 const findIndex = (account, id) => {
