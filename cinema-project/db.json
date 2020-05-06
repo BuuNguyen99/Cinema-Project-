@@ -1292,15 +1292,11 @@
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
-      "birth": "1999-05-13T00:00:00.000Z",
+      "birth": "1999-05-13",
       "pass": "nguyenbuu99",
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
-      "targets": "12",
-      "myDeal": [],
-      "tableData": {
-        "id": 0
-      }
+      "targets": "12"
     },
     {
       "name": "huelinhh",
@@ -1312,11 +1308,31 @@
       "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
       "targets": 0,
-      "myDeal": [],
-      "id": "fE6XAWZ",
-      "tableData": {
-        "id": 1
-      }
+      "id": "fE6XAWZ"
+    },
+    {
+      "name": "RHY",
+      "email": "nguyenbuu3599@gmail.com",
+      "phone": "1212121212",
+      "gender": "Nam",
+      "birth": "1999-12-12",
+      "pass": "nguyenbuu99",
+      "address": "121212",
+      "currentStar": 0,
+      "targets": 0,
+      "id": "Wgcwofp"
+    },
+    {
+      "id": "Q6BLUym",
+      "name": "RHYYY",
+      "email": "loveyourself@gmail.com",
+      "phone": "0359323651",
+      "gender": "Nữ",
+      "birth": "2020-04-26",
+      "pass": "nguyenbuu0305",
+      "address": "Huế",
+      "currentStar": "1212",
+      "targets": "12"
     }
   ],
   "admin": [
@@ -1344,9 +1360,9 @@
   ],
   "account": [
     {
-      "id": "admin0001",
-      "name": "admin1",
-      "email": "admin@123",
+      "id": "admin0002",
+      "name": "admin2",
+      "email": "admin@1234",
       "pass": "123456789q",
       "image": ""
     }
@@ -1673,7 +1689,7 @@
   ],
   "booking": [
     {
-      "idUser": "admin0001",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
       "date": "Thứ 2, 16/03/2020",
@@ -1688,7 +1704,7 @@
       "id": 1
     },
     {
-      "idUser": "admin0001",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
       "date": "Thứ 2, 16/03/2020",
@@ -1703,7 +1719,7 @@
       "id": 2
     },
     {
-      "idUser": "admin0001",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
       "date": "Chủ nhật, 15/03/2020",
@@ -1717,7 +1733,7 @@
       "id": 3
     },
     {
-      "idUser": "admin0001",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Ác mộng bên hồ",
       "date": "Thứ 2, 16/03/2020",
@@ -1731,7 +1747,7 @@
       "id": 4
     },
     {
-      "idUser": "admin0001",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Ác mộng bên hồ",
       "date": "Thứ 2, 16/03/2020",
@@ -1745,7 +1761,7 @@
       "id": 5
     },
     {
-      "idUser": "admin0001",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
       "date": "Chủ nhật, 15/03/2020",
@@ -1757,6 +1773,103 @@
       "foodPrice": 0,
       "tickCode": "UA3ltTcH",
       "id": 6
+    },
+    {
+      "idUser": "user0001",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "13:00",
+      "seat": [
+        "A2",
+        "A3",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "ticketPrice": 330000,
+      "foodPrice": 0,
+      "tickCode": "kUNc9IMj",
+      "id": 7
+    },
+    {
+      "idUser": "user0001",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "08:00",
+      "seat": [
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "ticketPrice": 160000,
+      "foodPrice": 130000,
+      "tickCode": "mmJdZLjH",
+      "id": 8
+    },
+    {
+      "idUser": "user0001",
+      "room": "Rap 2",
+      "nameMovie": "The Invisible Man: Kẻ Vô Hình",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "22:00",
+      "seat": [
+        "A3",
+        "A4"
+      ],
+      "ticketPrice": 110000,
+      "foodPrice": 0,
+      "tickCode": "4bMtfkaM",
+      "id": 9
+    },
+    {
+      "idUser": "Wgcwofp",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "08:00",
+      "seat": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "ticketPrice": 220000,
+      "foodPrice": 0,
+      "tickCode": "vowU0B3q",
+      "id": 10
+    },
+    {
+      "idUser": "Q6BLUym",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "Chủ nhật, 15/03/2020",
+      "time": "22:00",
+      "seat": [
+        "A1",
+        "A2"
+      ],
+      "ticketPrice": 110000,
+      "foodPrice": 0,
+      "tickCode": "n8bA0HaU",
+      "id": 11
+    },
+    {
+      "idUser": "Q6BLUym",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "Thứ 2, 16/03/2020",
+      "time": "08:00",
+      "seat": [
+        "F2",
+        "F3"
+      ],
+      "ticketPrice": 110000,
+      "foodPrice": 107000,
+      "tickCode": "NfHrsXDp",
+      "id": 12
     }
   ],
   "foodCombo": [

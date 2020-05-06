@@ -12,31 +12,28 @@ class ItemDeal extends Component {
       <>
         <StyledTableRow>
           <StyledTableCell component="th" scope="row">
-            {this.props.myDeal.dayTrading}
+            {this.props.myDeal.date}
           </StyledTableCell>
-          <StyledTableCell align="right">
-            {this.props.myDeal.tranNumber}
+          <StyledTableCell align="center">
+            {this.props.myDeal.time}
           </StyledTableCell>
-          <StyledTableCell align="right">
+          <StyledTableCell align="center">
             {this.props.myDeal.tickCode}
           </StyledTableCell>
-          <StyledTableCell align="right">
+          <StyledTableCell align="center">
             {this.props.myDeal.room}
           </StyledTableCell>
-          <StyledTableCell align="right">
-            {this.props.myDeal.movie}
+          <StyledTableCell align="center">
+            {this.props.myDeal.nameMovie}
           </StyledTableCell>
-          <StyledTableCell align="right">
-            {this.props.myDeal.numberOfTicks}
+          <StyledTableCell align="center">
+            {this.props.myDeal.seat}
           </StyledTableCell>
-          <StyledTableCell align="right">
-            {this.props.myDeal.price}
+          <StyledTableCell align="center">
+            {this.props.myDeal.ticketPrice}
           </StyledTableCell>
-          <StyledTableCell align="right">
-            {this.props.myDeal.star}
-          </StyledTableCell>
-          <StyledTableCell align="right">
-            {this.props.myDeal.targets}
+          <StyledTableCell align="center">
+            {this.props.myDeal.foodPrice}
           </StyledTableCell>
         </StyledTableRow>
       </>

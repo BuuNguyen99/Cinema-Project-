@@ -6,13 +6,17 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import ManageUsers from "./ManageUsers";
+import ManageUsers from "./ManageUsers/ManageUsers";
 import ManageMovies from "./ManageMovies";
 import ManageRevenue from "./ManageRevenue";
 import "./AdminPage.css";
+import routeAdmin from "./ManageUsers/routeAdmin";
+import { Switch, Route, Router } from "react-router-dom";
+import { ThemeProvider } from '@material-ui/styles';
+import theme from './../../constants/themes';
+import history from './../../commons/history';
 
 class AdminPage extends React.Component {
- 
   render() {
     return (
       <div className="container-fluid my-4">
@@ -82,6 +86,24 @@ function NavTabs(props) {
     setValue(newValue);
   };
 
+  let showContentMenus = routes => {
+    var result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component= {route.main}
+          />
+        );
+      });
+    }
+    return <Switch> {result} </Switch>;
+  };
+
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -91,19 +113,27 @@ function NavTabs(props) {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="Quản lý Người Dùng" href="/drafts" {...a11yProps(0)} />
+          <LinkTab
+            label="Quản lý Người Dùng"
+            href="/drafts"
+            {...a11yProps(0)}
+          />
           <LinkTab label="Quản lý Phim" href="/trash" {...a11yProps(1)} />
           <LinkTab label="Quản Lý doanh thu" href="/spam" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <ManageUsers />
+        <Router history={history}>
+          <ThemeProvider theme={theme}>
+            {showContentMenus(routeAdmin)}
+          </ThemeProvider>
+        </Router>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ManageMovies/>
+        <ManageMovies />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <ManageRevenue/>
+        <ManageRevenue />
       </TabPanel>
     </div>
   );

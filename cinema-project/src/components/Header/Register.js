@@ -121,8 +121,7 @@ class Register extends React.Component {
         pass: txtPassword.value,
         address: txtAddress.value,
         currentStar: 0,
-        targets: 0,
-        myDeal: []
+        targets: 0
       }
 
       let lengthUsers = users.length;
