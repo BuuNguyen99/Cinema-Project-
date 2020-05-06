@@ -11,7 +11,7 @@ const stateDefault = {
   theater: [],
   promotion: [],
   getBookingById: {},
-  reviewMovie:[],
+  reviewMovie: [],
   bookingMovie: [],
 };
 
@@ -87,12 +87,12 @@ function reducerMovie(state = stateDefault, action) {
     case Types.GET_BOOKING: {
       return {
         ...state,
-        getBookingById: action.data
-      }
+        getBookingById: action.data,
+      };
     }
     case Types.FETCH_DATA_REVIEW_MOVIE: {
       let newState = { ...state };
-      newState.reviewMovie = action.reviewMovie;      
+      newState.reviewMovie = action.reviewMovie;
       return newState;
     }
     case Types.RATING_ITEM_REVIEW_MOVIE: {
@@ -100,14 +100,41 @@ function reducerMovie(state = stateDefault, action) {
       for (let i = 0; i < newState.reviewMovie.length; i++) {
         if (newState.reviewMovie[i].id === action.reviewMovie.id) {
           newState.reviewMovie[i] = action.reviewMovie;
-        } 
+        }
       }
       return newState;
     }
     case Types.FETCH_DATA_BOOKING_MOVIE: {
-      let newState = { ...state };     
-      newState.bookingMovie = action.bookingMovie ;
+      let newState = { ...state };
+      newState.bookingMovie = action.bookingMovie;
       return newState;
+    }
+
+    case Types.ADD_MOVIE: {
+      return {
+        ...state,
+        movie: [...state.movie, action.data],
+        //movieShowing: isMovieShowing(action.data.premiereDate) ? [...state.movieShowing, action.data] : state.movieShowing,
+        //movieComingSoon: !isMovieShowing(action.data.premiereDate) ? [...state.movieComingSoon, action.data] : state.movieComingSoon
+      };
+    }
+    case Types.DELETE_MOVIE: {
+      return {
+        ...state,
+        movie: state.movie.filter((item) => item.id !== action.id),
+        //movieShowing: isMovieShowing(action.data.premiereDate) ? [...state.movieShowing, action.data] : state.movieShowing,
+        //movieComingSoon: !isMovieShowing(action.data.premiereDate) ? [...state.movieComingSoon, action.data] : state.movieComingSoon
+      };
+    }
+    case Types.EDIT_MOVIE: {
+      return {
+        ...state,
+        movie: state.movie.map((item) => {
+          if (item.id === action.data.id) {
+            return action.data;
+          } else return item;
+        }),
+      };
     }
     default: {
       return state;
