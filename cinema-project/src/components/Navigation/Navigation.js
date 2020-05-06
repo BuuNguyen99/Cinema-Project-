@@ -139,7 +139,7 @@ class Navigation extends Component {
 function Decentralization(props) {
   let { account } = props.account;
   if (account.length === 0) {
-    return <></>;
+    return <span></span>;
   } else if (account.length === 1) {
     let stringID = account[0].id;
     stringID = stringID.slice(0, 5);

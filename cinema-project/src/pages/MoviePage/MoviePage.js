@@ -7,8 +7,21 @@ class MoviePage extends Component {
   componentDidMount () {  
     this.props.fetchAllDataMovie();
    }
+
+   isMovieShowing = (date) => {
+    const now = new Date().setHours(0, 0, 0, 0);
+    if(Date.parse(date) <= now) return true;
+    else return false
+  }
   render() {
-    let { movieShowing, movieComingSoon } = this.props;
+    let { movies } = this.props;
+    let movieShowing = movies.filter((item) =>
+			this.isMovieShowing(item.premiereDate)
+    );
+    
+    let movieComingSoon = movies.filter((item) =>
+			!this.isMovieShowing(item.premiereDate)
+		);
     const { match } = this.props;
     const tabDefault = match.path === '/now-showing' ? 0 : 1;
     return (
@@ -26,7 +39,8 @@ class MoviePage extends Component {
 const mapStateToProps = state => {
   return {
     movieShowing: state.reducerMovie.movieShowing,
-    movieComingSoon: state.reducerMovie.movieComingSoon
+    movieComingSoon: state.reducerMovie.movieComingSoon,
+    movies: state.reducerMovie.movie
   }
 }
 const mapDispatchToProps = (dispatch) => {

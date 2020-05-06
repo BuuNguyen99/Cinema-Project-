@@ -41,3 +41,7 @@ export const FETCH_DATA_FOOD = 'FETCH_DATA_FOOD';
 export const CREATE_BOOKING = 'CREATE_BOOKING';
 
 export const GET_BOOKING = 'GET_BOOKING'
+
+export const ADD_MOVIE = 'ADD_MOVIE'
+export const DELETE_MOVIE = 'DELETE_MOVIE'
+export const EDIT_MOVIE = 'EDIT_MOVIE'

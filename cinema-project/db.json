@@ -1266,6 +1266,23 @@
         "rate": "7.5",
         "numberOfReviews": "40"
       }
+    },
+    {
+      "name": "Hỏi đáp năm 2020",
+      "type": "bb",
+      "time": "103",
+      "nation": "viet nam",
+      "price": "75000",
+      "premiereDate": "Wed May 06 2020 10:40:05 GMT+0700 (Indochina Time)",
+      "actor": "test",
+      "author": "test",
+      "date": "Wed May 06 2020 10:40:05 GMT+0700 (Indochina Time)",
+      "slug": "ca-nhan-mb-test",
+      "intro": "intro",
+      "image": "test",
+      "imageInfo": "test",
+      "video": "test",
+      "id": "K8DItPH"
     }
   ],
   "users": [
@@ -1286,7 +1303,7 @@
       }
     },
     {
-      "name": "huelinh",
+      "name": "huelinhh",
       "email": "nguyenhue@gmail.com",
       "phone": "0981234567",
       "gender": "Nữ",

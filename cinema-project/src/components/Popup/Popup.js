@@ -29,45 +29,53 @@ const PopupComfirm = ({ open, onClose, onComfirm, total }) => {
 	};
 
 	const handleOnClose = () => {
-    setFormState({})
-    onClose()
+		setFormState({});
+		onClose();
 	};
+	let title = total !== undefined ? "Thông tin thanh toán" : "Xác nhận xóa";
 	return (
 		<Modal isOpen={open} toggle={handleOnClose} id='exampleModalCenter'>
-			<ModalHeader toggle={handleOnClose}>Thông tin thanh toán</ModalHeader>
+			<ModalHeader toggle={handleOnClose}>{title}</ModalHeader>
 			<ModalBody>
-				<Form>
-					<FormGroup>
-						<Label>{`Họ tên chủ tài khoản`}</Label>
-						<Input
-							type='text'
-							name='title'
-							value={formState.title === undefined ? "" : formState.title}
-							onChange={(event) => handleChange(event)}
-						/>
-					</FormGroup>
-					<FormGroup>
-						<Label>{`Số tài khoản`}</Label>
-						<Input
-							type='text'
-							name='numberSeri'
-							value={
-								formState.numberSeri === undefined ? "" : formState.numberSeri
-							}
-							onChange={(event) => handleChange(event)}
-						/>
-          </FormGroup>
-          <FormGroup>
-						<Label>{`Số tiền thanh toán`}</Label>
-						<Input
-              type='text'
-              disabled
-							name='total'
-							value={total}
-							onChange={(event) => handleChange(event)}
-						/>
-					</FormGroup>
-				</Form>
+				{total !== undefined && (
+					<Form>
+						<FormGroup>
+							<Label>{`Họ tên chủ tài khoản`}</Label>
+							<Input
+								type='text'
+								name='title'
+								value={formState.title === undefined ? "" : formState.title}
+								onChange={(event) => handleChange(event)}
+							/>
+						</FormGroup>
+						<FormGroup>
+							<Label>{`Số tài khoản`}</Label>
+							<Input
+								type='text'
+								name='numberSeri'
+								value={
+									formState.numberSeri === undefined ? "" : formState.numberSeri
+								}
+								onChange={(event) => handleChange(event)}
+							/>
+						</FormGroup>
+						<FormGroup>
+							<Label>{`Số tiền thanh toán`}</Label>
+							<Input
+								type='text'
+								disabled
+								name='total'
+								value={total}
+								onChange={(event) => handleChange(event)}
+							/>
+						</FormGroup>
+					</Form>
+				)}
+				{
+					total === undefined && (
+						<span>Bạn có chắc chắn muốn xóa?</span>
+					)
+				}
 			</ModalBody>
 			<ModalFooter>
 				<Button className='blue-dark' color='primary' onClick={onComfirm}>

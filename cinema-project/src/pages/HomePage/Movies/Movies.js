@@ -22,7 +22,14 @@ class Movies extends React.Component {
   }
 
   render() {
-    let { movieShowing, movieComingSoon } = this.props;
+    let { movies } = this.props;
+    let movieShowing = movies.filter((item) =>
+			this.isMovieShowing(item.premiereDate)
+    );
+    
+    let movieComingSoon = movies.filter((item) =>
+			!this.isMovieShowing(item.premiereDate)
+		);
     return (
       <div className="container mb-5">
         <div className="wrap">
@@ -48,7 +55,8 @@ class Movies extends React.Component {
 const mapStateToProps = state => {
   return {
     movieShowing: state.reducerMovie.movieShowing,
-    movieComingSoon: state.reducerMovie.movieComingSoon
+    movieComingSoon: state.reducerMovie.movieComingSoon,
+    movies: state.reducerMovie.movie
   }
 }
 const mapDispatchToProps = (dispatch) => {

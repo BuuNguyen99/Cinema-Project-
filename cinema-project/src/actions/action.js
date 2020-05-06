@@ -29,7 +29,7 @@ export const  actSearchMovieRequest = (keyword) => {
     }
 }
 
-export const  actSearchMovie = (data) => {
+export const actSearchMovie = (data) => {
     return {
         type: Types.SEARCH_MOVIE,
         data
@@ -405,4 +405,60 @@ export const actFetchDataReviewMovie = (reviewMovie) => {
         type: Types.FETCH_DATA_REVIEW_MOVIE,
         reviewMovie
     }
+}
+
+export const actUpdateMovieRequest = (data) => {
+    return (dispatch) => {
+        return callApi(`movie/${data.id}`,'PUT', data).then (res => {
+            if(res.status === 200 ) {
+                dispatch(actEditMovie(res.data))
+                alert('Sửa thành công!')
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+}
+
+export const actEditMovie = (data) => {
+    return {
+        type: Types.EDIT_MOVIE,
+        data
+    }
+}
+
+export const actAddMovieRequest = (data) => {
+    return (dispatch) => {
+        return callApi('movie','POST', data).then (res => {
+            if(res.status === 200 || res.status === 201) {
+                dispatch(actAddMovie(res.data))
+                alert('Tạo thành công!')
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+
+}
+
+export const actAddMovie = (data) => {
+    return {
+        type: Types.ADD_MOVIE,
+        data
+    }
+}
+
+export const actDeleteMovieRequest = (id) => {
+    return (dispatch) => {
+        return callApi(`movie/${id}`,'DELETE', null).then (res => {
+            if(res.status === 200) {
+                dispatch(actDeleteMovie(id))
+                alert('xóa thành công!')
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+}
+
+export const actDeleteMovie = (id) => {
+    return {
+        type: Types.DELETE_MOVIE,
+        id
+    }
+
 }
