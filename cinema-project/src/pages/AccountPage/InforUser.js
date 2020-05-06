@@ -46,8 +46,7 @@ class InforUser extends Component {
       isChecked: false,
       id: props.account.id,
       currentStar: props.account.currentStar,
-      targets: props.account.targets,
-      myDeal: props.account.myDeal
+      targets: props.account.targets
     };
   }
 
@@ -104,7 +103,6 @@ class InforUser extends Component {
       id,
       targets,
       currentStar,
-      myDeal,
       isChecked
     } = this.state; 
     if(isChecked === true) {
@@ -130,8 +128,7 @@ class InforUser extends Component {
           pass: txtNewPassword.value,
           address: txtAddress.value,
           currentStar: currentStar,
-          targets: targets,
-          myDeal: myDeal
+          targets: targets
         };
         this.props.onUpdateUser(accountUser);
         this.props.onUpdateAccount(accountUser);
@@ -157,8 +154,7 @@ class InforUser extends Component {
         pass: getPassword.value,
         address: txtAddress.value,
         currentStar: currentStar,
-        targets: targets,
-        myDeal: myDeal
+        targets: targets
       };
       this.props.onUpdateUser(accountUser);
       this.props.onUpdateAccount(accountUser);

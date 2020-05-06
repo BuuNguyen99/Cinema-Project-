@@ -1,0 +1,8 @@
+.iconUp:hover {
+    cursor: pointer;
+    color:orange;
+}
+.iconDel:hover {
+    cursor: pointer;
+    color: red;
+}

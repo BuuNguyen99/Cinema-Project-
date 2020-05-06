@@ -406,3 +406,25 @@ export const actFetchDataReviewMovie = (reviewMovie) => {
         reviewMovie
     }
 }
+
+
+
+
+export const  actFetchDataBookingMovieRequest = () => {
+    return (dispatch) => {
+        return callApi('booking','GET', null).then (res => {
+            if(res.status === 200) {
+                dispatch(actFetchDataBookingMovie(res.data))
+            } else alert('Không thể kết nối đến dữ liệu!')
+        });
+    }
+}
+
+export const actFetchDataBookingMovie = (bookingMovie) => {
+    return {
+        type: Types.FETCH_DATA_BOOKING_MOVIE,
+        bookingMovie
+    }
+}
+
+

@@ -93,8 +93,7 @@ class Login extends React.Component {
               pass: users[i].pass,
               address: users[i].address,
               currentStar: users[i].currentStar,
-              targets: users[i].targets,
-              myDeal: users[i].myDeal
+              targets: users[i].targets
             };
             alert("Đăng nhập thành công");
             this.props.onLoginAccount(accountUser);

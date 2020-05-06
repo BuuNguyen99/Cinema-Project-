@@ -8,13 +8,27 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import ItemDeal from './ItemDeal';
-
+import { actFetchDataBookingMovieRequest } from '../../../actions/action';
+import { connect } from "react-redux";
 
 class Deal extends Component {
+
+  componentDidMount() {
+    this.props.onFetchDataBookingMovie();
+  }
+
   render() {
+    let {account, bookingMovie } = this.props;
+    if (Object.keys(account).length !== 0) {
+			localStorage.setItem("account", JSON.stringify(account));
+		} else {
+      account = JSON.parse(localStorage.getItem("account"));
+    }
+      localStorage.setItem("bookingMovie", JSON.stringify(bookingMovie));
+      bookingMovie = JSON.parse(localStorage.getItem("bookingMovie"));
     return (
         <div className="container my-4">
-          <CustomizedTables account= {this.props.account}/>
+          <CustomizedTables account={account} bookingMovie={bookingMovie}/>
         </div>
     );
   }
@@ -42,8 +56,22 @@ const useStyles = makeStyles({
 
  function CustomizedTables(props) {
   const classes = useStyles();
-  console.log('props:', props)
-  let dataItemDeal = props.account.map((myDeal, index) => {
+  let { account, bookingMovie } = props;
+  let data = [];
+  let arrayBooking = [];
+  console.log(bookingMovie);
+  
+  data = bookingMovie;
+  
+  
+  for (let i = 0 ; i < data.length ; i++) {
+    
+    if ( account.id === data[i].idUser) {
+      arrayBooking.push(data[i]);
+    }
+  }
+
+  let dataItemDeal = arrayBooking.map((myDeal, index) => {
     return <ItemDeal key={`movie ${index}`} myDeal={myDeal} />;
   });
   return (
@@ -52,14 +80,13 @@ const useStyles = makeStyles({
         <TableHead>
           <TableRow>
             <StyledTableCell>Ngày</StyledTableCell>
-            <StyledTableCell align="right">Số giao dịch</StyledTableCell>
-            <StyledTableCell align="right">Mã Vé</StyledTableCell>
-            <StyledTableCell align="right">Rạp</StyledTableCell>
-            <StyledTableCell align="right">Phim</StyledTableCell>
-            <StyledTableCell align="right">Số lượng</StyledTableCell>
-            <StyledTableCell align="right">Giá trị</StyledTableCell>
-            <StyledTableCell align="right">Sao tích lũy</StyledTableCell>
-            <StyledTableCell align="right">Điểm đã dùng</StyledTableCell>
+            <StyledTableCell align="center">Thời Gian</StyledTableCell>
+            <StyledTableCell align="center">Mã Vé</StyledTableCell>
+            <StyledTableCell align="center">Rạp</StyledTableCell>
+            <StyledTableCell align="center">Phim</StyledTableCell>
+            <StyledTableCell align="center">Ghế</StyledTableCell>
+            <StyledTableCell align="center">Giá trị</StyledTableCell>
+            <StyledTableCell align="center">Giá Combo</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -69,4 +96,20 @@ const useStyles = makeStyles({
     </TableContainer>
   );
 }
-export default Deal;
+
+
+
+const mapStateToProps = state => {
+  return {
+    bookingMovie: state.reducerMovie.bookingMovie,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onFetchDataBookingMovie: () => {
+      dispatch(actFetchDataBookingMovieRequest());
+    }
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Deal);
