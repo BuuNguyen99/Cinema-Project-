@@ -68,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function FullWidthTabs(props) { 
-  console.log('props.account.myDeal:', props.account)
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -123,7 +122,7 @@ function FullWidthTabs(props) {
             <InforUser account= {props.account} />
           </TabPanel>
           <TabPanel value={value} index={1} dir={theme.direction}>
-            <Deal account= {props.account.myDeal} />
+            <Deal account= {props.account} />
           </TabPanel>
         </SwipeableViews>
       </div>
