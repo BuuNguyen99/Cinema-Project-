@@ -408,6 +408,7 @@ export const actFetchDataReviewMovie = (reviewMovie) => {
 }
 
 
+
 export const actUpdateMovieRequest = (data) => {
     return (dispatch) => {
         return callApi(`movie/${data.id}`,'PUT', data).then (res => {
@@ -457,13 +458,11 @@ export const actDeleteMovieRequest = (id) => {
 }
 
 
-
 export const  actFetchDataBookingMovieRequest = () => {
     return (dispatch) => {
         return callApi('booking','GET', null).then (res => {
             if(res.status === 200) {
                 dispatch(actFetchDataBookingMovie(res.data))
-
             } else alert('Không thể kết nối đến dữ liệu!')
         });
     }
@@ -476,13 +475,13 @@ export const actDeleteMovie = (id) => {
     }
 
 }
+
 export const actFetchDataBookingMovie = (bookingMovie) => {
     return {
         type: Types.FETCH_DATA_BOOKING_MOVIE,
         bookingMovie
     }
 }
-
 
 export const actUpdateMovieRequest = (data) => {
     return (dispatch) => {
@@ -494,3 +493,4 @@ export const actUpdateMovieRequest = (data) => {
         });
     }
 }
+
