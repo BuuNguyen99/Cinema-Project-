@@ -453,18 +453,9 @@ export const actDeleteMovie = (id) => {
 };
 
 export const actFetchDataBookingMovie = (bookingMovie) => {
-<<<<<<< HEAD
   return {
     type: Types.FETCH_DATA_BOOKING_MOVIE,
     bookingMovie,
   };
 };
-=======
-    return {
-        type: Types.FETCH_DATA_BOOKING_MOVIE,
-        bookingMovie
-    }
-}
 
-
->>>>>>> fix conplit
