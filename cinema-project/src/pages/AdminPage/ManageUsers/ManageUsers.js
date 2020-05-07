@@ -28,10 +28,6 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
 
 function SimpleTable(props) {
   const classes = useStyles();
@@ -39,8 +35,11 @@ function SimpleTable(props) {
   let dataUsers = users.map((users, index) => {
     return <ItemUser key={`itemUser ${index}`} users={users} />;
   });
+  let margin = {
+    marginBottom : "150px"
+  }
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style = {margin}>
       <div className="row mb-3">
         <div className="col-md-12">
           <Link to="/admin-page/addUsers">
