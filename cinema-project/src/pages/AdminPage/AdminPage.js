@@ -8,19 +8,19 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import ManageUsers from "./ManageUsers/ManageUsers";
 import ManageMovies from "./ManageMovies";
-import ManageRevenue from "./ManageRevenue";
+import ManageRevenue from "./ManageRevenue/ManageRevenue";
 import "./AdminPage.css";
 import routeAdmin from "./ManageUsers/routeAdmin";
 import { Switch, Route, Router } from "react-router-dom";
-import { ThemeProvider } from '@material-ui/styles';
-import theme from './../../constants/themes';
-import history from './../../commons/history';
-
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "./../../constants/themes";
+import history from "./../../commons/history";
+// import {Row , Col , NavItem , Nav} from 'react-bootstrap';
 class AdminPage extends React.Component {
   render() {
     return (
       <div className="container-fluid my-4">
-        <NavTabs />
+        <VerticalTabs />
       </div>
     );
   }
@@ -33,8 +33,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`nav-tabpanel-${index}`}
-      aria-labelledby={`nav-tab-${index}`}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -54,21 +54,9 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `nav-tab-${index}`,
-    "aria-controls": `nav-tabpanel-${index}`,
+    id: `vertical-tab-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`,
   };
-}
-
-function LinkTab(props) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -76,17 +64,19 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  tabs: {
+    marginTop: "10px",
+  },
 }));
 
-function NavTabs(props) {
+function VerticalTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  let showContentMenus = routes => {
+  let showContentMenus = (routes) => {
     var result = null;
     if (routes.length > 0) {
       result = routes.map((route, index) => {
@@ -95,49 +85,52 @@ function NavTabs(props) {
             key={index}
             path={route.path}
             exact={route.exact}
-            component= {route.main}
+            component={route.main}
           />
         );
       });
     }
     return <Switch> {result} </Switch>;
   };
-
-
+  let border = {
+    borderRight: "1px solid rgba(0, 0, 0, 0.12)",
+    
+  }
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs
-          variant="fullWidth"
-          value={value}
-          onChange={handleChange}
-          aria-label="nav tabs example"
-        >
-          <LinkTab
-            label="Quản lý Người Dùng"
-            href="/drafts"
-            {...a11yProps(0)}
-          />
-          <LinkTab label="Quản lý Phim" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="Quản Lý doanh thu" href="/spam" {...a11yProps(2)} />
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-        <Router history={history}>
-          <ThemeProvider theme={theme}>
-            {showContentMenus(routeAdmin)}
-          </ThemeProvider>
-        </Router>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <ManageMovies />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <ManageRevenue />
-      </TabPanel>
+      <div className="row">
+        <div className="col-md-2 col-lg-2" style = { border }>
+          <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={value}
+            onChange={handleChange}
+            aria-label="Vertical tabs example"
+            className={classes.tabs}
+          >
+            <Tab label="Quản Lý Users" {...a11yProps(0)} />
+            <Tab label="Quản Lý Phim" {...a11yProps(1)} />
+            <Tab label="Quản Lý Doanh Thu" {...a11yProps(2)} />
+          </Tabs>
+        </div>
+        <div className="col-md-10 col-lg-10">
+          <TabPanel value={value} index={0}>
+            <Router history={history}>
+              <ThemeProvider theme={theme}>
+                {showContentMenus(routeAdmin)}
+              </ThemeProvider>
+            </Router>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <ManageMovies />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <ManageRevenue />
+          </TabPanel>
+        </div>
+      </div>
     </div>
   );
 }
-
 
 export default AdminPage;

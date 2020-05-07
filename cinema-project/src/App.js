@@ -6,12 +6,14 @@ import { Switch, Route, Router } from "react-router-dom";
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './constants/themes';
 import history from './commons/history';
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 
 class App extends React.Component {
   render() {
     return (
       <Router history={history}>
+        <ScrollToTop/>
           <ThemeProvider theme={theme}>
           <div className="Container">
             <Header />

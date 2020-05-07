@@ -14,7 +14,7 @@
       "date": [
         {
           "id": "movie001_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "05/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -60,7 +60,7 @@
         },
         {
           "id": "movie001_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "05/16/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -106,7 +106,7 @@
         },
         {
           "id": "movie001_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "05/17/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -174,7 +174,7 @@
       "date": [
         {
           "id": "movie002_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "05/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -220,7 +220,7 @@
         },
         {
           "id": "movie002_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "05/16/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -266,7 +266,7 @@
         },
         {
           "id": "movie002_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "05/17/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -334,7 +334,7 @@
       "date": [
         {
           "id": "movie003_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "05/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -380,7 +380,7 @@
         },
         {
           "id": "movie003_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "05/16/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -426,7 +426,7 @@
         },
         {
           "id": "movie003_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "06/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -494,7 +494,7 @@
       "date": [
         {
           "id": "movie004_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "07/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -540,7 +540,7 @@
         },
         {
           "id": "movie004_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "06/16/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -586,7 +586,7 @@
         },
         {
           "id": "movie004_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "06/17/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -654,7 +654,7 @@
       "date": [
         {
           "id": "movie005_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "05/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -700,7 +700,7 @@
         },
         {
           "id": "movie005_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "07/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -746,7 +746,7 @@
         },
         {
           "id": "movie005_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "08/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -814,7 +814,7 @@
       "date": [
         {
           "id": "movie006_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "05/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -860,7 +860,7 @@
         },
         {
           "id": "movie006_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "05/16/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -906,7 +906,7 @@
         },
         {
           "id": "movie006_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "05/17/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -974,7 +974,7 @@
       "date": [
         {
           "id": "movie007_15032020",
-          "datemovie": "Chủ nhật, 15/03/2020",
+          "datemovie": "05/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -1020,7 +1020,7 @@
         },
         {
           "id": "movie007_16032020",
-          "datemovie": "Thứ 2, 16/03/2020",
+          "datemovie": "06/15/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -1066,7 +1066,7 @@
         },
         {
           "id": "movie007_17032020",
-          "datemovie": "Thứ Ba, 17/03/2020",
+          "datemovie": "05/17/2020",
           "frametime": [
             {
               "Room": "Room 1",
@@ -1288,7 +1288,7 @@
   "users": [
     {
       "id": "user0001",
-      "name": "Nguyễn Bữu",
+      "name": "Nguyễn Bữuuuuu",
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
@@ -1360,9 +1360,9 @@
   ],
   "account": [
     {
-      "id": "admin0002",
-      "name": "admin2",
-      "email": "admin@1234",
+      "id": "admin0001",
+      "name": "admin1",
+      "email": "admin@123",
       "pass": "123456789q",
       "image": ""
     }
@@ -1692,7 +1692,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
-      "date": "Thứ 2, 16/03/2020",
+      "date": "05/16/2020",
       "time": "08:00",
       "seat": [
         "E6",
@@ -1707,7 +1707,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
-      "date": "Thứ 2, 16/03/2020",
+      "date": "05/17/2020",
       "time": "08:00",
       "seat": [
         "E6",
@@ -1722,7 +1722,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
-      "date": "Chủ nhật, 15/03/2020",
+      "date": "05/15/2020",
       "time": "11:00",
       "seat": [
         "I0"
@@ -1736,7 +1736,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Ác mộng bên hồ",
-      "date": "Thứ 2, 16/03/2020",
+      "date": "05/14/2020",
       "time": "08:00",
       "seat": [
         "F7"
@@ -1750,7 +1750,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Ác mộng bên hồ",
-      "date": "Thứ 2, 16/03/2020",
+      "date": "04/15/2020",
       "time": "13:00",
       "seat": [
         "F7"
@@ -1764,7 +1764,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Onward: Truy Tìm Phép Thuật",
-      "date": "Chủ nhật, 15/03/2020",
+      "date": "03/16/2020",
       "time": "19:00",
       "seat": [
         "E7"
@@ -1778,7 +1778,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "Chủ nhật, 15/03/2020",
+      "date": "05/15/2020",
       "time": "13:00",
       "seat": [
         "A2",
@@ -1797,7 +1797,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "Chủ nhật, 15/03/2020",
+      "date": "05/13/2020",
       "time": "08:00",
       "seat": [
         "E5",
@@ -1813,7 +1813,7 @@
       "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "The Invisible Man: Kẻ Vô Hình",
-      "date": "Chủ nhật, 15/03/2020",
+      "date": "05/14/2020",
       "time": "22:00",
       "seat": [
         "A3",
@@ -1825,51 +1825,20 @@
       "id": 9
     },
     {
-      "idUser": "Wgcwofp",
+      "idUser": "user0001",
       "room": "Rap 2",
       "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "Chủ nhật, 15/03/2020",
+      "date": "05/15/2020",
       "time": "08:00",
       "seat": [
         "A1",
         "A2",
-        "A3",
-        "A4"
+        "A3"
       ],
-      "ticketPrice": 220000,
+      "ticketPrice": 150000,
       "foodPrice": 0,
-      "tickCode": "vowU0B3q",
+      "tickCode": "gtMY5fdc",
       "id": 10
-    },
-    {
-      "idUser": "Q6BLUym",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "Chủ nhật, 15/03/2020",
-      "time": "22:00",
-      "seat": [
-        "A1",
-        "A2"
-      ],
-      "ticketPrice": 110000,
-      "foodPrice": 0,
-      "tickCode": "n8bA0HaU",
-      "id": 11
-    },
-    {
-      "idUser": "Q6BLUym",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "Thứ 2, 16/03/2020",
-      "time": "08:00",
-      "seat": [
-        "F2",
-        "F3"
-      ],
-      "ticketPrice": 110000,
-      "foodPrice": 107000,
-      "tickCode": "NfHrsXDp",
-      "id": 12
     }
   ],
   "foodCombo": [
