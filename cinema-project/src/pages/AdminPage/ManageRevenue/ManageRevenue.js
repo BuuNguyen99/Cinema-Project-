@@ -3,11 +3,31 @@ import ChartMonth from "./ChartMonth";
 import { connect } from "react-redux";
 import { actFetchDataBookingMovieRequest } from "../../../actions/action";
 import moment from "moment";
-
+import Card from "react-bootstrap/Card";
+import { Button } from "react-bootstrap";
 class ManageRevenue extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checkMonth: "0",
+      total: 0,
+    };
+  }
   componentDidMount() {
     this.props.onFetchBookingMovie();
   }
+
+  onChangeSelect = (e) => {
+    let Data = JSON.parse(localStorage.getItem("Data"));
+    for (let z = 0; z < Data.length; z++) {
+      if (e.target.value == Data[z].id) {
+        this.setState({
+          checkMonth: e.target.value,
+          total: Data[z].total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        });
+      }
+    }
+  };
   render() {
     let { bookingMovie } = this.props;
     if (Object.keys(bookingMovie).length !== 0) {
@@ -75,23 +95,84 @@ class ManageRevenue extends Component {
         id: 11,
         name: "Tháng 12",
         total: 0,
-      }
+      },
+      {
+        id: 12,
+        total: 0,
+      },
     ];
-    for ( let i = 0; i < bookingMovie.length ; i++) {
+    for (let i = 0; i < bookingMovie.length - 1; i++) {
       var date = bookingMovie[i].date;
       var birth = moment(date).format("MM/DD/YYYY");
       var getMonth = new Date(birth);
       var month = getMonth.getMonth();
-      for(let j = 0 ; j < Data.length ; j++ ) {
+      Data[12].total += bookingMovie[i].ticketPrice + bookingMovie[i].foodPrice;
+      for (let j = 0; j < Data.length; j++) {
         if (month === Data[j].id) {
-          Data[j].total += (bookingMovie[i].ticketPrice + bookingMovie[i].foodPrice );
+          Data[j].total +=
+            bookingMovie[i].ticketPrice + bookingMovie[i].foodPrice;
         }
       }
     }
-    console.log(Data);
+
+    if (Object.keys(Data).length !== 0) {
+      localStorage.setItem("Data", JSON.stringify(Data));
+    } else {
+      Data = JSON.parse(localStorage.getItem("Data"));
+    }
+
+    let size = {
+      width: "200px",
+    };
+    let margin = {
+      marginLeft: "26px",
+    };
     return (
-      <div style={{ minHeight: "70vh" }} className="container my-4">
-        <ChartMonth Data = { Data }/>
+      <div className="container my-4">
+        <div className="row mb-3">
+          <div className="col-md-12">
+            <Card>
+              <Card.Body>
+                <Card.Title>Doanh Thu Của Từng Tháng:</Card.Title>
+                <Card.Text>
+                  <div className="row mb-3">
+                    <div className="col-md-5">
+                      <div class="form-group" style={size}>
+                        <select
+                          class="form-control"
+                          id="exampleFormControlSelect1"
+                          style={margin}
+                          value={this.state.checkMonth}
+                          onChange={this.onChangeSelect}
+                        >
+                          <option value="0">Tháng 1</option>
+                          <option value="1">Tháng 2</option>
+                          <option value="2">Tháng 3</option>
+                          <option value="3">Tháng 4</option>
+                          <option value="4">Tháng 5</option>
+                          <option value="5">Tháng 6</option>
+                          <option value="6">Tháng 7</option>
+                          <option value="7">Tháng 8</option>
+                          <option value="8">Tháng 9</option>
+                          <option value="9">Tháng 10</option>
+                          <option value="10">Tháng 11</option>
+                          <option value="11">Tháng 12</option>
+                          <option value="12">Tổng 12 Tháng</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-md-7">
+                      <p className="total">
+                        Tổng Số Tiền : {this.state.total}đ
+                      </p>
+                    </div>
+                  </div>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
+        <ChartMonth Data={Data} />
       </div>
     );
   }

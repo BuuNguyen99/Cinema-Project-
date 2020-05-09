@@ -255,7 +255,9 @@ export const actCreateBookingRequest = (data) => {
             if(res.status === 200 || res.status === 201) {
                 alert('Đặt vé thành công, chúng tôi đã gửi mã QR code qua điện thoại của bạn, vui lòng đem mã số này đến quầy để nhận vé!')
                 dispatch(actCreateBooking(res.data))
+               setTimeout (() => {
                 history.push('/');
+               },0)
             } else alert('Không thể kết nối dữ liệu!')
         })
     }

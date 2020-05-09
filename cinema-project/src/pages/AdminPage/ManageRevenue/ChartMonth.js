@@ -6,6 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer
 } from "recharts";
 import './ChartMonth.css';
 class ChartMonth extends PureComponent {
@@ -13,11 +14,15 @@ class ChartMonth extends PureComponent {
   
   render() {
     console.log(this.props);
+    let Data = this.props.Data;
+    Data.splice(12,1);
+    
     return (
+      <ResponsiveContainer width="95%" height={500}>
       <AreaChart
-        width={1200}
-        height={600}
-        data={this.props.Data}
+      width={1000}
+      height={400}
+        data={Data}
         margin={{
           top: 10,
           right: 30,
@@ -29,8 +34,10 @@ class ChartMonth extends PureComponent {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Area type="monotone" dataKey="total" stroke="#8884d8" fill="#8884d8" />
+        <Area type="monotone" dataKey="total" stroke="#f26b38" fill="#f26b38" />
+        
       </AreaChart>
+      </ResponsiveContainer>
     );
   }
 }
