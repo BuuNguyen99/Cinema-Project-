@@ -2,3 +2,10 @@ g.recharts-cartesian-axis-ticks {
     font-size: 12px;
    
 }
+.charts {
+    grid-template-columns: 100% !important;
+}
+.total {
+    margin-top: 6px;
+    font-size: 20px;
+}
