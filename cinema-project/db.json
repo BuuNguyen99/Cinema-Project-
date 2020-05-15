@@ -1288,7 +1288,7 @@
   "users": [
     {
       "id": "user0001",
-      "name": "Nguyễn Bữuuuuu",
+      "name": "Nguyễn Buu",
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
@@ -1311,16 +1311,40 @@
       "id": "fE6XAWZ"
     },
     {
-      "name": "RHY",
+      "id": "Wgcwofp",
+      "name": "RHYdsd",
       "email": "nguyenbuu3599@gmail.com",
       "phone": "1212121212",
       "gender": "Nam",
       "birth": "1999-12-12",
-      "pass": "nguyenbuu99",
+      "pass": "nguyenbuu12",
       "address": "121212",
+      "currentStar": "120",
+      "targets": 0
+    },
+    {
+      "id": "6rvyWzB",
+      "name": "ABC",
+      "email": "nguyenbuu35991@gmail.com",
+      "phone": "0357175762",
+      "gender": "Nữ",
+      "birth": "2020-04-28",
+      "pass": "12121212q",
+      "address": "1212121212",
+      "currentStar": "1212",
+      "targets": 0
+    },
+    {
+      "name": "abc",
+      "email": "112@gmail.com",
+      "phone": "1212121211",
+      "gender": "Nam",
+      "birth": "2020-04-26",
+      "pass": "12121212q",
+      "address": "12",
       "currentStar": 0,
       "targets": 0,
-      "id": "Wgcwofp"
+      "id": "5CV-BXb"
     }
   ],
   "admin": [
@@ -1346,20 +1370,7 @@
       "image": ""
     }
   ],
-  "account": [
-    {
-      "id": "Wgcwofp",
-      "name": "RHY",
-      "email": "nguyenbuu3599@gmail.com",
-      "phone": "1212121212",
-      "gender": "Nam",
-      "birth": "1999-12-12",
-      "pass": "nguyenbuu99",
-      "address": "121212",
-      "currentStar": 0,
-      "targets": 0
-    }
-  ],
+  "account": [],
   "reviewMovie": [
     {
       "id": "reviewMovie0001",
@@ -1719,6 +1730,70 @@
       "foodPrice": 0,
       "tickCode": "CenlGDfT",
       "id": 13
+    },
+    {
+      "idUser": "Wgcwofp",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "05/15/2020",
+      "time": "22:00",
+      "seat": [
+        "A1",
+        "C4",
+        "C8"
+      ],
+      "ticketPrice": 150000,
+      "foodPrice": 0,
+      "tickCode": "j3KGccPO",
+      "id": 14
+    },
+    {
+      "idUser": "6rvyWzB",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "05/15/2020",
+      "time": "08:00",
+      "seat": [
+        "B7",
+        "D9",
+        "D0",
+        "C9"
+      ],
+      "ticketPrice": 200000,
+      "foodPrice": 0,
+      "tickCode": "0T5hyC3k",
+      "id": 15
+    },
+    {
+      "idUser": "skTL1HM",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "05/15/2020",
+      "time": "08:00",
+      "seat": [
+        "A3",
+        "A2",
+        "A5",
+        "A4"
+      ],
+      "ticketPrice": 200000,
+      "foodPrice": 0,
+      "tickCode": "AwTWhWHX",
+      "id": 16
+    },
+    {
+      "idUser": "5CV-BXb",
+      "room": "Rap 2",
+      "nameMovie": "Nắng 3: lời hứa của cha",
+      "date": "05/15/2020",
+      "time": "13:00",
+      "seat": [
+        "A1"
+      ],
+      "ticketPrice": 50000,
+      "foodPrice": 0,
+      "tickCode": "wN3jIJvv",
+      "id": 17
     }
   ],
   "foodCombo": [
