@@ -22,11 +22,12 @@ class TicketBooking extends Component {
 		} else {
 			account = JSON.parse(localStorage.getItem("account"));
     }
-
+    if(itemMovieInfo) {
     let ItemMovie = itemMovieInfo.map((itemMovieInfo, index) => {
       return <MovieInfo key={`movie ${index}`} itemMovieInfo={itemMovieInfo} account={account}/>;
     });
     return <div className="container my-4">{ItemMovie}</div>;
+   }
   }
 }
 

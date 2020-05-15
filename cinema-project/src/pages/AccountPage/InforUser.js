@@ -89,7 +89,6 @@ class InforUser extends Component {
 
   onSave = (e) => {
     e.preventDefault();
-
     let {
       txtName,
       txtPhone,
@@ -132,6 +131,7 @@ class InforUser extends Component {
         };
         this.props.onUpdateUser(accountUser);
         this.props.onUpdateAccount(accountUser);
+        window.location.reload();
         alert("Lưu thông tin thành công");
         
       }
@@ -158,6 +158,7 @@ class InforUser extends Component {
       };
       this.props.onUpdateUser(accountUser);
       this.props.onUpdateAccount(accountUser);
+      window.location.reload();
       alert("Lưu thông tin thành công");
     }
     else {
