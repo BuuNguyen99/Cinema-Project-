@@ -133,12 +133,16 @@ class Register extends React.Component {
           }
         }
         this.props.onRegisterUser(user);
+        window.location.reload();
         alert("đăng kí thành công vui lòng đăng nhâp");
         this.setState({ show: false });
+        
       } else {
         this.props.onRegisterUser(user);
+        window.location.reload();
         alert("đăng kí thành công vui lòng đăng nhâp");
         this.setState({ show: false });
+        
       }
     } else {
       alert("Vui Lòng điền đầy đủ thông tin và đúng định dạng");
