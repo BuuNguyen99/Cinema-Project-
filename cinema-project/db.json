@@ -1121,27 +1121,6 @@
       }
     },
     {
-      "id": "Movie008",
-      "name": "MINIONS: THE RISE OF GRU",
-      "slug": "minions-the-rise-of-gru",
-      "intro": "Minions - Những Quả Chuối Vàng biết đi sẽ trở lại trong câu chuyện chưa kể về tuổi thơ của Gru - cậu bé mười hai tuổi mơ được trở thành ác nhân xuất sắc nhất thế giới.",
-      "type": "Hoạt hình",
-      "author": "Lyle Balda",
-      "actor": "Minions, ALl",
-      "time": "105 minute",
-      "nation": "Mỹ",
-      "premiereDate": "Wed May 18 2020 00:00:00 GMT+0700 (Indochina Time)",
-      "date": [],
-      "price": "75000",
-      "image": "https://i.picsum.photos/id/201/600/400.jpg",
-      "imageInfo": "https://i.picsum.photos/id/201/600/400.jpg",
-      "video": "https://www.youtube.com/embed/EAqCXCSraJ4?autoplay=1",
-      "vote": {
-        "rate": "7.5",
-        "numberOfReviews": "40"
-      }
-    },
-    {
       "id": "Movie009",
       "name": "Cuốc Xe Nửa Đêm",
       "slug": "cuoc-xe-nua-dem",
@@ -1271,13 +1250,13 @@
   "users": [
     {
       "id": "user0001",
-      "name": "Nguyễn Bữu",
+      "name": "Nguyễn Bữuuuuu",
       "email": "nguyenbuubkdn@gmail.com",
       "phone": "0357175762",
       "gender": "Nam",
       "birth": "1999-05-13",
       "pass": "nguyenbuu99",
-      "address": "856/34 Tôn Đức Thắng - Liên Chiểu - Đà Nẵng",
+      "address": "856/34 Tôn Đức Thắng",
       "currentStar": 100,
       "targets": "12"
     },
@@ -1318,28 +1297,28 @@
       "targets": 0
     },
     {
-      "id": "ioBqEhe",
-      "name": "Hôm qua aád",
-      "email": "1111@gmail.com",
-      "phone": "1212121233",
-      "gender": "Nữ",
-      "birth": "2020-04-02",
-      "pass": "nguyenbuu99",
-      "address": "121322",
+      "id": "Ji9hUug",
+      "name": "abccd",
+      "email": "nguyenbuu112@gmail.com",
+      "phone": "1212121212",
+      "gender": "Nam",
+      "birth": "2020-05-05",
+      "pass": "12121212q",
+      "address": "12",
       "currentStar": 0,
       "targets": 0
     },
     {
-      "id": "VndRkCL",
-      "name": "ABCcds",
-      "email": "1@gmail.com",
-      "phone": "1212121212",
-      "gender": "Nam",
-      "birth": "1222-09-26",
-      "pass": "12121212q",
-      "address": "Huế1212",
-      "currentStar": "12",
-      "targets": "21"
+      "id": "S4CogBX",
+      "name": "abcqqq",
+      "email": "nguyenbuu@gmail.com",
+      "phone": "1212121211",
+      "gender": "Nữ",
+      "birth": "2020-03-29",
+      "pass": "1212121212q",
+      "address": "1212",
+      "currentStar": "1212",
+      "targets": "122"
     }
   ],
   "admin": [
@@ -1381,8 +1360,8 @@
       "image": "https://www.galaxycine.vn/media/2020/3/12/unnamed_1584006435812.jpg",
       "content": "Dù hóa thân thành Groot trong Guardians Of The Galaxy là siêu anh hùng nhưng Vin Diesel chỉ lồng tiếng chứ chẳng đóng một cảnh giải cứu thế giới nào cả.",
       "vote": {
-        "rate": "7.3",
-        "numberOfReviews": "51"
+        "rate": "7.37",
+        "numberOfReviews": "50"
       }
     },
     {
@@ -1768,132 +1747,19 @@
       "id": 15
     },
     {
-      "idUser": "ioBqEhe",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "A3"
-      ],
-      "ticketPrice": 50000,
-      "foodPrice": 65000,
-      "tickCode": "qPoqMmUy",
-      "id": 16
-    },
-    {
-      "idUser": "ioBqEhe",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "05/16/2020",
-      "time": "08:00",
-      "seat": [
-        "A7"
-      ],
-      "ticketPrice": 50000,
-      "foodPrice": 65000,
-      "tickCode": "V98zhyxB",
-      "id": 17
-    },
-    {
-      "idUser": "ioBqEhe",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "A1",
-        "A2"
-      ],
-      "ticketPrice": 110000,
-      "foodPrice": 253000,
-      "tickCode": "URAh4PCD",
-      "id": 18
-    },
-    {
-      "idUser": "ioBqEhe",
-      "room": "Rap 2",
-      "nameMovie": "The Invisible Man: Kẻ Vô Hình",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "A1"
-      ],
-      "ticketPrice": 50000,
-      "foodPrice": 0,
-      "tickCode": "9b2OkNfB",
-      "id": 19
-    },
-    {
-      "idUser": "VndRkCL",
+      "idUser": "Ji9hUug",
       "room": "Rap 2",
       "nameMovie": "Nắng 3: lời hứa của cha",
       "date": "05/15/2020",
       "time": "13:00",
       "seat": [
-        "B6"
+        "A7",
+        "A8"
       ],
-      "ticketPrice": 50000,
+      "ticketPrice": 100000,
       "foodPrice": 0,
-      "tickCode": "tqGcFp6g",
-      "id": 20
-    },
-    {
-      "idUser": "VndRkCL",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "B6"
-      ],
-      "ticketPrice": 50000,
-      "foodPrice": 0,
-      "tickCode": "WzVytvGS",
-      "id": 21
-    },
-    {
-      "idUser": "VndRkCL",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "A6"
-      ],
-      "ticketPrice": 50000,
-      "foodPrice": 0,
-      "tickCode": "TsDsf3r0",
-      "id": 22
-    },
-    {
-      "idUser": "VndRkCL",
-      "room": "Rap 2",
-      "nameMovie": "Nắng 3: lời hứa của cha",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "A6"
-      ],
-      "ticketPrice": 50000,
-      "foodPrice": 0,
-      "tickCode": "BAkbSF7e",
-      "id": 23
-    },
-    {
-      "idUser": "user0001",
-      "room": "Rap 2",
-      "nameMovie": "Onward: Truy Tìm Phép Thuật",
-      "date": "05/15/2020",
-      "time": "08:00",
-      "seat": [
-        "A9",
-        "B0"
-      ],
-      "ticketPrice": 120000,
-      "foodPrice": 0,
-      "tickCode": "WOQW28fr",
-      "id": 24
+      "tickCode": "0QAJpLML",
+      "id": 16
     }
   ],
   "foodCombo": [
