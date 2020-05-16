@@ -127,7 +127,7 @@ class ManageRevenue extends Component {
 		}
 
 		let size = {
-			width: "200px",
+			width: "150px",
 		};
 		let margin = {
 			marginLeft: "26px",
