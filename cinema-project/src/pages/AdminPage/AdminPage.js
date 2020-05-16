@@ -99,7 +99,7 @@ function VerticalTabs() {
   return (
     <div className={classes.root}>
       <div className="row">
-        <div className="col-md-2 col-lg-2" style = { border }>
+        <div className="col-md-3 col-lg-2" style = { border }>
           <Tabs
             orientation="vertical"
             variant="scrollable"
@@ -113,7 +113,7 @@ function VerticalTabs() {
             <Tab label="Quản Lý Doanh Thu" {...a11yProps(2)} />
           </Tabs>
         </div>
-        <div className="col-md-10 col-lg-10">
+        <div className="col-md-9 col-lg-10">
           <TabPanel value={value} index={0}>
             <Router history={history}>
               <ThemeProvider theme={theme}>

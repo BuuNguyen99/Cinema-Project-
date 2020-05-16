@@ -60,10 +60,8 @@ const useStyles = makeStyles({
   let data = [];
   let arrayBooking = [];
   console.log(bookingMovie);
-  
   data = bookingMovie;
-  
-  
+
   for (let i = 0 ; i < data.length ; i++) {
     
     if ( account.id === data[i].idUser) {
